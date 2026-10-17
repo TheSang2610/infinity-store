@@ -1,0 +1,1096 @@
+{
+  "iphone-12": [
+    {
+      "name": "Đen",
+      "hex": "#1f2020",
+      "image": "/products/apple/iphone-colors/iphone-12/den.jpg"
+    },
+    {
+      "name": "Trắng",
+      "hex": "#f6f2ef",
+      "image": "/products/apple/iphone-colors/iphone-12/trang.jpg"
+    },
+    {
+      "name": "Đỏ (PRODUCT)RED",
+      "hex": "#d82e2e",
+      "image": "/products/apple/iphone-colors/iphone-12/do-product-red.jpg"
+    },
+    {
+      "name": "Xanh Lá",
+      "hex": "#d8efd5",
+      "image": "/products/apple/iphone-colors/iphone-12/xanh-la.jpg"
+    },
+    {
+      "name": "Xanh Dương",
+      "hex": "#1f4e79",
+      "image": "/products/apple/iphone-colors/iphone-12/xanh-duong.jpg"
+    },
+    {
+      "name": "Tím",
+      "hex": "#b7afe6",
+      "image": "/products/apple/iphone-colors/iphone-12/tim.jpg"
+    }
+  ],
+  "iphone-12-mini": [
+    {
+      "name": "Đen",
+      "hex": "#1f2020",
+      "image": "/products/apple/iphone-colors/iphone-12-mini/den.jpg"
+    },
+    {
+      "name": "Trắng",
+      "hex": "#f6f2ef",
+      "image": "/products/apple/iphone-colors/iphone-12-mini/trang.jpg"
+    },
+    {
+      "name": "Đỏ (PRODUCT)RED",
+      "hex": "#d82e2e",
+      "image": "/products/apple/iphone-colors/iphone-12-mini/do-product-red.jpg"
+    },
+    {
+      "name": "Xanh Lá",
+      "hex": "#d8efd5",
+      "image": "/products/apple/iphone-colors/iphone-12-mini/xanh-la.jpg"
+    },
+    {
+      "name": "Xanh Dương",
+      "hex": "#1f4e79",
+      "image": "/products/apple/iphone-colors/iphone-12-mini/xanh-duong.jpg"
+    },
+    {
+      "name": "Tím",
+      "hex": "#b7afe6",
+      "image": "/products/apple/iphone-colors/iphone-12-mini/tim.jpg"
+    }
+  ],
+  "iphone-12-pro": [
+    {
+      "name": "Bạc",
+      "hex": "#e2e4e1",
+      "image": "/products/apple/iphone-colors/iphone-12-pro/bac.jpg"
+    },
+    {
+      "name": "Xám Than",
+      "hex": "#52514d",
+      "image": "/products/apple/iphone-colors/iphone-12-pro/xam-than.jpg"
+    },
+    {
+      "name": "Vàng",
+      "hex": "#fcebd3",
+      "image": "/products/apple/iphone-colors/iphone-12-pro/vang.jpg"
+    },
+    {
+      "name": "Xanh Thái Bình Dương",
+      "hex": "#2d4e5c",
+      "image": "/products/apple/iphone-colors/iphone-12-pro/xanh-thai-binh-duong.jpg"
+    }
+  ],
+  "iphone-12-pro-max": [
+    {
+      "name": "Bạc",
+      "hex": "#e2e4e1",
+      "image": "/products/apple/iphone-colors/iphone-12-pro-max/bac.jpg"
+    },
+    {
+      "name": "Xám Than",
+      "hex": "#52514d",
+      "image": "/products/apple/iphone-colors/iphone-12-pro-max/xam-than.jpg"
+    },
+    {
+      "name": "Vàng",
+      "hex": "#fcebd3",
+      "image": "/products/apple/iphone-colors/iphone-12-pro-max/vang.jpg"
+    },
+    {
+      "name": "Xanh Thái Bình Dương",
+      "hex": "#2d4e5c",
+      "image": "/products/apple/iphone-colors/iphone-12-pro-max/xanh-thai-binh-duong.jpg"
+    }
+  ],
+  "iphone-13": [
+    {
+      "name": "Hồng",
+      "hex": "#fae0d8",
+      "image": "/products/apple/iphone-colors/iphone-13/hong.jpg"
+    },
+    {
+      "name": "Xanh Dương",
+      "hex": "#276787",
+      "image": "/products/apple/iphone-colors/iphone-13/xanh-duong.jpg"
+    },
+    {
+      "name": "Đen Nửa Đêm",
+      "hex": "#232a31",
+      "image": "/products/apple/iphone-colors/iphone-13/den-nua-dem.jpg"
+    },
+    {
+      "name": "Trắng Ánh Sao",
+      "hex": "#faf6f2",
+      "image": "/products/apple/iphone-colors/iphone-13/trang-anh-sao.jpg"
+    },
+    {
+      "name": "Đỏ (PRODUCT)RED",
+      "hex": "#bf0013",
+      "image": "/products/apple/iphone-colors/iphone-13/do-product-red.jpg"
+    },
+    {
+      "name": "Xanh Lá",
+      "hex": "#394c38",
+      "image": "/products/apple/iphone-colors/iphone-13/xanh-la.jpg"
+    }
+  ],
+  "iphone-13-mini": [
+    {
+      "name": "Hồng",
+      "hex": "#fae0d8",
+      "image": "/products/apple/iphone-colors/iphone-13-mini/hong.jpg"
+    },
+    {
+      "name": "Xanh Dương",
+      "hex": "#276787",
+      "image": "/products/apple/iphone-colors/iphone-13-mini/xanh-duong.jpg"
+    },
+    {
+      "name": "Đen Nửa Đêm",
+      "hex": "#232a31",
+      "image": "/products/apple/iphone-colors/iphone-13-mini/den-nua-dem.jpg"
+    },
+    {
+      "name": "Trắng Ánh Sao",
+      "hex": "#faf6f2",
+      "image": "/products/apple/iphone-colors/iphone-13-mini/trang-anh-sao.jpg"
+    },
+    {
+      "name": "Đỏ (PRODUCT)RED",
+      "hex": "#bf0013",
+      "image": "/products/apple/iphone-colors/iphone-13-mini/do-product-red.jpg"
+    },
+    {
+      "name": "Xanh Lá",
+      "hex": "#394c38",
+      "image": "/products/apple/iphone-colors/iphone-13-mini/xanh-la.jpg"
+    }
+  ],
+  "iphone-13-pro": [
+    {
+      "name": "Xám Than",
+      "hex": "#54524f",
+      "image": "/products/apple/iphone-colors/iphone-13-pro/xam-than.jpg"
+    },
+    {
+      "name": "Vàng",
+      "hex": "#fae7cf",
+      "image": "/products/apple/iphone-colors/iphone-13-pro/vang.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#f1f2ed",
+      "image": "/products/apple/iphone-colors/iphone-13-pro/bac.jpg"
+    },
+    {
+      "name": "Xanh Sierra",
+      "hex": "#a7c1d9",
+      "image": "/products/apple/iphone-colors/iphone-13-pro/xanh-sierra.jpg"
+    },
+    {
+      "name": "Xanh Lá Núi Alpine",
+      "hex": "#576856",
+      "image": "/products/apple/iphone-colors/iphone-13-pro/xanh-la-nui-alpine.jpg"
+    }
+  ],
+  "iphone-13-pro-max": [
+    {
+      "name": "Xám Than",
+      "hex": "#54524f",
+      "image": "/products/apple/iphone-colors/iphone-13-pro-max/xam-than.jpg"
+    },
+    {
+      "name": "Vàng",
+      "hex": "#fae7cf",
+      "image": "/products/apple/iphone-colors/iphone-13-pro-max/vang.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#f1f2ed",
+      "image": "/products/apple/iphone-colors/iphone-13-pro-max/bac.jpg"
+    },
+    {
+      "name": "Xanh Sierra",
+      "hex": "#a7c1d9",
+      "image": "/products/apple/iphone-colors/iphone-13-pro-max/xanh-sierra.jpg"
+    },
+    {
+      "name": "Xanh Lá Núi Alpine",
+      "hex": "#576856",
+      "image": "/products/apple/iphone-colors/iphone-13-pro-max/xanh-la-nui-alpine.jpg"
+    }
+  ],
+  "iphone-14": [
+    {
+      "name": "Xanh Dương",
+      "hex": "#a0b4c7",
+      "image": "/products/apple/iphone-colors/iphone-14/xanh-duong.jpg"
+    },
+    {
+      "name": "Tím",
+      "hex": "#e5ddea",
+      "image": "/products/apple/iphone-colors/iphone-14/tim.jpg"
+    },
+    {
+      "name": "Vàng",
+      "hex": "#f9e479",
+      "image": "/products/apple/iphone-colors/iphone-14/vang.jpg"
+    },
+    {
+      "name": "Đen Nửa Đêm",
+      "hex": "#222930",
+      "image": "/products/apple/iphone-colors/iphone-14/den-nua-dem.jpg"
+    },
+    {
+      "name": "Trắng Ánh Sao",
+      "hex": "#faf6f2",
+      "image": "/products/apple/iphone-colors/iphone-14/trang-anh-sao.jpg"
+    },
+    {
+      "name": "Đỏ (PRODUCT)RED",
+      "hex": "#fc0324",
+      "image": "/products/apple/iphone-colors/iphone-14/do-product-red.jpg"
+    }
+  ],
+  "iphone-14-plus": [
+    {
+      "name": "Xanh Dương",
+      "hex": "#a0b4c7",
+      "image": "/products/apple/iphone-colors/iphone-14-plus/xanh-duong.jpg"
+    },
+    {
+      "name": "Tím",
+      "hex": "#e5ddea",
+      "image": "/products/apple/iphone-colors/iphone-14-plus/tim.jpg"
+    },
+    {
+      "name": "Vàng",
+      "hex": "#f9e479",
+      "image": "/products/apple/iphone-colors/iphone-14-plus/vang.jpg"
+    },
+    {
+      "name": "Đen Nửa Đêm",
+      "hex": "#222930",
+      "image": "/products/apple/iphone-colors/iphone-14-plus/den-nua-dem.jpg"
+    },
+    {
+      "name": "Trắng Ánh Sao",
+      "hex": "#faf6f2",
+      "image": "/products/apple/iphone-colors/iphone-14-plus/trang-anh-sao.jpg"
+    },
+    {
+      "name": "Đỏ (PRODUCT)RED",
+      "hex": "#fc0324",
+      "image": "/products/apple/iphone-colors/iphone-14-plus/do-product-red.jpg"
+    }
+  ],
+  "iphone-14-pro-max": [
+    {
+      "name": "Tím Đậm",
+      "hex": "#594f63",
+      "image": "/products/apple/iphone-colors/iphone-14-pro-max/tim-dam.jpg"
+    },
+    {
+      "name": "Vàng",
+      "hex": "#f4e8ce",
+      "image": "/products/apple/iphone-colors/iphone-14-pro-max/vang.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#f0f2f2",
+      "image": "/products/apple/iphone-colors/iphone-14-pro-max/bac.jpg"
+    },
+    {
+      "name": "Đen Không Gian",
+      "hex": "#403e3d",
+      "image": "/products/apple/iphone-colors/iphone-14-pro-max/den-khong-gian.jpg"
+    }
+  ],
+  "iphone-15": [
+    {
+      "name": "Hồng",
+      "hex": "#e3c8ca",
+      "image": "/products/apple/iphone-colors/iphone-15/hong.jpg"
+    },
+    {
+      "name": "Vàng",
+      "hex": "#e6e0c1",
+      "image": "/products/apple/iphone-colors/iphone-15/vang.jpg"
+    },
+    {
+      "name": "Xanh Lá",
+      "hex": "#cad4c5",
+      "image": "/products/apple/iphone-colors/iphone-15/xanh-la.jpg"
+    },
+    {
+      "name": "Xanh Dương",
+      "hex": "#ced5d9",
+      "image": "/products/apple/iphone-colors/iphone-15/xanh-duong.jpg"
+    },
+    {
+      "name": "Đen",
+      "hex": "#35393b",
+      "image": "/products/apple/iphone-colors/iphone-15/den.jpg"
+    }
+  ],
+  "iphone-15-plus": [
+    {
+      "name": "Hồng",
+      "hex": "#e3c8ca",
+      "image": "/products/apple/iphone-colors/iphone-15-plus/hong.jpg"
+    },
+    {
+      "name": "Vàng",
+      "hex": "#e6e0c1",
+      "image": "/products/apple/iphone-colors/iphone-15-plus/vang.jpg"
+    },
+    {
+      "name": "Xanh Lá",
+      "hex": "#cad4c5",
+      "image": "/products/apple/iphone-colors/iphone-15-plus/xanh-la.jpg"
+    },
+    {
+      "name": "Xanh Dương",
+      "hex": "#ced5d9",
+      "image": "/products/apple/iphone-colors/iphone-15-plus/xanh-duong.jpg"
+    },
+    {
+      "name": "Đen",
+      "hex": "#35393b",
+      "image": "/products/apple/iphone-colors/iphone-15-plus/den.jpg"
+    }
+  ],
+  "iphone-15-pro": [
+    {
+      "name": "Titan Tự Nhiên",
+      "hex": "#bab4a9",
+      "image": "/products/apple/iphone-colors/iphone-15-pro/titan-tu-nhien.jpg"
+    },
+    {
+      "name": "Titan Xanh",
+      "hex": "#2f4452",
+      "image": "/products/apple/iphone-colors/iphone-15-pro/titan-xanh.jpg"
+    },
+    {
+      "name": "Titan Trắng",
+      "hex": "#f2f1ed",
+      "image": "/products/apple/iphone-colors/iphone-15-pro/titan-trang.jpg"
+    },
+    {
+      "name": "Titan Đen",
+      "hex": "#3b3b3b",
+      "image": "/products/apple/iphone-colors/iphone-15-pro/titan-den.jpg"
+    }
+  ],
+  "iphone-15-pro-max": [
+    {
+      "name": "Titan Tự Nhiên",
+      "hex": "#bab4a9",
+      "image": "/products/apple/iphone-colors/iphone-15-pro-max/titan-tu-nhien.jpg"
+    },
+    {
+      "name": "Titan Xanh",
+      "hex": "#2f4452",
+      "image": "/products/apple/iphone-colors/iphone-15-pro-max/titan-xanh.jpg"
+    },
+    {
+      "name": "Titan Trắng",
+      "hex": "#f2f1ed",
+      "image": "/products/apple/iphone-colors/iphone-15-pro-max/titan-trang.jpg"
+    },
+    {
+      "name": "Titan Đen",
+      "hex": "#3b3b3b",
+      "image": "/products/apple/iphone-colors/iphone-15-pro-max/titan-den.jpg"
+    }
+  ],
+  "iphone-16": [
+    {
+      "name": "Xanh Lưu Ly",
+      "hex": "#9aadf6",
+      "image": "/products/apple/iphone-colors/iphone-16/xanh-luu-ly.jpg"
+    },
+    {
+      "name": "Xanh Mòng Két",
+      "hex": "#b0d4d2",
+      "image": "/products/apple/iphone-colors/iphone-16/xanh-mong-ket.jpg"
+    },
+    {
+      "name": "Hồng",
+      "hex": "#f2adda",
+      "image": "/products/apple/iphone-colors/iphone-16/hong.jpg"
+    },
+    {
+      "name": "Trắng",
+      "hex": "#fafafa",
+      "image": "/products/apple/iphone-colors/iphone-16/trang.jpg"
+    },
+    {
+      "name": "Đen",
+      "hex": "#3c4042",
+      "image": "/products/apple/iphone-colors/iphone-16/den.jpg"
+    }
+  ],
+  "iphone-16-plus": [
+    {
+      "name": "Xanh Lưu Ly",
+      "hex": "#9aadf6",
+      "image": "/products/apple/iphone-colors/iphone-16-plus/xanh-luu-ly.jpg"
+    },
+    {
+      "name": "Xanh Mòng Két",
+      "hex": "#b0d4d2",
+      "image": "/products/apple/iphone-colors/iphone-16-plus/xanh-mong-ket.jpg"
+    },
+    {
+      "name": "Hồng",
+      "hex": "#f2adda",
+      "image": "/products/apple/iphone-colors/iphone-16-plus/hong.jpg"
+    },
+    {
+      "name": "Trắng",
+      "hex": "#fafafa",
+      "image": "/products/apple/iphone-colors/iphone-16-plus/trang.jpg"
+    },
+    {
+      "name": "Đen",
+      "hex": "#3c4042",
+      "image": "/products/apple/iphone-colors/iphone-16-plus/den.jpg"
+    }
+  ],
+  "iphone-16-pro": [
+    {
+      "name": "Titan Sa Mạc",
+      "hex": "#bfa48f",
+      "image": "/products/apple/iphone-colors/iphone-16-pro/titan-sa-mac.jpg"
+    },
+    {
+      "name": "Titan Tự Nhiên",
+      "hex": "#c2bcb2",
+      "image": "/products/apple/iphone-colors/iphone-16-pro/titan-tu-nhien.jpg"
+    },
+    {
+      "name": "Titan Trắng",
+      "hex": "#f2f1ed",
+      "image": "/products/apple/iphone-colors/iphone-16-pro/titan-trang.jpg"
+    },
+    {
+      "name": "Titan Đen",
+      "hex": "#3c3c3d",
+      "image": "/products/apple/iphone-colors/iphone-16-pro/titan-den.jpg"
+    }
+  ],
+  "iphone-16-pro-max": [
+    {
+      "name": "Titan Sa Mạc",
+      "hex": "#bfa48f",
+      "image": "/products/apple/iphone-colors/iphone-16-pro-max/titan-sa-mac.jpg"
+    },
+    {
+      "name": "Titan Tự Nhiên",
+      "hex": "#c2bcb2",
+      "image": "/products/apple/iphone-colors/iphone-16-pro-max/titan-tu-nhien.jpg"
+    },
+    {
+      "name": "Titan Trắng",
+      "hex": "#f2f1ed",
+      "image": "/products/apple/iphone-colors/iphone-16-pro-max/titan-trang.jpg"
+    },
+    {
+      "name": "Titan Đen",
+      "hex": "#3c3c3d",
+      "image": "/products/apple/iphone-colors/iphone-16-pro-max/titan-den.jpg"
+    }
+  ],
+  "iphone-16e": [
+    {
+      "name": "Đen",
+      "hex": "#2b2b2d",
+      "image": "/products/apple/iphone-colors/iphone-16e/den.jpg"
+    },
+    {
+      "name": "Trắng",
+      "hex": "#f5f5f0",
+      "image": "/products/apple/iphone-colors/iphone-16e/trang.jpg"
+    }
+  ],
+  "iphone-17": [
+    {
+      "name": "Tím Oải Hương",
+      "hex": "#dfcee9",
+      "image": "/products/apple/iphone-colors/iphone-17/tim-oai-huong.jpg"
+    },
+    {
+      "name": "Xanh Lá Xô Thơm",
+      "hex": "#b9c5a9",
+      "image": "/products/apple/iphone-colors/iphone-17/xanh-la-xo-thom.jpg"
+    },
+    {
+      "name": "Xanh Lam Khói",
+      "hex": "#a7bcd4",
+      "image": "/products/apple/iphone-colors/iphone-17/xanh-lam-khoi.jpg"
+    },
+    {
+      "name": "Trắng",
+      "hex": "#f5f5f0",
+      "image": "/products/apple/iphone-colors/iphone-17/trang.jpg"
+    },
+    {
+      "name": "Đen",
+      "hex": "#353536",
+      "image": "/products/apple/iphone-colors/iphone-17/den.jpg"
+    }
+  ],
+  "iphone-17-pro": [
+    {
+      "name": "Cam Vũ Trụ",
+      "hex": "#f77e2d",
+      "image": "/products/apple/iphone-colors/iphone-17-pro/cam-vu-tru.jpg"
+    },
+    {
+      "name": "Xanh Đậm",
+      "hex": "#33405a",
+      "image": "/products/apple/iphone-colors/iphone-17-pro/xanh-dam.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e1",
+      "image": "/products/apple/iphone-colors/iphone-17-pro/bac.jpg"
+    }
+  ],
+  "iphone-17-pro-max": [
+    {
+      "name": "Cam Vũ Trụ",
+      "hex": "#f77e2d",
+      "image": "/products/apple/iphone-colors/iphone-17-pro-max/cam-vu-tru.jpg"
+    },
+    {
+      "name": "Xanh Đậm",
+      "hex": "#33405a",
+      "image": "/products/apple/iphone-colors/iphone-17-pro-max/xanh-dam.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e1",
+      "image": "/products/apple/iphone-colors/iphone-17-pro-max/bac.jpg"
+    }
+  ],
+  "iphone-air": [
+    {
+      "name": "Xanh Da Trời",
+      "hex": "#c9dbe9",
+      "image": "/products/apple/iphone-colors/iphone-air/xanh-da-troi.jpg"
+    },
+    {
+      "name": "Vàng Nhạt",
+      "hex": "#f0e5cf",
+      "image": "/products/apple/iphone-colors/iphone-air/vang-nhat.jpg"
+    },
+    {
+      "name": "Trắng Mây",
+      "hex": "#f5f5f2",
+      "image": "/products/apple/iphone-colors/iphone-air/trang-may.jpg"
+    },
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2b2b2c",
+      "image": "/products/apple/iphone-colors/iphone-air/den-khong-gian.jpg"
+    }
+  ],
+  "iphone-17e": [
+    {
+      "name": "Hồng Phớt",
+      "hex": "#efd3d5",
+      "image": "/products/apple/iphone-colors/iphone-17e/hong-phot.jpg"
+    },
+    {
+      "name": "Trắng",
+      "hex": "#f5f5f0",
+      "image": "/products/apple/iphone-colors/iphone-17e/trang.jpg"
+    },
+    {
+      "name": "Đen",
+      "hex": "#2b2b2d",
+      "image": "/products/apple/iphone-colors/iphone-17e/den.jpg"
+    }
+  ],
+  "iphone-se-3": [
+    {
+      "name": "Đen Nửa Đêm",
+      "hex": "#232a31",
+      "image": "/products/apple/iphone-colors/iphone-se-3/den-nua-dem.jpg"
+    },
+    {
+      "name": "Trắng Ánh Sao",
+      "hex": "#faf6f2",
+      "image": "/products/apple/iphone-colors/iphone-se-3/trang-anh-sao.jpg"
+    },
+    {
+      "name": "Đỏ (PRODUCT)RED",
+      "hex": "#bf0013",
+      "image": "/products/apple/iphone-colors/iphone-se-3/do-product-red.jpg"
+    }
+  ],
+  "macbook-air-13-m1": [
+    {
+      "name": "Xám Không Gian",
+      "hex": "#7d7e80",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m1/xam-khong-gian.jpg"
+    },
+    {
+      "name": "Vàng",
+      "hex": "#e3ccb4",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m1/vang.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m1/bac.jpg"
+    }
+  ],
+  "macbook-pro-13-m1": [
+    {
+      "name": "Xám Không Gian",
+      "hex": "#7d7e80",
+      "image": "/products/apple/macbook-colors/macbook-pro-13-m1/xam-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-13-m1/bac.jpg"
+    }
+  ],
+  "macbook-pro-13-m2": [
+    {
+      "name": "Xám Không Gian",
+      "hex": "#7d7e80",
+      "image": "/products/apple/macbook-colors/macbook-pro-13-m2/xam-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-13-m2/bac.jpg"
+    }
+  ],
+  "macbook-pro-14-m1-pro": [
+    {
+      "name": "Xám Không Gian",
+      "hex": "#7d7e80",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m1-pro/xam-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m1-pro/bac.jpg"
+    }
+  ],
+  "macbook-pro-16-m1-pro": [
+    {
+      "name": "Xám Không Gian",
+      "hex": "#7d7e80",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m1-pro/xam-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m1-pro/bac.jpg"
+    }
+  ],
+  "macbook-pro-14-m2-pro": [
+    {
+      "name": "Xám Không Gian",
+      "hex": "#7d7e80",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m2-pro/xam-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m2-pro/bac.jpg"
+    }
+  ],
+  "macbook-pro-16-m2-pro": [
+    {
+      "name": "Xám Không Gian",
+      "hex": "#7d7e80",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m2-pro/xam-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m2-pro/bac.jpg"
+    }
+  ],
+  "macbook-air-13-m2": [
+    {
+      "name": "Đêm Xanh Thẳm",
+      "hex": "#2e3642",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m2/dem-xanh-tham.jpg"
+    },
+    {
+      "name": "Ánh Sao",
+      "hex": "#f0e4d3",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m2/anh-sao.jpg"
+    },
+    {
+      "name": "Xám Không Gian",
+      "hex": "#7d7e80",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m2/xam-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m2/bac.jpg"
+    }
+  ],
+  "macbook-air-15-m2": [
+    {
+      "name": "Đêm Xanh Thẳm",
+      "hex": "#2e3642",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m2/dem-xanh-tham.jpg"
+    },
+    {
+      "name": "Ánh Sao",
+      "hex": "#f0e4d3",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m2/anh-sao.jpg"
+    },
+    {
+      "name": "Xám Không Gian",
+      "hex": "#7d7e80",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m2/xam-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m2/bac.jpg"
+    }
+  ],
+  "macbook-air-13-m3": [
+    {
+      "name": "Đêm Xanh Thẳm",
+      "hex": "#2e3642",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m3/dem-xanh-tham.jpg"
+    },
+    {
+      "name": "Ánh Sao",
+      "hex": "#f0e4d3",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m3/anh-sao.jpg"
+    },
+    {
+      "name": "Xám Không Gian",
+      "hex": "#7d7e80",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m3/xam-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m3/bac.jpg"
+    }
+  ],
+  "macbook-air-15-m3": [
+    {
+      "name": "Đêm Xanh Thẳm",
+      "hex": "#2e3642",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m3/dem-xanh-tham.jpg"
+    },
+    {
+      "name": "Ánh Sao",
+      "hex": "#f0e4d3",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m3/anh-sao.jpg"
+    },
+    {
+      "name": "Xám Không Gian",
+      "hex": "#7d7e80",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m3/xam-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m3/bac.jpg"
+    }
+  ],
+  "macbook-pro-14-m3": [
+    {
+      "name": "Xám Không Gian",
+      "hex": "#7d7e80",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m3/xam-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m3/bac.jpg"
+    }
+  ],
+  "macbook-pro-14-m3-pro": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m3-pro/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m3-pro/bac.jpg"
+    }
+  ],
+  "macbook-pro-16-m3-pro": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m3-pro/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m3-pro/bac.jpg"
+    }
+  ],
+  "macbook-air-13-m4": [
+    {
+      "name": "Xanh Da Trời",
+      "hex": "#c7d7e3",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m4/xanh-da-troi.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m4/bac.jpg"
+    },
+    {
+      "name": "Ánh Sao",
+      "hex": "#f0e4d3",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m4/anh-sao.jpg"
+    },
+    {
+      "name": "Đêm Xanh Thẳm",
+      "hex": "#2e3642",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m4/dem-xanh-tham.jpg"
+    }
+  ],
+  "macbook-air-15-m4": [
+    {
+      "name": "Xanh Da Trời",
+      "hex": "#c7d7e3",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m4/xanh-da-troi.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m4/bac.jpg"
+    },
+    {
+      "name": "Ánh Sao",
+      "hex": "#f0e4d3",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m4/anh-sao.jpg"
+    },
+    {
+      "name": "Đêm Xanh Thẳm",
+      "hex": "#2e3642",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m4/dem-xanh-tham.jpg"
+    }
+  ],
+  "macbook-pro-14-m4": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m4/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m4/bac.jpg"
+    }
+  ],
+  "macbook-pro-14-m4-pro": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m4-pro/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m4-pro/bac.jpg"
+    }
+  ],
+  "macbook-pro-16-m4-pro": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m4-pro/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m4-pro/bac.jpg"
+    }
+  ],
+  "macbook-pro-16-m4-max": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m4-max/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m4-max/bac.jpg"
+    }
+  ],
+  "macbook-pro-14-m5": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m5/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m5/bac.jpg"
+    }
+  ],
+  "macbook-pro-16-m5-pro": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m5-pro/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m5-pro/bac.jpg"
+    }
+  ],
+  "macbook-air-13-m5": [
+    {
+      "name": "Xanh Da Trời",
+      "hex": "#c7d7e3",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m5/xanh-da-troi.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m5/bac.jpg"
+    },
+    {
+      "name": "Ánh Sao",
+      "hex": "#f0e4d3",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m5/anh-sao.jpg"
+    },
+    {
+      "name": "Đêm Xanh Thẳm",
+      "hex": "#2e3642",
+      "image": "/products/apple/macbook-colors/macbook-air-13-m5/dem-xanh-tham.jpg"
+    }
+  ],
+  "macbook-air-15-m5": [
+    {
+      "name": "Xanh Da Trời",
+      "hex": "#c7d7e3",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m5/xanh-da-troi.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m5/bac.jpg"
+    },
+    {
+      "name": "Ánh Sao",
+      "hex": "#f0e4d3",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m5/anh-sao.jpg"
+    },
+    {
+      "name": "Đêm Xanh Thẳm",
+      "hex": "#2e3642",
+      "image": "/products/apple/macbook-colors/macbook-air-15-m5/dem-xanh-tham.jpg"
+    }
+  ],
+  "macbook-pro-14-m5-pro": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m5/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m5/bac.jpg"
+    }
+  ],
+  "macbook-pro-14-m5-max": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m5/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m5/bac.jpg"
+    }
+  ],
+  "macbook-pro-14-m5-pro-config": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m5/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m5/bac.jpg"
+    }
+  ],
+  "macbook-pro-14-m5-max-config": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m5/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-14-m5/bac.jpg"
+    }
+  ],
+  "macbook-pro-16-m5-max": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m5-pro/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m5-pro/bac.jpg"
+    }
+  ],
+  "macbook-pro-16-m5-config": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m5-pro/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m5-pro/bac.jpg"
+    }
+  ],
+  "macbook-pro-16-m5-max-config": [
+    {
+      "name": "Đen Không Gian",
+      "hex": "#2e2c2e",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m5-pro/den-khong-gian.jpg"
+    },
+    {
+      "name": "Bạc",
+      "hex": "#e3e4e5",
+      "image": "/products/apple/macbook-colors/macbook-pro-16-m5-pro/bac.jpg"
+    }
+  ]
+}

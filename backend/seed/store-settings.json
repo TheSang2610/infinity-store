@@ -1,0 +1,27 @@
+{
+  "storeName": "Infinity Store",
+  "companyName": "Công Ty Infinity Store (dữ liệu demo)",
+  "businessLicense": "GPĐKKD: 0000000000 (dữ liệu demo, không phải doanh nghiệp thật).",
+  "officeAddress": "123 Đường Số 1, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
+  "email": "",
+  "hotline": "028.0000.0000",
+  "hotlineHours": "7h30 - 22h00",
+  "supportHotline": "1800.0000",
+  "supportHours": "8h00 - 21h00",
+  "complaintHotline": "1800.0001",
+  "complaintHours": "8h00 - 21h30",
+  "consultPhone": "0384 589 559",
+  "zaloPhone": "0384589559",
+  "showrooms": [
+    {"name": "Showroom TP. Hồ Chí Minh", "address": "123 Đường Số 1, Q. 1, TP.HCM"},
+    {"name": "Showroom Hà Nội", "address": "45 Đường Số 2, Q. Cầu Giấy, Hà Nội"}
+  ],
+  "socialLinks": [
+    {"label": "Facebook", "url": "https://facebook.com"},
+    {"label": "YouTube", "url": "https://youtube.com"},
+    {"label": "TikTok", "url": "https://tiktok.com"}
+  ],
+  "bank": {"code": "bidv", "name": "BIDV", "accountNumber": "1810408755", "accountName": "NGUYEN THE SANG"},
+  "momo": {"phone": "0384589559", "accountName": "NGUYEN THE SANG"},
+  "invoiceSeller": {"name": "INFINITY STORE", "taxCode": "", "address": "123 Đường Số 1, Q. 1, TP.HCM", "phone": "02800000000"}
+}

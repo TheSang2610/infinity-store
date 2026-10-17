@@ -1,0 +1,346 @@
+/* ==========================================================================
+   ADMIN DESIGN — một hệ thiết kế cho mọi trang quản trị / nhân viên / quản lý
+   Cùng bảng màu với cửa hàng: nền xám nhạt, thẻ trắng, chữ mực, MỘT màu nhấn xanh.
+   Chế độ tối do app/dark-mode.css đảm nhận.
+   ========================================================================== */
+
+:root:not([data-theme="dark"]) .admin-console {
+  --ad-page: #f5f6f8;
+  --ad-surface: #ffffff;
+  --ad-surface-2: #f8fafc;
+  --ad-line: #e3e8ef;
+  --ad-line-strong: #cfd8e3;
+  --ad-ink: #0f1b2d;
+  --ad-ink-2: #3c4b5f;
+  --ad-muted: #67768a;
+  --ad-accent: #0a66d1;
+  --ad-accent-strong: #0852a8;
+  --ad-accent-soft: #e8f1fc;
+  --ad-radius: 16px;
+  --ad-shadow: 0 1px 2px rgba(15, 27, 45, .04), 0 4px 16px rgba(15, 27, 45, .04);
+  --ad-shadow-hover: 0 10px 28px rgba(15, 27, 45, .08);
+  background: var(--ad-page) !important;
+  color: var(--ad-ink) !important;
+  font-feature-settings: "tnum" 1;
+}
+
+/* ---------------------------------------------------------------- Thanh bên */
+:root:not([data-theme="dark"]) .admin-console .admin-sidebar {
+  background: var(--ad-surface) !important;
+  background-image: none !important;
+  border-right: 1px solid var(--ad-line) !important;
+  box-shadow: none !important;
+}
+:root:not([data-theme="dark"]) .admin-console .admin-brand strong { color: var(--ad-ink) !important; font-size: 17px !important; letter-spacing: -.01em; }
+:root:not([data-theme="dark"]) .admin-console .admin-brand small { color: var(--ad-muted) !important; letter-spacing: .12em; }
+:root:not([data-theme="dark"]) .admin-console .admin-nav-groups > section > span {
+  color: #8a97a8 !important;
+  font-size: 10.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: .1em !important;
+}
+:root:not([data-theme="dark"]) .admin-console .admin-nav-groups a {
+  position: relative;
+  border: 0 !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: var(--ad-ink-2) !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  transition: background-color .2s ease, color .2s ease !important;
+}
+:root:not([data-theme="dark"]) .admin-console .admin-nav-groups a i { color: #8a97a8 !important; transition: color .2s ease, transform .3s cubic-bezier(.2, .8, .2, 1); }
+:root:not([data-theme="dark"]) .admin-console .admin-nav-groups a:hover { background: var(--ad-surface-2) !important; color: var(--ad-ink) !important; }
+:root:not([data-theme="dark"]) .admin-console .admin-nav-groups a:hover i { color: var(--ad-accent) !important; transform: translateX(2px); }
+:root:not([data-theme="dark"]) .admin-console .admin-nav-groups a.is-active {
+  background: var(--ad-accent-soft) !important;
+  color: var(--ad-accent-strong) !important;
+}
+:root:not([data-theme="dark"]) .admin-console .admin-nav-groups a.is-active i { color: var(--ad-accent) !important; }
+:root:not([data-theme="dark"]) .admin-console .admin-nav-groups a.is-active::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--ad-accent);
+  animation: ad-indicator .35s cubic-bezier(.2, .8, .2, 1) both;
+}
+@keyframes ad-indicator { from { transform: scaleY(.2); opacity: 0; } to { transform: none; opacity: 1; } }
+
+:root:not([data-theme="dark"]) .admin-console :is(.admin-user-summary, .admin-sidebar-actions > *) {
+  border-color: var(--ad-line) !important;
+  background: var(--ad-surface-2) !important;
+  box-shadow: none !important;
+}
+:root:not([data-theme="dark"]) .admin-console .admin-user-summary strong { color: var(--ad-ink) !important; }
+:root:not([data-theme="dark"]) .admin-console .admin-user-summary span { color: var(--ad-muted) !important; }
+:root:not([data-theme="dark"]) .admin-console .admin-sidebar-actions :is(a, button) { color: var(--ad-ink-2) !important; }
+
+/* ----------------------------------------------------------- Thanh trên cùng */
+:root:not([data-theme="dark"]) .admin-console .admin-commandbar {
+  border-bottom: 1px solid var(--ad-line) !important;
+  background: rgba(255, 255, 255, .86) !important;
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  box-shadow: none !important;
+}
+:root:not([data-theme="dark"]) .admin-console .admin-commandbar span { color: var(--ad-ink) !important; }
+:root:not([data-theme="dark"]) .admin-console .admin-commandbar b { color: var(--ad-muted) !important; }
+:root:not([data-theme="dark"]) .admin-console .admin-commandbar nav :is(a, span) {
+  border: 1px solid var(--ad-line) !important;
+  border-radius: 999px !important;
+  background: var(--ad-surface) !important;
+  color: var(--ad-ink-2) !important;
+  box-shadow: none !important;
+}
+:root:not([data-theme="dark"]) .admin-console .admin-commandbar nav a:hover { border-color: var(--ad-line-strong) !important; color: var(--ad-accent) !important; }
+
+/* ------------------------------------------------- Nội dung & chuyển trang */
+:root:not([data-theme="dark"]) .admin-console .admin-content > :not(.admin-commandbar):not(.admin-mobile-header) {
+  animation: ad-page-in .45s cubic-bezier(.2, .8, .2, 1) both;
+}
+:root:not([data-theme="dark"]) .admin-console .admin-content > :nth-child(4) { animation-delay: .04s; }
+:root:not([data-theme="dark"]) .admin-console .admin-content > :nth-child(5) { animation-delay: .08s; }
+:root:not([data-theme="dark"]) .admin-console .admin-content > :nth-child(n + 6) { animation-delay: .12s; }
+@keyframes ad-page-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* Tiêu đề trang */
+:root:not([data-theme="dark"]) .admin-console .admin-topline > div > span,
+:root:not([data-theme="dark"]) .admin-console .pp-eyebrow,
+:root:not([data-theme="dark"]) .admin-console .admin-card-head > div > span,
+:root:not([data-theme="dark"]) .admin-console .admin-card-head > span {
+  color: var(--ad-accent) !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: .08em !important;
+}
+:root:not([data-theme="dark"]) .admin-console :is(.admin-topline h1, .pp-heading h1) {
+  color: var(--ad-ink) !important;
+  font-weight: 700 !important;
+  letter-spacing: -.03em !important;
+}
+:root:not([data-theme="dark"]) .admin-console :is(.admin-subtitle, .admin-topline p, .pp-heading p) { color: var(--ad-muted) !important; }
+
+/* --------------------------------------------------------------- Thẻ (card) */
+:root:not([data-theme="dark"]) .admin-console :is(
+  .admin-card, .admin-metric, .admin-executive-kpis > article, .admin-report-kpis > article, .admin-branch-card,
+  .admin-branch-summary > article, .student-review-kpis > article, .pp-stat, .pp-workspace, .admin-preview-card,
+  .work-task-card, .admin-payroll-row, .admin-toolbar, .admin-report-filters, .admin-bulkbar, .admin-table-wrap,
+  .admin-operational-strip > article
+) {
+  border: 1px solid var(--ad-line) !important;
+  border-radius: var(--ad-radius) !important;
+  background: var(--ad-surface) !important;
+  background-image: none !important;
+  box-shadow: var(--ad-shadow) !important;
+}
+:root:not([data-theme="dark"]) .admin-console :is(
+  .admin-metric, .admin-executive-kpis > article, .admin-report-kpis > article, .admin-branch-card, .pp-stat,
+  .admin-branch-summary > article, .student-review-kpis > article, .work-task-card, .admin-operational-strip > article
+) {
+  transition: transform .3s cubic-bezier(.2, .8, .2, 1), box-shadow .3s ease, border-color .3s ease !important;
+}
+:root:not([data-theme="dark"]) .admin-console :is(
+  .admin-metric, .admin-executive-kpis > article, .admin-report-kpis > article, .admin-branch-card, .pp-stat,
+  .admin-branch-summary > article, .student-review-kpis > article, .work-task-card, .admin-operational-strip > article
+):hover {
+  transform: translateY(-2px);
+  border-color: var(--ad-line-strong) !important;
+  box-shadow: var(--ad-shadow-hover) !important;
+}
+:root:not([data-theme="dark"]) .admin-console .admin-card-head h2 { color: var(--ad-ink) !important; letter-spacing: -.015em; }
+:root:not([data-theme="dark"]) .admin-console .admin-card-head a { color: var(--ad-accent) !important; }
+
+/* Số liệu KPI: số lớn màu mực, nhãn xám */
+:root:not([data-theme="dark"]) .admin-console :is(.admin-executive-kpis, .admin-report-kpis, .admin-metric, .student-review-kpis, .admin-branch-summary) strong {
+  color: var(--ad-ink) !important;
+  letter-spacing: -.02em;
+}
+:root:not([data-theme="dark"]) .admin-console :is(.admin-executive-kpis, .admin-report-kpis, .admin-metric, .student-review-kpis, .admin-branch-summary) article span,
+:root:not([data-theme="dark"]) .admin-console .admin-metric span { color: var(--ad-muted) !important; }
+
+/* Icon KPI: một tông duy nhất (thay cho xanh/tím/xanh lá/cam) */
+:root:not([data-theme="dark"]) .admin-console :is(
+  .admin-executive-kpis > article > i, .admin-report-kpis > article > i, .admin-operational-strip i,
+  .admin-report-attention i, .is-blue, .is-violet, .is-green, .is-orange, .tone-blue, .tone-violet, .tone-green, .tone-orange, .tone-gold
+):not(.admin-badge) {
+  background: var(--ad-accent-soft) !important;
+  color: var(--ad-accent) !important;
+  box-shadow: none !important;
+}
+
+/* Thanh "Truy cập nhanh": thẻ trắng thay cho khối đen */
+:root:not([data-theme="dark"]) .admin-console :is(.admin-quick-actions, .admin-business-actions) {
+  border: 1px solid var(--ad-line) !important;
+  background: var(--ad-surface) !important;
+  background-image: none !important;
+  color: var(--ad-ink) !important;
+}
+:root:not([data-theme="dark"]) .admin-console :is(.admin-quick-actions, .admin-business-actions) :is(h2, strong, span:not(.admin-badge)) { color: var(--ad-ink) !important; }
+:root:not([data-theme="dark"]) .admin-console :is(.admin-quick-actions, .admin-business-actions) a {
+  border: 1px solid var(--ad-line) !important;
+  border-radius: 999px !important;
+  background: var(--ad-surface-2) !important;
+  color: var(--ad-ink-2) !important;
+  box-shadow: none !important;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease, transform .2s ease !important;
+}
+:root:not([data-theme="dark"]) .admin-console :is(.admin-quick-actions, .admin-business-actions) a:hover {
+  border-color: transparent !important;
+  background: var(--ad-accent-soft) !important;
+  color: var(--ad-accent-strong) !important;
+  transform: translateY(-1px);
+}
+
+/* Trang sản phẩm: bỏ tông vàng nâu/navy riêng, dùng chung hệ màu */
+:root:not([data-theme="dark"]) .admin-console .pp-overview-feature {
+  border: 1px solid #cfe0f5 !important;
+  background: linear-gradient(135deg, #0a66d1 0%, #0a4fa3 100%) !important;
+  color: #fff !important;
+}
+:root:not([data-theme="dark"]) .admin-console .pp-overview-feature :is(.pp-eyebrow, span) { color: #d5e6fb !important; }
+:root:not([data-theme="dark"]) .admin-console .pp-overview-feature strong { color: #fff !important; }
+:root:not([data-theme="dark"]) .admin-console .pp-health-track > span { background: #fff !important; }
+:root:not([data-theme="dark"]) .admin-console .pp-status-tabs a[aria-current] { color: var(--ad-ink) !important; border-bottom-color: var(--ad-accent) !important; }
+
+/* -------------------------------------------------------------------- Nút */
+:root:not([data-theme="dark"]) .admin-console :is(.admin-button, .pp-button, .admin-branch-people-link, .admin-branch-edit-link) {
+  min-height: 40px;
+  border: 1px solid var(--ad-line) !important;
+  border-radius: 10px !important;
+  background: var(--ad-surface) !important;
+  background-image: none !important;
+  color: var(--ad-ink) !important;
+  box-shadow: none !important;
+  font-weight: 650 !important;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease !important;
+}
+:root:not([data-theme="dark"]) .admin-console :is(.admin-button, .pp-button, .admin-branch-people-link, .admin-branch-edit-link):hover {
+  border-color: var(--ad-line-strong) !important;
+  background: var(--ad-surface-2) !important;
+}
+:root:not([data-theme="dark"]) .admin-console :is(
+  .admin-button-primary, .pp-button-primary, .pp-filter-submit, form button[type="submit"]:not(.admin-button):not([class*="danger"]):not(.pp-row-actions *):not(.admin-sidebar-actions *):not(.admin-mobile-header *)
+) {
+  border-color: var(--ad-accent) !important;
+  background: var(--ad-accent) !important;
+  background-image: none !important;
+  color: #fff !important;
+  box-shadow: 0 1px 2px rgba(10, 102, 209, .25) !important;
+}
+:root:not([data-theme="dark"]) .admin-console :is(
+  .admin-button-primary, .pp-button-primary, .pp-filter-submit, form button[type="submit"]:not(.admin-button):not([class*="danger"]):not(.pp-row-actions *):not(.admin-sidebar-actions *):not(.admin-mobile-header *)
+):hover {
+  border-color: var(--ad-accent-strong) !important;
+  background: var(--ad-accent-strong) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(10, 102, 209, .25) !important;
+}
+:root:not([data-theme="dark"]) .admin-console :is(.admin-button, button):active { transform: translateY(0) scale(.98); }
+:root:not([data-theme="dark"]) .admin-console .admin-button-danger { border-color: #f2c4c0 !important; background: #fff6f5 !important; color: #b42318 !important; }
+
+/* ------------------------------------------------------------- Ô nhập liệu */
+:root:not([data-theme="dark"]) .admin-console :is(input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]), select, textarea) {
+  min-height: 40px;
+  border: 1px solid var(--ad-line) !important;
+  border-radius: 10px !important;
+  background-color: var(--ad-surface) !important;
+  color: var(--ad-ink) !important;
+  box-shadow: none !important;
+  transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+:root:not([data-theme="dark"]) .admin-console :is(input, select, textarea):hover { border-color: var(--ad-line-strong) !important; }
+:root:not([data-theme="dark"]) .admin-console :is(input, select, textarea):focus {
+  border-color: var(--ad-accent) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(10, 102, 209, .14) !important;
+}
+:root:not([data-theme="dark"]) .admin-console :is(input, textarea)::placeholder { color: #98a4b3 !important; }
+:root:not([data-theme="dark"]) .admin-console :is(.admin-field, .admin-field > span, label > span) { color: var(--ad-ink-2) !important; }
+:root:not([data-theme="dark"]) .admin-console .admin-field > em { color: var(--ad-accent) !important; }
+
+/* ------------------------------------------------------------------- Bảng */
+:root:not([data-theme="dark"]) .admin-console .admin-table-wrap { overflow: auto; }
+:root:not([data-theme="dark"]) .admin-console .admin-table th {
+  border-bottom: 1px solid var(--ad-line) !important;
+  background: var(--ad-surface-2) !important;
+  color: var(--ad-muted) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: .06em !important;
+  white-space: nowrap;
+}
+:root:not([data-theme="dark"]) .admin-console .admin-table td {
+  border-top: 1px solid #eef1f5 !important;
+  color: var(--ad-ink-2) !important;
+  font-size: 13.5px !important;
+}
+:root:not([data-theme="dark"]) .admin-console .admin-table td strong { color: var(--ad-ink) !important; }
+:root:not([data-theme="dark"]) .admin-console .admin-table tbody tr { transition: background-color .18s ease; }
+:root:not([data-theme="dark"]) .admin-console .admin-table tbody tr:hover { background: #f6f9fd !important; }
+:root:not([data-theme="dark"]) .admin-console .admin-table :is(td:first-child, td:has(> .admin-badge)) { white-space: nowrap; }
+:root:not([data-theme="dark"]) .admin-console :is(.admin-table-link, .pp-row-actions a) { color: var(--ad-accent) !important; font-weight: 650 !important; }
+:root:not([data-theme="dark"]) .admin-console :is(.admin-table-link, .pp-row-actions a):hover { color: var(--ad-accent-strong) !important; text-decoration: underline; text-underline-offset: 3px; }
+:root:not([data-theme="dark"]) .admin-console .admin-pagination a {
+  border: 1px solid var(--ad-line) !important;
+  border-radius: 10px !important;
+  background: var(--ad-surface) !important;
+  color: var(--ad-ink-2) !important;
+}
+:root:not([data-theme="dark"]) .admin-console .admin-pagination a:is(.is-active, [aria-current]) { border-color: var(--ad-accent) !important; background: var(--ad-accent) !important; color: #fff !important; }
+
+/* ------------------------------------------------------------ Huy hiệu trạng thái */
+:root:not([data-theme="dark"]) .admin-console :is(.admin-badge, .pp-status, .pp-variant-count, .work-task-priority) {
+  border: 0 !important;
+  border-radius: 999px !important;
+  font-size: 11.5px !important;
+  font-weight: 650 !important;
+  letter-spacing: 0 !important;
+  white-space: nowrap;
+}
+:root:not([data-theme="dark"]) .admin-console :is(.status-active, .status-paid, .status-delivered, .status-completed, .status-received, .invoice-issued, .pp-status-active, .work-status-completed, .hr-attendance-present) { background: #e7f6ee !important; color: #067647 !important; }
+:root:not([data-theme="dark"]) .admin-console :is(.status-pending, .status-unpaid, .status-draft, .invoice-draft, .pp-status-draft, .work-status-review, .hr-attendance-late, .priority-high) { background: #fef4e6 !important; color: #b54708 !important; }
+:root:not([data-theme="dark"]) .admin-console :is(.status-processing, .status-confirmed, .status-shipping, .invoice-ready, .work-status-in_progress, .work-status-assigned, .hr-attendance-leave) { background: var(--ad-accent-soft) !important; color: var(--ad-accent-strong) !important; }
+:root:not([data-theme="dark"]) .admin-console :is(.status-cancelled, .status-failed, .status-refunded, .status-returned, .invoice-cancelled, .hr-attendance-absent, .priority-urgent) { background: #fdeceb !important; color: #b42318 !important; }
+:root:not([data-theme="dark"]) .admin-console :is(.status-inactive, .status-closed, .status-not_required, .invoice-not_created, .hr-attendance-none, .pp-variant-count) { background: #f0f2f5 !important; color: #4b5869 !important; }
+
+/* ----------------------------------------------- Ảnh đại diện chữ cái */
+:root:not([data-theme="dark"]) .admin-console :is(.admin-payroll-person > b, .admin-hr-person > b, .admin-employee-cell > b, .admin-executive-kpis article > b) {
+  background: var(--ad-accent-soft) !important;
+  color: var(--ad-accent-strong) !important;
+}
+
+/* --------------------------------------------------- Biểu đồ doanh thu */
+:root:not([data-theme="dark"]) .admin-console .admin-blue-chart div {
+  background: linear-gradient(180deg, #4c95e6, #0a66d1) !important;
+  transform-origin: bottom;
+  animation: ad-bar-grow .7s cubic-bezier(.2, .8, .2, 1) both;
+}
+:root:not([data-theme="dark"]) .admin-console .admin-blue-chart div:nth-child(even) { background: linear-gradient(180deg, #8dbaf0, #4c95e6) !important; }
+:root:not([data-theme="dark"]) .admin-console .admin-blue-chart div:nth-child(2) { animation-delay: .05s; }
+:root:not([data-theme="dark"]) .admin-console .admin-blue-chart div:nth-child(3) { animation-delay: .1s; }
+:root:not([data-theme="dark"]) .admin-console .admin-blue-chart div:nth-child(4) { animation-delay: .15s; }
+:root:not([data-theme="dark"]) .admin-console .admin-blue-chart div:nth-child(5) { animation-delay: .2s; }
+:root:not([data-theme="dark"]) .admin-console .admin-blue-chart div:nth-child(6) { animation-delay: .25s; }
+:root:not([data-theme="dark"]) .admin-console .admin-blue-chart div:nth-child(7) { animation-delay: .3s; }
+@keyframes ad-bar-grow { from { transform: scaleY(0); } to { transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .admin-console *, .admin-console *::before { animation: none !important; transition: none !important; }
+  .admin-console :hover { transform: none !important; }
+}
+
+/* Bảng: mỗi ô một dòng, bảng tự rộng theo nội dung và cuộn ngang khi cần */
+:root:not([data-theme="dark"]) .admin-console .admin-table,
+:root[data-theme="dark"] .admin-console .admin-table { width: 100%; min-width: max-content !important; }
+.admin-console .admin-table :is(th, td) { white-space: nowrap; }
+.admin-console .admin-table td { max-width: 340px; }
+.admin-console .admin-table td :is(strong, span, small, a, p) { overflow: hidden; text-overflow: ellipsis; }
+.admin-console .admin-table td > :is(strong, span, small, p) { display: block; max-width: 320px; }
+.admin-console .admin-table-wrap { scrollbar-width: thin; }
+.admin-console .admin-table td { overflow: hidden; text-overflow: ellipsis; }
+:root:not([data-theme="dark"]) .admin-console .pp-heading h1 > span { color: var(--ad-accent) !important; }

@@ -1,0 +1,594 @@
+/* ==========================================================================
+   DARK MODE — lớp giao diện tối thống nhất cho cửa hàng (nạp sau cùng)
+
+   Một bộ màu duy nhất, áp theo vai trò thay vì từng trang:
+   - page    : nền trang và các dải section
+   - surface : thẻ, khung, panel nổi
+   - inset   : ô chìm bên trong thẻ (chip, pill, hàng thông số, input)
+   - photo   : khung ảnh sản phẩm — ảnh gốc nền trắng nên giữ một khung sáng dịu,
+               nhất quán ở mọi nơi thay vì lúc trắng lúc xám
+   Tất cả cặp chữ/nền đạt WCAG AA (≥ 4.5:1 cho chữ thường).
+   ========================================================================== */
+
+html[data-theme="dark"] {
+  --dk-page: #0b1220;
+  --dk-page-2: #0e1727;
+  --dk-surface: #121c2c;
+  --dk-surface-2: #172438;
+  --dk-inset: #1b2a40;
+  --dk-line: #24364e;
+  --dk-line-strong: #31475f;
+  --dk-text: #e8eef6;
+  --dk-text-2: #b6c3d4;
+  --dk-text-3: #93a3b8;
+  --dk-accent: #4c9bf0;
+  --dk-accent-text: #8cc4ff;
+  --dk-accent-soft: #14304f;
+  --dk-photo: #eef1f5;
+  --dk-success: #4ad295;
+  --dk-success-soft: #0f2e25;
+  --dk-warning-soft: #33260f;
+  --dk-danger: #ff8a8a;
+  --dk-shadow: 0 1px 0 rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.35);
+
+  /* Biến dùng chung của các stylesheet cũ */
+  --page-bg: var(--dk-page);
+  --surface: var(--dk-surface);
+  --surface-soft: var(--dk-surface-2);
+  --text: var(--dk-text);
+  --text-soft: var(--dk-text-2);
+  --border: var(--dk-line);
+  --cps-bg: var(--dk-page);
+  --cps-white: var(--dk-surface);
+  --cps-text: var(--dk-text);
+  --cps-text-muted: var(--dk-text-3);
+  --cps-text-light: var(--dk-text-3);
+  --cps-border: var(--dk-line);
+  --cps-card-border: var(--dk-line);
+  --cps-red-light: var(--dk-accent-soft);
+  --cps-red-border: var(--dk-line-strong);
+}
+
+:root[data-theme="dark"]:not(#dm) body {
+  background: var(--dk-page) !important;
+  color: var(--dk-text);
+}
+
+/* --------------------------------------------------------------------------
+   1. Nền trang & dải section — trong suốt để lộ nền trang thống nhất
+   -------------------------------------------------------------------------- */
+:root[data-theme="dark"]:not(#dm) :is(
+  main.catalog-storefront, .storefront-refresh, .catalog-products-section, .catalog-family-section,
+  .catalog-campaign, .student-offer-band, .home-showcases, .home-showcase, .visual-category-menu,
+  .cps-flashsale-section, .cps-cart-page, .warranty-lookup-layout, .warranty-page, .store-search-page,
+  .store-search-shell, .quick-order-page, .installment-page, .installment-luxe-page, .smem-login-wrapper,
+  .smem-dashboard-wrap, .pdp-container, .pdp-section-wrap, .cps-block-section, .shop-categories,
+  .apple-launch, .storefront-member-assurance, .catalog-discover, .cps-recommend-section
+) {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. Thẻ & panel nổi
+   -------------------------------------------------------------------------- */
+:root[data-theme="dark"]:not(#dm) :is(
+  .cps-product-card, .product-card, .home-showcase-card, .catalog-family-tile, .apple-launch-card,
+  .student-offer-inner, .student-promotion, .storefront-member-assurance, .cps-commitments-grid,
+  .catalog-products-heading, .catalog-filter-panel, .catalog-toolbar, .catalog-results-bar,
+  .cps-footer, .cps-brand-strip, .cps-seo-box, .cps-cart-ctrl-bar, .cps-cart-empty-card, .cps-qr-promo-card,
+  .cps-cart-item, .cps-cart-summary, .smem-form-col, .smem-intro-col, .smem-benefits-card, .smem-panel-card,
+  .smem-section-card, .smem-order-card, .smem-dash-header-card, .smem-order-lookup-card, .smem-tier-card,
+  .smem-refer-card, .smem-address-card, .smem-input-card, .smem-dash-sidebar, .smem-tier-progress-card,
+  .store-search-heading, .warranty-lookup-card, .warranty-result, .warranty-empty, .warranty-member-note,
+  .quick-order-summary, .quick-order-item, .quick-order-empty, .pdp-price-card, .pdp-chip-card,
+  .pdp-commitment-card, .pdp-highlight-card, .pdp-specs-container, .pdp-trust-grid, .pdp-sticky-bar,
+  .pdp-selection-summary, .pdp-installment-banner, .installment-panel, .installment-calculator,
+  .installment-result-card, .installment-partner-card, .installment-term-card, .installment-steps-card,
+  .installment-faq-card, .installment-consult-card, .installment-trust-card, .installment-simulator,
+  .installment-workspace, .installment-product-item, .catalog-empty-state, .cps-flashsale-grid > *,
+  .visual-category-item, .shop-category, .home-showcase-tabs, .apple-iphone-bento-card
+) {
+  background: var(--dk-surface) !important;
+  background-image: none !important;
+  border-color: var(--dk-line) !important;
+  color: var(--dk-text) !important;
+  box-shadow: none;
+}
+
+:root[data-theme="dark"]:not(#dm) :is(.cps-product-card, .product-card, .home-showcase-card, .catalog-family-tile):hover {
+  border-color: var(--dk-line-strong) !important;
+  box-shadow: var(--dk-shadow) !important;
+}
+
+/* Footer: một khối tối liền mạch */
+:root[data-theme="dark"]:not(#dm) .cps-footer { border-top: 1px solid var(--dk-line) !important; }
+:root[data-theme="dark"]:not(#dm) :is(.cps-footer, .cps-brand-strip, .cps-seo-box) {
+  background: var(--dk-page-2) !important;
+  border-radius: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. Ô chìm: chip, pill, tab, hàng thông số, input
+   -------------------------------------------------------------------------- */
+:root[data-theme="dark"]:not(#dm) :is(
+  .cps-member-box, .cps-brand-pill-item, .cps-partner-tag, .cps-badge-installment, .cps-filter-pill,
+  .cps-seo-toggle-btn, .home-showcase-specs, .home-showcase-card-body, .home-showcase-offers > span,
+  .home-showcase-tabs > button, .catalog-family-pills > button, .catalog-offers > span, .catalog-count,
+  .catalog-model-tabs > *, .catalog-price-tabs > *, .catalog-sort, .catalog-local-search,
+  .apple-launch-card-copy li, .pdp-spec-row, .pdp-color-swatch-btn, .pdp-chips-grid > *, .pdp-trust-item,
+  .pdp-btn-installment, .pdp-sticky-btn-cart, .pdp-section-nav > *, .cps-cart-ctrl-btn, .cps-freeship-pill,
+  .smem-input-field, .smem-status-tab, .smem-quick-tab, .smem-voucher-ticket, .smem-refer-code-box,
+  .smem-benefit-item, .smem-side-item, .smem-order-status-tabs > *, .quick-order-voucher,
+  .installment-chip-btn, .installment-cat-btn, .installment-mode-btn, .installment-select-dropdown,
+  .installment-term-options > *, .installment-breakdown-table, .installment-schedule-table,
+  .warranty-serial, .warranty-policy, .storefront-member-assurance-icon, .cps-commit-icon,
+  .student-offer-actions > a:not(:first-child), .storefront-member-assurance > a
+) {
+  background: var(--dk-inset) !important;
+  background-image: none !important;
+  border-color: var(--dk-line) !important;
+  color: var(--dk-text-2) !important;
+}
+
+:root[data-theme="dark"]:not(#dm) :is(
+  .pdp-color-swatch-btn.is-active, .catalog-family-pills > button.is-active, .home-showcase-tabs > button.is-active,
+  .cps-filter-pill.is-active, .installment-chip-btn.is-active, .installment-mode-btn.is-active,
+  .smem-status-tab.is-active, .smem-quick-tab.is-active, .home-showcase-offers > span:first-child
+) {
+  background: var(--dk-accent-soft) !important;
+  border-color: var(--dk-accent) !important;
+  color: var(--dk-accent-text) !important;
+}
+
+:root[data-theme="dark"]:not(#dm) :is(input, select, textarea):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not(.admin-console *) {
+  background-color: var(--dk-inset);
+  border-color: var(--dk-line-strong);
+  color: var(--dk-text);
+}
+:root[data-theme="dark"]:not(#dm) :is(input, textarea)::placeholder { color: var(--dk-text-3); opacity: 1; }
+
+/* --------------------------------------------------------------------------
+   4. Khung ảnh sản phẩm — một khung sáng dịu thống nhất
+   -------------------------------------------------------------------------- */
+:root[data-theme="dark"]:not(#dm) :is(
+  .cps-card-media, .product-image-wrapper, .home-showcase-media, .catalog-family-image,
+  .pdp-gallery-main, .pdp-thumb-btn, .quick-order-image, .smem-order-thumb, .smem-warranty-product-media,
+  .installment-product-item img, .visual-category-image, .cps-cart-item-image
+) {
+  background: var(--dk-photo) !important;
+  background-image: none !important;
+  border-color: transparent !important;
+}
+:root[data-theme="dark"]:not(#dm) .pdp-thumb-btn.is-active { outline: 2px solid var(--dk-accent); outline-offset: 2px; }
+:root[data-theme="dark"]:not(#dm) .visual-category-image { border-radius: 16px; }
+
+/* Nút nổi trên khung ảnh */
+:root[data-theme="dark"]:not(#dm) :is(.pdp-gallery-arrows > button, .pdp-zoom-button, .pdp-gallery-counter, .home-showcase-arrow, .shop-category-arrow) {
+  background: rgba(14, 23, 39, 0.86) !important;
+  border-color: var(--dk-line-strong) !important;
+  color: var(--dk-text) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Chữ: tiêu đề, nội dung, chữ phụ
+   -------------------------------------------------------------------------- */
+:root[data-theme="dark"]:not(#dm) :is(
+  .cps-card-name, .cps-card-name a, .product-body h3, .product-body h3 a, .home-showcase-name,
+  .cps-block-title, .student-offer-inner h2, .apple-launch-heading h2, .cps-commit-text h4, .pdp-trust-text strong,
+  .pdp-commitment-card h4, .pdp-title, .pdp-section-title, .apple-aperture-header h2, .store-search-heading h1,
+  .smem-intro-col h1, .smem-form-col h2, .smem-benefit-item strong, .cps-cart-empty-card h3,
+  .warranty-member-note strong, .catalog-results-bar strong, .catalog-family-tile strong, .shop-section-heading h2,
+  .storefront-member-assurance-copy strong, .cps-footer h3, .cps-footer h4, .cps-footer strong, .cps-seo-box h2,
+  .cps-seo-box h3, .cps-brand-strip-title, .installment-hero-title, .quick-order-heading h1, .pdp-spec-val,
+  .warranty-lookup-card h1, .warranty-lookup-card h2, .catalog-products-heading h2, .cps-flashsale-title,
+  .home-showcase-heading h2, .catalog-campaign h1, .catalog-campaign h2, nav.cps-breadcrumb .current,
+  .pdp-breadcrumb span:last-child, .cps-cart-back, .cps-cart-back span, .apple-iphone-hero-title
+) {
+  color: var(--dk-text) !important;
+}
+
+:root[data-theme="dark"]:not(#dm) :is(
+  .catalog-card-specs li, .home-showcase-specs li, .cps-commit-text p, .apple-launch-heading p,
+  .student-offer-inner p, .smem-intro-col p, .smem-benefit-item div, .smem-footer-note, .smem-divider span,
+  .cps-card-footer span, .catalog-results-bar span, .catalog-discover p, .catalog-filter-controls span,
+  .catalog-family-tile small, .home-showcase-tabs small, .pdp-chip-subtitle, .pdp-price-label, .pdp-spec-key,
+  .installment-partner-rate, .installment-term-badge, .installment-trust-text span, .installment-selected-meta span,
+  .installment-form-container span, .installment-search-icon, .cps-footer p, .cps-footer li, .cps-footer a,
+  .cps-footer-bottom p, .cps-seo-box p, .cps-seo-content, .store-search-heading p, .warranty-member-note span,
+  .quick-order-empty p, .quick-order-heading span, .cps-cart-check-all span, .pdp-sticky-variant,
+  .storefront-member-assurance-copy span, .shop-intro p, .shop-section-heading p, .catalog-count span,
+  .student-promotion p, .pdp-tagline, .pdp-section-desc, .pdp-price-caption, .pdp-selection-summary span,
+  .live-consult-bubble small, .chatbot-launcher small, .cps-breadcrumb a, .pdp-breadcrumb a,
+  .store-search-breadcrumb a, .store-search-breadcrumb span, .shop-hero-navigation span, .product-brand span
+) {
+  color: var(--dk-text-3) !important;
+}
+
+/* Nhãn nhỏ, kicker, link màu nhấn */
+:root[data-theme="dark"]:not(#dm) :is(
+  .cps-block-kicker, .shop-intro > span, .shop-section-heading span, .catalog-family-kicker, .eyebrow,
+  .student-offer-inner span, .student-promotion span, .catalog-offers strong, .pdp-section-eyebrow,
+  .pdp-option-selected-label, .pdp-kicker-badge, .cps-view-all-link, .home-showcase-card-footer a,
+  .warranty-member-note a, .smem-benefit-more, .smem-forgot-link, .shop-intro > a, .pdp-hotline-consultation a,
+  .smem-benefit-icon, .cps-member-box span, .cps-badge-installment, .catalog-card-availability button,
+  .product-quick-view-btn span, .cps-footer a:hover, .apple-launch-kicker, .pdp-color-swatch-btn.is-active span
+) {
+  color: var(--dk-accent-text) !important;
+}
+
+:root[data-theme="dark"]:not(#dm) :is(.cps-price-current, .home-showcase-price-row strong, .pdp-current-price, .quick-order-price strong) {
+  color: #9ccaff !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. Nhãn trạng thái & nút — đủ tương phản trên nền tối
+   -------------------------------------------------------------------------- */
+:root[data-theme="dark"]:not(#dm) .cps-badge-condition-new { background: #0f7a55 !important; color: #fff !important; }
+:root[data-theme="dark"]:not(#dm) .cps-badge-condition-likenew { background: #b4520f !important; color: #fff !important; }
+:root[data-theme="dark"]:not(#dm) :is(.pdp-condition-new, .pdp-stock-banner.in-stock) {
+  background: var(--dk-success-soft) !important;
+  border-color: #1d5a45 !important;
+  color: var(--dk-success) !important;
+}
+:root[data-theme="dark"]:not(#dm) :is(.cps-sold-bar) { background: var(--dk-inset) !important; }
+:root[data-theme="dark"]:not(#dm) .cps-sold-text { color: var(--dk-text) !important; text-shadow: none !important; }
+
+/* Nút chính: nền xanh đậm hơn để chữ trắng đạt AA */
+:root[data-theme="dark"]:not(#dm) :is(
+  .mini-cta, .product-badge.badge-pro, .button.button-primary, .pdp-sticky-btn-buy, .pdp-btn-buy-now,
+  .smem-submit-btn, .sf-search-submit, .cps-empty-cta-link.is-primary
+) {
+  background: #1f6fd1 !important;
+  border-color: #1f6fd1 !important;
+  color: #fff !important;
+}
+:root[data-theme="dark"]:not(#dm) :is(.apple-iphone-localnav-cta, .apple-iphone-btn-primary) { background: #c9304f !important; color: #fff !important; }
+
+/* Nút phụ */
+:root[data-theme="dark"]:not(#dm) :is(.pdp-btn-add-cart, .smem-social-btn, .cps-cart-ctrl-btn, .catalog-cta, .home-showcase-all) {
+  background: var(--dk-inset) !important;
+  border-color: var(--dk-line-strong) !important;
+  color: var(--dk-text) !important;
+}
+
+/* Nút chat nổi */
+:root[data-theme="dark"]:not(#dm) :is(.live-consult-bubble, .chatbot-launcher) {
+  background: var(--dk-surface) !important;
+  border-color: var(--dk-line-strong) !important;
+  color: var(--dk-text) !important;
+}
+
+/* Đường kẻ & phân cách */
+:root[data-theme="dark"]:not(#dm) :is(.cps-footer-grid, .cps-footer-bottom, .pdp-spec-row, .catalog-filter-panel, .smem-divider)::before,
+:root[data-theme="dark"]:not(#dm) :is(.cps-footer-grid, .cps-footer-bottom, .pdp-spec-row, .catalog-filter-panel, .smem-divider)::after {
+  border-color: var(--dk-line) !important;
+}
+:root[data-theme="dark"]:not(#dm) hr { border-color: var(--dk-line); }
+
+@media (prefers-reduced-motion: reduce) {
+  :root[data-theme="dark"]:not(#dm) :is(.cps-product-card, .product-card, .home-showcase-card) { transition: none !important; }
+}
+
+/* --------------------------------------------------------------------------
+   7. Bổ sung theo kết quả dò tự động
+   -------------------------------------------------------------------------- */
+/* Tiêu đề & nhãn form trong toàn bộ trang cửa hàng (không áp cho trang quản trị) */
+:root[data-theme="dark"]:not(#dm) :is(main, footer, .cps-footer, .cps-seo-box) :is(h1, h2, h3, h4, h5):not(.admin-console *) {
+  color: var(--dk-text);
+}
+:root[data-theme="dark"]:not(#dm) :is(main, footer) label:not(.admin-console *) { color: var(--dk-text-2); }
+
+:root[data-theme="dark"]:not(#dm) :is(
+  .catalog-discover h2, .catalog-family-section h1, .catalog-products-heading h1, .student-promotion strong,
+  .apple-launch-card-copy h3, .pdp-sticky-title, .pdp-sticky-price, .cps-flashsale-title h2, .cps-qr-text,
+  .cps-footer-col > div > span, .cps-breadcrumb span, .warranty-lookup-card label, .smem-input-group label,
+  .catalog-results-bar p
+) {
+  color: var(--dk-text) !important;
+}
+
+:root[data-theme="dark"]:not(#dm) :is(
+  .catalog-products-heading p, .apple-launch-card-copy p, .cps-cart-empty-card p, .smem-switch-auth,
+  .store-search-heading small, .pdp-trust-text span, .shop-category span, .home-showcase-card-footer span,
+  .home-showcase-offers strong, .catalog-local-search span, .cps-countdown-label, .product-launch-description,
+  .shop-hero-navigation span
+) {
+  color: var(--dk-text-3) !important;
+}
+
+:root[data-theme="dark"]:not(#dm) :is(
+  .catalog-eyebrow, .apple-launch-card-copy > span, .apple-launch-card-copy a, .smem-switch-auth button,
+  .catalog-products-heading span
+) {
+  color: var(--dk-accent-text) !important;
+}
+
+/* Nút "Xem chi tiết/So sánh" trong thẻ sản phẩm */
+:root[data-theme="dark"]:not(#dm) .product-actions > a {
+  background: var(--dk-inset) !important;
+  border-color: var(--dk-line-strong) !important;
+  color: var(--dk-text) !important;
+}
+
+/* Nút "Xem nhanh" nằm trên khung ảnh sáng: chip tối, chữ sáng */
+:root[data-theme="dark"]:not(#dm) .product-quick-view-btn {
+  background: rgba(14, 23, 39, 0.88) !important;
+  border-color: transparent !important;
+  color: var(--dk-text) !important;
+}
+:root[data-theme="dark"]:not(#dm) .product-quick-view-btn span { color: var(--dk-text) !important; }
+
+/* Nhãn tình trạng máy "New" trong thẻ */
+:root[data-theme="dark"]:not(#dm) .product-brand span {
+  background: var(--dk-success-soft) !important;
+  color: var(--dk-success) !important;
+}
+:root[data-theme="dark"]:not(#dm) .pdp-stock-count { color: var(--dk-success) !important; }
+
+/* Pill nhỏ & ô biểu tượng còn nền sáng */
+:root[data-theme="dark"]:not(#dm) :is(.cps-footer-col > div > span, .catalog-products-heading div > span, .quick-order-empty > span, .warranty-empty > span) {
+  background: var(--dk-accent-soft) !important;
+  border-color: var(--dk-line-strong) !important;
+  color: var(--dk-accent-text) !important;
+}
+
+/* CTA xanh sáng: làm đậm để chữ trắng đạt AA */
+:root[data-theme="dark"]:not(#dm) :is(.catalog-campaign a, .catalog-campaign-stage a) > span { color: #fff !important; }
+:root[data-theme="dark"]:not(#dm) :is(.catalog-campaign a, .catalog-campaign-stage a)[class*="primary"],
+:root[data-theme="dark"]:not(#dm) .catalog-campaign-stage a:first-of-type { background-color: #1f6fd1 !important; }
+
+/* Hero sản phẩm vốn đã tối ở cả hai chế độ: giữ chữ phụ đủ sáng trên nền gradient xanh */
+:root[data-theme="dark"]:not(#dm) :is(.product-launch-description, .product-launch-hero-inner .shop-hero-navigation span) {
+  color: #c3cfdd !important;
+}
+
+/* Ảnh giới thiệu MacBook/iPhone vốn là ảnh tối: không đặt khung sáng */
+:root[data-theme="dark"]:not(#dm) .apple-launch-card-media { background: var(--dk-surface-2) !important; }
+
+/* Lớp phủ mờ "xem thêm" của khối giới thiệu: chuyển về màu nền footer thay vì trắng */
+:root[data-theme="dark"]:not(#dm) .cps-seo-content.is-collapsed::after {
+  background: linear-gradient(to bottom, rgba(14, 23, 39, 0), var(--dk-page-2)) !important;
+}
+
+/* Mobile: thanh điều hướng dưới, nút phụ & nút đỏ quảng cáo iPhone */
+:root[data-theme="dark"]:not(#dm) .mobile-app-nav {
+  background: rgba(11, 18, 32, 0.96) !important;
+  border-color: var(--dk-line) !important;
+}
+:root[data-theme="dark"]:not(#dm) .mobile-app-nav > a { color: var(--dk-text-3) !important; }
+:root[data-theme="dark"]:not(#dm) .mobile-app-nav > a.is-active {
+  background: var(--dk-accent-soft) !important;
+  color: var(--dk-accent-text) !important;
+}
+:root[data-theme="dark"]:not(#dm) .mobile-app-nav > a.is-active span { color: var(--dk-accent-text) !important; }
+:root[data-theme="dark"]:not(#dm) .shop-intro > a {
+  background: var(--dk-inset) !important;
+  border-color: var(--dk-line-strong) !important;
+}
+:root[data-theme="dark"]:not(#dm) .student-offer-actions > a:not(:first-child) {
+  background: var(--dk-inset) !important;
+  border-color: var(--dk-line-strong) !important;
+  color: var(--dk-text) !important;
+}
+:root[data-theme="dark"]:not(#dm) .apple-iphone-ad-btn-primary { background: #c9304f !important; color: #fff !important; }
+
+/* ==========================================================================
+   CỔNG QUẢN TRỊ / NHÂN VIÊN / QUẢN LÝ (.admin-console) — cùng bộ màu tối
+   ========================================================================== */
+:root[data-theme="dark"]:not(#dm) .admin-console { color: var(--dk-text-2); }
+
+/* Bảng dữ liệu */
+:root[data-theme="dark"]:not(#dm) .admin-console :is(td, dd) { color: var(--dk-text-2) !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console th { color: var(--dk-text-3) !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console :is(td, dd) :is(strong, b:not([class])) { color: var(--dk-text) !important; }
+
+/* Tiêu đề và số liệu nhấn mạnh */
+:root[data-theme="dark"]:not(#dm) .admin-console :is(h1, h2, h3, h4, summary, .admin-chart-summary strong, .admin-payroll-person strong,
+  .admin-payroll-base strong, .admin-branch-bar header b, .admin-executive-kpis strong, article > span > strong, header > span > strong,
+  a > span > strong, .work-task-meta strong, .admin-product-step-title strong, .admin-product-model-cell a, .pp-product-cell a,
+  .admin-live-chat aside strong, .admin-live-chat button strong, .admin-dropzone strong) {
+  color: var(--dk-text) !important;
+}
+
+/* Chữ phụ, nhãn form, chú thích */
+:root[data-theme="dark"]:not(#dm) .admin-console :is(
+  .admin-field, .admin-field > span, .admin-field > small, label > span, dt, small, .admin-empty-state,
+  .admin-list a > span, .admin-payroll-row > div > span, .admin-payroll-person span, .admin-profile-progress b,
+  .admin-branch-summary article > span, .student-review-kpis article > span, .pp-stat small, .pp-workspace-heading p,
+  .pp-stock-total, .pp-table-footer p, .pp-pagination a, .pp-status-tabs a, .admin-bulkbar, .admin-bulkbar span,
+  .admin-bulkbar label, .work-task-main p, .camera-empty-state p, .admin-product-editor-hero p, .admin-product-editor-hero li span,
+  .admin-product-editor-hero li b, .admin-variant-section-head span, .admin-customer-card-copy small,
+  .admin-customer-card-copy footer small, .admin-customer-preview-note small, .admin-customer-preview-tabs button,
+  .admin-chart > div > span, .admin-chart > div > small, .pp-overview-feature .pp-total span, .pp-breadcrumb a
+) {
+  color: var(--dk-text-3) !important;
+}
+
+/* Liên kết & nhãn màu nhấn */
+:root[data-theme="dark"]:not(#dm) .admin-console :is(
+  .admin-table-link, .pp-row-actions a, .admin-operational-strip a, .admin-topline > div > span, .pp-eyebrow,
+  .work-task-section-title span, .admin-preview-card header span, .admin-field > em, .admin-product-step-title em,
+  .admin-product-count, .admin-preview-card header em, .admin-employee-cell b, .admin-customer-card-copy em,
+  .admin-customer-card-badges span
+) {
+  color: var(--dk-accent-text) !important;
+}
+:root[data-theme="dark"]:not(#dm) .admin-console .admin-live-indicator { color: var(--dk-success) !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console .admin-product-readiness .is-ready { color: var(--dk-success) !important; }
+
+/* Khung & panel */
+:root[data-theme="dark"]:not(#dm) .admin-console :is(
+  .admin-toolbar, .pp-workspace, .pp-stat, .admin-live-chat, .admin-live-chat aside, .admin-executive-kpis > article,
+  .admin-customer-product-card, .admin-sticky-actions, .admin-preview-card, .admin-payroll-row
+) {
+  background: var(--dk-surface) !important;
+  background-image: none !important;
+  border-color: var(--dk-line) !important;
+}
+:root[data-theme="dark"]:not(#dm) .admin-console :is(
+  .admin-payroll-net, .admin-ledger-note, .camera-security-pill, .admin-branch-people-link, .admin-pagination a,
+  .admin-customer-preview-tabs, .admin-customer-preview-stage, .admin-customer-preview-note, .work-file-link,
+  .admin-product-editor-hero ol li, details.admin-product-optional, .admin-live-chat aside button, .admin-branch-bar > div,
+  .admin-variant-section-head strong, .pp-row-actions form button, .pp-filter-submit, .pp-workspace-heading h2 span
+) {
+  background: var(--dk-inset) !important;
+  background-image: none !important;
+  border-color: var(--dk-line) !important;
+  color: var(--dk-text-2) !important;
+}
+:root[data-theme="dark"]:not(#dm) .admin-console :is(.admin-customer-preview-tabs button.is-active, .admin-product-editor-hero ol li.is-current, .admin-pagination a.is-active, .admin-pagination a[aria-current]) {
+  background: var(--dk-accent-soft) !important;
+  border-color: var(--dk-accent) !important;
+  color: var(--dk-accent-text) !important;
+}
+:root[data-theme="dark"]:not(#dm) .admin-console .admin-dropzone {
+  background: var(--dk-surface-2) !important;
+  border-color: var(--dk-line-strong) !important;
+}
+
+/* Ảnh đại diện chữ cái & icon KPI */
+:root[data-theme="dark"]:not(#dm) .admin-console :is(.admin-payroll-person > b, .admin-hr-person > b, .admin-employee-cell > b, article > div > b, .admin-branch-card > header > span) {
+  background: var(--dk-accent-soft) !important;
+  color: var(--dk-accent-text) !important;
+}
+:root[data-theme="dark"]:not(#dm) .admin-console :is(article > i, a > i, article > div > i, .tone-blue, .tone-ok) { background: #15304d !important; color: #8cc4ff !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console :is(.tone-green) { background: #11372b !important; color: #6fe0ac !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console :is(.tone-orange, .tone-warn, .tone-gold) { background: #3a2a12 !important; color: #f7c37a !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console :is(.tone-violet) { background: #2a2350 !important; color: #c3b6ff !important; }
+
+/* Huy hiệu trạng thái: nền đậm, chữ sáng cùng sắc thái (≥ 4.5:1) */
+:root[data-theme="dark"]:not(#dm) .admin-console :is(.admin-badge, .pp-status, .pp-variant-count, .work-task-priority, .admin-performance-rate) {
+  background: #1f2c40 !important;
+  border-color: transparent !important;
+  color: #c3cfdd !important;
+}
+:root[data-theme="dark"]:not(#dm) .admin-console :is(
+  .status-active, .status-paid, .status-delivered, .status-completed, .status-received, .invoice-issued, .pp-status-active,
+  .work-status-completed, .hr-attendance-present, .priority-low
+) {
+  background: #11372b !important;
+  color: #6fe0ac !important;
+}
+:root[data-theme="dark"]:not(#dm) .admin-console :is(
+  .status-pending, .status-unpaid, .status-draft, .invoice-draft, .pp-status-draft, .work-status-review, .hr-attendance-late,
+  .priority-high, .admin-performance-rate
+) {
+  background: #3a2a12 !important;
+  color: #f7c37a !important;
+}
+:root[data-theme="dark"]:not(#dm) .admin-console :is(
+  .status-processing, .status-confirmed, .status-shipping, .invoice-ready, .work-status-in_progress, .work-status-assigned,
+  .hr-attendance-leave
+) {
+  background: #15304d !important;
+  color: #8cc4ff !important;
+}
+:root[data-theme="dark"]:not(#dm) .admin-console :is(
+  .status-cancelled, .status-failed, .status-refunded, .status-returned, .invoice-cancelled, .hr-attendance-absent,
+  .priority-urgent, .inventory-quantity.is-out
+) {
+  background: #3b1a1d !important;
+  color: #ff9c9c !important;
+}
+:root[data-theme="dark"]:not(#dm) .admin-console :is(.status-inactive, .status-closed, .status-not_required, .invoice-not_created, .hr-attendance-none, .pp-variant-count) {
+  background: #1f2c40 !important;
+  color: #b6c3d4 !important;
+}
+
+/* Bổ sung quản trị: dashboard, live chat, trình soạn sản phẩm */
+:root[data-theme="dark"]:not(#dm) .admin-console :is(
+  article > div > span, a > div > span, .admin-live-chat button p, .admin-live-chat button time, .admin-live-chat aside header span,
+  .admin-live-placeholder span, .pp-stat-label, .pp-status-tabs a span, .pp-overview-feature .pp-total span,
+  .work-task-card header time, .admin-chart > div > span, .admin-chart > div > small
+) {
+  color: var(--dk-text-3) !important;
+}
+:root[data-theme="dark"]:not(#dm) .admin-console :is(
+  article > div > strong, .pp-stat strong, .pp-stock-total strong, .pp-table-footer strong, .admin-live-placeholder strong,
+  .admin-customer-card-copy strong, .admin-customer-preview-note strong, details.admin-product-optional summary span
+) {
+  color: var(--dk-text) !important;
+}
+:root[data-theme="dark"]:not(#dm) .admin-console :is(.admin-payroll-net strong, .pp-overview-feature .pp-eyebrow) { color: var(--dk-accent-text) !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console :is(.pp-overview-feature) { background: var(--dk-surface-2) !important; background-image: none !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console :is(article > b) { background: var(--dk-accent-soft) !important; color: var(--dk-accent-text) !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console :is(
+  .admin-live-chat button em, .inventory-branch-chip, .admin-product-count, .admin-preview-card header em,
+  .admin-customer-card-badges span, .admin-customer-card-copy em
+) {
+  background: var(--dk-accent-soft) !important;
+  border-color: var(--dk-line-strong) !important;
+  color: var(--dk-accent-text) !important;
+}
+:root[data-theme="dark"]:not(#dm) .admin-console .inventory-branch-chip span { color: var(--dk-text-3) !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console .admin-product-editor-hero {
+  background: var(--dk-surface) !important;
+  background-image: none !important;
+  border-color: var(--dk-line) !important;
+}
+:root[data-theme="dark"]:not(#dm) .admin-console .admin-product-editor-hero :is(h2) { color: var(--dk-text) !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console .admin-product-editor-hero ol li b { background: var(--dk-surface) !important; color: var(--dk-text-2) !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console .admin-product-editor-hero ol li.is-current b { background: #1f6fd1 !important; color: #fff !important; }
+
+/* Tab trạng thái dạng gạch chân trong thư viện sản phẩm */
+:root[data-theme="dark"]:not(#dm) .admin-console .pp-status-tabs { border-color: var(--dk-line) !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console .pp-status-tabs a { background: transparent !important; color: var(--dk-text-3) !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console .pp-status-tabs a[aria-current] { color: var(--dk-text) !important; border-bottom-color: var(--dk-accent) !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console .pp-status-tabs a > span { background: var(--dk-inset) !important; color: var(--dk-text-2) !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console .inventory-branch-chip strong { color: var(--dk-text) !important; }
+:root[data-theme="dark"]:not(#dm) .admin-console .admin-product-editor-hero > div > span { color: var(--dk-accent-text) !important; }
+
+/* Trạng thái rỗng & thanh toán nhanh */
+:root[data-theme="dark"]:not(#dm) :is(.catalog-empty-state p, .quick-payment-state p) { color: var(--dk-text-3) !important; }
+:root[data-theme="dark"]:not(#dm) :is(.quick-payment-page, .quick-payment-shell) { background: transparent !important; }
+:root[data-theme="dark"]:not(#dm) .quick-payment-state { background: var(--dk-surface) !important; border-color: var(--dk-line) !important; }
+:root[data-theme="dark"]:not(#dm) .quick-payment-state.is-error > span { background: #3b1a1d !important; color: #ff9c9c !important; }
+:root[data-theme="dark"]:not(#dm) .quick-payment-state.is-success > span { background: var(--dk-success-soft) !important; color: var(--dk-success) !important; }
+:root[data-theme="dark"]:not(#dm) .student-offer-actions > a:first-child {
+  background: #1f6fd1 !important;
+  border-color: #1f6fd1 !important;
+  color: #fff !important;
+}
+
+/* Thẻ sản phẩm dùng chung & khối đang giảm giá */
+:root[data-theme="dark"]:not(#dm) .shop-card-link { background: var(--dk-surface) !important; border-color: var(--dk-line) !important; color: var(--dk-text) !important; }
+:root[data-theme="dark"]:not(#dm) .shop-card-link:hover { border-color: var(--dk-line-strong) !important; box-shadow: var(--dk-shadow) !important; }
+:root[data-theme="dark"]:not(#dm) .shop-card-media { background: var(--dk-photo) !important; }
+:root[data-theme="dark"]:not(#dm) .shop-card-name, :root[data-theme="dark"]:not(#dm) .shop-card-price strong, :root[data-theme="dark"]:not(#dm) .shop-deals-head h2 { color: var(--dk-text) !important; }
+:root[data-theme="dark"]:not(#dm) .shop-card-price del { color: var(--dk-text-3) !important; }
+:root[data-theme="dark"]:not(#dm) .shop-card-tag { background: #fff !important; color: #0f1b2d !important; }
+:root[data-theme="dark"]:not(#dm) .shop-card-tag.is-discount { background: #1f6fd1 !important; color: #fff !important; }
+:root[data-theme="dark"]:not(#dm) .shop-eyebrow { color: var(--dk-accent-text) !important; }
+:root[data-theme="dark"]:not(#dm) .cps-tradein-banner { background: var(--dk-surface) !important; background-image: none !important; border: 1px solid var(--dk-line) !important; }
+:root[data-theme="dark"]:not(#dm) .cps-tradein-content h3 { color: var(--dk-text) !important; }
+:root[data-theme="dark"]:not(#dm) .cps-tradein-content p { color: var(--dk-text-3) !important; }
+
+/* Trang chủ: bento danh mục, cam kết, quyền lợi */
+:root[data-theme="dark"]:not(#dm) .bento-tile:not(.bento-hero) { background: linear-gradient(180deg, var(--dk-surface) 0%, var(--dk-page-2) 100%) !important; border-color: var(--dk-line) !important; color: var(--dk-text) !important; }
+:root[data-theme="dark"]:not(#dm) .bento-tile:not(.bento-hero):hover { border-color: var(--dk-line-strong) !important; box-shadow: var(--dk-shadow) !important; }
+:root[data-theme="dark"]:not(#dm) .bento-tile .bento-copy p { color: var(--dk-text-3) !important; }
+:root[data-theme="dark"]:not(#dm) .bento-tile .bento-cta { color: var(--dk-accent-text) !important; }
+:root[data-theme="dark"]:not(#dm) .bento-tile:not(.bento-hero) .bento-spotlight { background: radial-gradient(420px circle at var(--spot-x) var(--spot-y), rgba(76, 155, 240, .14), transparent 62%) !important; }
+:root[data-theme="dark"]:not(#dm) .bento-hero { border: 1px solid var(--dk-line) !important; }
+:root[data-theme="dark"]:not(#dm) .home-discover-head h2, :root[data-theme="dark"]:not(#dm) .home-trust-item strong, :root[data-theme="dark"]:not(#dm) .perk-card:not(.perk-accent) h2 { color: var(--dk-text) !important; }
+:root[data-theme="dark"]:not(#dm) .home-trust { background: var(--dk-surface) !important; border-color: var(--dk-line) !important; }
+:root[data-theme="dark"]:not(#dm) .home-trust-item + .home-trust-item { box-shadow: inset 1px 0 0 var(--dk-line) !important; }
+:root[data-theme="dark"]:not(#dm) .home-trust-item:hover { background: var(--dk-surface-2) !important; }
+:root[data-theme="dark"]:not(#dm) .home-trust-item div > span, :root[data-theme="dark"]:not(#dm) .perk-card:not(.perk-accent) > p:not(.perk-kicker) { color: var(--dk-text-3) !important; }
+:root[data-theme="dark"]:not(#dm) :is(.home-trust-icon, .perk-icon) { background: var(--dk-accent-soft) !important; color: var(--dk-accent-text) !important; }
+:root[data-theme="dark"]:not(#dm) .perk-card:not(.perk-accent) { background: var(--dk-surface) !important; border-color: var(--dk-line) !important; color: var(--dk-text) !important; }
+:root[data-theme="dark"]:not(#dm) .perk-card:not(.perk-accent) .perk-kicker { color: var(--dk-accent-text) !important; }
+:root[data-theme="dark"]:not(#dm) .perk-card:not(.perk-accent) .perk-actions a { background: var(--dk-inset) !important; border-color: var(--dk-line-strong) !important; color: var(--dk-accent-text) !important; }
+:root[data-theme="dark"]:not(#dm) .perk-accent { background: radial-gradient(70% 90% at 100% 0%, rgba(255,255,255,.12) 0%, transparent 60%), linear-gradient(135deg, #1559b0 0%, #0d3f82 100%) !important; }
+:root[data-theme="dark"]:not(#dm) .perk-accent .perk-actions a:first-child { background: #fff !important; color: #0d3f82 !important; border-color: #fff !important; }
+@media (max-width: 980px) { :root[data-theme="dark"]:not(#dm) .home-trust-item + .home-trust-item { box-shadow: none !important; } }
+:root[data-theme="dark"]:not(#dm) .perk-student { background: #0d3f82 !important; }
+:root[data-theme="dark"]:not(#dm) .perk-student .perk-photo::after { background: linear-gradient(90deg, #0b3570 0%, rgba(11, 53, 112, .94) 34%, rgba(13, 63, 130, .66) 62%, rgba(13, 63, 130, .34) 100%), linear-gradient(0deg, rgba(5, 25, 55, .5) 0%, transparent 45%) !important; }
+:root[data-theme="dark"]:not(#dm) .perk-student .perk-photo::after { background: linear-gradient(90deg, rgba(11, 53, 112, .6) 0%, rgba(13, 63, 130, .3) 55%, rgba(13, 63, 130, .15) 100%), linear-gradient(0deg, rgba(5, 25, 55, .45) 0%, transparent 40%) !important; }
+@media (max-width: 600px) { :root[data-theme="dark"]:not(#dm) .perk-student .perk-photo::after { background: linear-gradient(180deg, rgba(11, 53, 112, .15) 0%, rgba(11, 53, 112, .45) 100%) !important; } }
+/* Thẻ Member có ảnh: mờ dần vào nền tối thay vì nền trắng */
+:root[data-theme="dark"]:not(#dm) .perk-member .perk-photo img { opacity: .62 !important; }
+:root[data-theme="dark"]:not(#dm) .perk-member .perk-photo::after { background: linear-gradient(90deg, rgba(18, 28, 44, .78) 0%, rgba(18, 28, 44, .4) 55%, rgba(18, 28, 44, .15) 100%), linear-gradient(0deg, rgba(18, 28, 44, .55) 0%, transparent 42%) !important; }
+:root[data-theme="dark"]:not(#dm) .perk-member .perk-actions a { background: rgba(23, 36, 56, .85) !important; }
+@media (max-width: 600px) { :root[data-theme="dark"]:not(#dm) .perk-member .perk-photo::after { background: linear-gradient(180deg, rgba(18, 28, 44, .1) 0%, rgba(18, 28, 44, .5) 100%) !important; } }

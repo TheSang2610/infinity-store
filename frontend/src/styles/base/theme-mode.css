@@ -1,0 +1,167 @@
+/* Shared light/dark appearance. Loaded last so it can theme every storefront and operations view. */
+:root {
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --page-bg: #08111f;
+  --surface: #101c2d;
+  --surface-soft: #162438;
+  --text: #e8eef7;
+  --text-soft: #9babc0;
+  --border: #263a52;
+  --brand: #55a8ff;
+  --brand-dark: #83c2ff;
+  --brand-soft: #112e4e;
+  --blue-layout: #10263e;
+  --blue-layout-border: #294765;
+}
+
+html[data-theme="dark"] body {
+  background: var(--page-bg);
+  color: var(--text);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 5px 10px 5px 6px;
+  border: 1px solid #d6e2ee;
+  border-radius: 11px;
+  background: #f7fafc;
+  color: #38536d;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 850;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: border-color .2s ease, background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.theme-toggle:hover { border-color: #9ec8ee; background: #eef7ff; color: #0869c3; }
+.theme-toggle:active { transform: scale(.97); }
+.theme-toggle-track { position: relative; display: grid; width: 50px; height: 26px; grid-template-columns: 1fr 1fr; align-items: center; padding: 0 5px; border-radius: 999px; background: #dceaf7; color: #56708a; box-shadow: inset 0 1px 3px rgba(16,42,70,.12); }
+.theme-toggle-track > span { position: relative; z-index: 2; display: grid; place-items: center; font-size: 12px; line-height: 1; }
+.theme-toggle-track > i { position: absolute; z-index: 1; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: #fff; box-shadow: 0 3px 8px rgba(18,48,77,.2); transition: transform .25s cubic-bezier(.2,.8,.2,1), background .2s ease; }
+.theme-toggle[aria-pressed="true"] .theme-toggle-track { background: #203754; color: #dceaff; }
+.theme-toggle[aria-pressed="true"] .theme-toggle-track > i { background: #86c5ff; transform: translateX(24px); }
+.theme-toggle.is-compact { width: 42px; min-width: 42px; height: 38px; min-height: 38px; padding: 0; border-color: rgba(255,255,255,.28); background: rgba(255,255,255,.13); color: #fff; }
+.theme-toggle.is-compact:hover { border-color: rgba(255,255,255,.46); background: rgba(255,255,255,.22); }
+.theme-toggle.is-compact .theme-toggle-track { width: 28px; height: 28px; grid-template-columns: 1fr; padding: 0; background: transparent; box-shadow: none; }
+.theme-toggle.is-compact .theme-toggle-track > i { display: none; }
+.theme-toggle.is-compact .theme-toggle-sun,
+.theme-toggle.is-compact[aria-pressed="true"] .theme-toggle-moon { display: grid; font-size: 17px; }
+.theme-toggle.is-compact .theme-toggle-moon,
+.theme-toggle.is-compact[aria-pressed="true"] .theme-toggle-sun { display: none; }
+
+/* Storefront */
+html[data-theme="dark"] .cps-header { background: linear-gradient(180deg,#082b52,#061e3a); box-shadow: 0 4px 24px rgba(0,0,0,.34); }
+html[data-theme="dark"] .cps-search-form,
+html[data-theme="dark"] .cps-search-dropdown { border-color: #2a4059; background: #101d2d; color: #e8eef7; }
+html[data-theme="dark"] .cps-search-input { color: #e8eef7; }
+html[data-theme="dark"] .cps-search-tag { background: #192a3e; color: #c6d4e5; }
+html[data-theme="dark"] .cps-header-cat-dropdown { border-color: #238de8 !important; background: #0c1726 !important; box-shadow: 0 18px 44px rgba(0,0,0,.5) !important; }
+html[data-theme="dark"] .cps-header-cat-dropdown a { border-color: #293b50 !important; background: #121f30 !important; }
+html[data-theme="dark"] .cps-header-cat-dropdown a strong { color: #e8eef7 !important; }
+html[data-theme="dark"] .cps-header-cat-dropdown a small { color: #96a8bd !important; }
+
+html[data-theme="dark"] :is(.storefront-refresh,.product-page-main,.cart-page,.cps-cart-page,.account-page,.warranty-page,.store-search-page,.member-invoice-page,.installment-luxe-page) { background-color: #08111f; color: #dbe5f1; }
+html[data-theme="dark"] :is(.catalog-filter-panel,.catalog-local-search input,.catalog-filter-controls select,.catalog-empty-state,.home-product-search,.home-search-results,.home-showcase-card,.cps-product-card,.product-card,.filter-panel,.cart-items,.cart-totals,.cart-empty,.cart-success,.cart-store-confirmation,.warranty-lookup-card,.warranty-result,.account-panel,.member-account-shell,.member-purchase-card,.member-purchase-stats p,.member-invoice-document,.installment-simulator) {
+  border-color: #283b51 !important;
+  background: #101c2d !important;
+  color: #dbe5f1 !important;
+  box-shadow: 0 12px 34px rgba(0,0,0,.16) !important;
+}
+html[data-theme="dark"] :is(.cps-card-media,.product-image,.product-image-wrapper,.home-showcase-card-body,.home-search-result-image,.cart-line-image,.order-product-image,.pdp-gallery-stage,.pdp-refined .pdp-thumb-btn) { background-color: #f5f7fa !important; }
+html[data-theme="dark"] :is(.catalog-local-search input,.catalog-filter-controls select,.cart-page input,.cart-page select,.cart-page textarea,.account-page input,.account-page select,.account-page textarea,.warranty-page input,.store-search-page input) { border-color: #30465e !important; background: #0c1726 !important; color: #e4edf7 !important; }
+html[data-theme="dark"] :is(.catalog-results-bar,.catalog-card-specs,.catalog-card-availability,.cart-line,.member-purchase-card > footer,.member-purchase-products,.member-details,.smem-tab-section) { border-color: #263a50 !important; }
+html[data-theme="dark"] :is(.catalog-results-bar,.catalog-results-bar strong,.catalog-filter-panel label,.home-showcase-card h3,.cps-card-name,.product-card h3,.cart-page h1,.cart-page h2,.cart-page h3,.account-page h1,.account-page h2,.account-page h3,.warranty-page h1,.warranty-page h2,.store-search-page h1,.store-search-page h2,.member-invoice-page h1,.member-invoice-page h2) { color: #edf4fc !important; }
+html[data-theme="dark"] :is(.catalog-results-bar span,.catalog-card-specs,.catalog-card-availability,.product-tagline,.cart-page small,.cart-page label,.account-page small,.account-page p,.warranty-page p,.store-search-page p,.member-invoice-page small) { color: #9bacbf !important; }
+
+html[data-theme="dark"] .pdp-refined :is(.pdp-info-column,.pdp-highlight-card,.pdp-commitment-card,.pdp-specs-container),
+html[data-theme="dark"] :is(.pdp-price-card,.pdp-chip-card,.pdp-section-nav a) { border-color: #293d54 !important; background: #101c2d !important; color: #dce7f3 !important; }
+html[data-theme="dark"] .pdp-refined :is(h1,h2,h3,strong),
+html[data-theme="dark"] .pdp-section-title { color: #eff5fc !important; }
+html[data-theme="dark"] .pdp-refined :is(p,small,dt) { color: #9eafc2 !important; }
+
+html[data-theme="dark"] :is(.smem-dash-header-card,.smem-section-card,.smem-panel-card,.smem-benefits-card,.smem-tier-card,.smem-input-card,.smem-order-card,.smem-order-lookup-card,.smem-warranty-result,.smem-refer-card,.smem-address-card,.smem-tier-progress-card) { border-color: #293d53 !important; background: #101c2d !important; color: #dce6f2 !important; box-shadow: 0 12px 32px rgba(0,0,0,.18) !important; }
+html[data-theme="dark"] :is(.smem-section-card,.smem-panel-card,.smem-order-card,.smem-warranty-result) :is(h2,h3,strong) { color: #edf4fc !important; }
+html[data-theme="dark"] .mobile-app-nav { border-color: #293d53; background: rgba(12,23,38,.94); box-shadow: 0 -10px 30px rgba(0,0,0,.28); }
+html[data-theme="dark"] .mobile-app-nav a { color: #93a7bd; }
+html[data-theme="dark"] .mobile-app-nav a.is-active { color: #69b5ff; }
+html[data-theme="dark"] :is(.quick-order-page,.quick-payment-page) { background: linear-gradient(180deg,#08111f,#0b1625); color: #dce6f2; }
+html[data-theme="dark"] :is(.quick-order-heading,.quick-payment-heading) h1 { color: #eff5fc; }
+html[data-theme="dark"] :is(.quick-order-heading,.quick-payment-heading) p { color: #98aabd; }
+html[data-theme="dark"] :is(.quick-order-products,.quick-order-summary,.quick-order-empty,.quick-payment-qr-card,.quick-payment-summary,.quick-payment-state) { border-color: #293d53; background: #101c2d; color: #dce6f2; box-shadow: 0 18px 55px rgba(0,0,0,.2); }
+html[data-theme="dark"] :is(.quick-order-products>header,.quick-order-item+.quick-order-item,.quick-order-price,.quick-order-summary dl,.quick-order-voucher,.quick-payment-summary dl,.quick-payment-summary dl>div) { border-color: #293d53; }
+html[data-theme="dark"] :is(.quick-order-products h2,.quick-order-info h3,.quick-order-price>strong,.quick-order-summary h2,.quick-order-summary dd,.quick-payment-bank strong,.quick-payment-summary h2,.quick-payment-summary dd,.quick-payment-mini-items strong) { color: #e9f1fa; }
+html[data-theme="dark"] :is(.quick-order-image,.quick-payment-mini-items>div) { background: #f4f7fa; }
+html[data-theme="dark"] .quick-order-voucher input { border-color: #30465e; background: #0b1625; color: #e5edf7; }
+html[data-theme="dark"] .quick-order-quantity { border-color: #30465e; }
+html[data-theme="dark"] .quick-order-quantity button { background: #15263a; color: #c4d2e1; }
+html[data-theme="dark"] .quick-payment-wait { background: #102c47; }
+html[data-theme="dark"] .quick-payment-wait strong { color: #b9daf7; }
+
+/* Admin, manager and staff portals */
+html[data-theme="dark"] body:has(.admin-console),
+html[data-theme="dark"] .admin-console { background: #08111f !important; color: #dbe5f1; }
+html[data-theme="dark"] .admin-sidebar { border-color: #263a50 !important; background: #0d1928 !important; color: #dce7f3 !important; box-shadow: 10px 0 34px rgba(0,0,0,.2) !important; }
+html[data-theme="dark"] .admin-brand { border-color: #26384d !important; }
+html[data-theme="dark"] .admin-brand strong { color: #edf5fd !important; }
+html[data-theme="dark"] .admin-brand small,
+html[data-theme="dark"] .admin-nav-groups section > span { color: #7f93aa !important; }
+html[data-theme="dark"] .admin-nav-groups a { color: #a8b8ca !important; }
+html[data-theme="dark"] .admin-nav-groups a:hover { background: #14263a !important; color: #dcecff !important; }
+html[data-theme="dark"] .admin-nav-groups a.is-active { background: linear-gradient(90deg,#12375d,#102840) !important; color: #80c2ff !important; }
+html[data-theme="dark"] .admin-user-summary { border-color: #29425d !important; background: #11243a !important; }
+html[data-theme="dark"] .admin-user-summary div strong { color: #e7f0f9 !important; }
+html[data-theme="dark"] .admin-user-summary div span { color: #91a5bb !important; }
+html[data-theme="dark"] .admin-sidebar-actions { grid-template-columns: 1fr 1fr; }
+html[data-theme="dark"] .admin-sidebar-actions .theme-toggle { grid-column: 1 / -1; }
+.admin-sidebar-actions .theme-toggle { grid-column: 1 / -1; width: 100%; }
+html[data-theme="dark"] .admin-sidebar-actions :is(.admin-store-link,button,.theme-toggle) { border-color: #2a4058 !important; background: #132338 !important; color: #b8c8d9 !important; }
+
+html[data-theme="dark"] .admin-commandbar,
+html[data-theme="dark"] .admin-mobile-header { border-color: #273b52 !important; background: rgba(10,20,34,.9) !important; }
+html[data-theme="dark"] .admin-commandbar :is(span,b),
+html[data-theme="dark"] .admin-mobile-header :is(strong,small) { color: #b7c7d8 !important; border-color: #31465d !important; }
+html[data-theme="dark"] .admin-commandbar nav :is(a,span) { border-color: #30445a; background: #132338; color: #c1cede; }
+html[data-theme="dark"] .admin-mobile-header .theme-toggle { border-color: #31465d; background: #14243a; }
+
+html[data-theme="dark"] .admin-console :is(.admin-card,.admin-metric,.admin-table-wrap,.admin-bulkbar,.admin-preview-card,.admin-variant,.admin-branch-summary article,.admin-branch-card,.admin-report-filters,.admin-report-kpis article,.admin-report-table-card,.admin-operational-strip,.admin-revenue-panel,.admin-employee-profile-card,.admin-employee-month-stats article,.work-task-kpis article,.work-task-card,.camera-card,.face-test-camera-card,.face-test-controls,.face-test-directory,.staff-personnel-card,.staff-employment-card,.staff-tools-panel,.staff-profile-shift,.role-tool-grid > a,.student-review-kpis article,.student-review-card) {
+  border-color: #283d54 !important;
+  background: #101c2d !important;
+  color: #dce6f2 !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,.16) !important;
+}
+html[data-theme="dark"] .admin-console :is(.admin-table th,.admin-variant-head,.admin-preview-image,.admin-dropzone,.admin-detail-grid p,.face-test-selected,.face-test-privacy,.staff-personnel-grid > div,.student-review-body dl > div) { border-color: #293d53 !important; background: #142337 !important; }
+html[data-theme="dark"] .admin-console :is(.admin-table td,.admin-card-head,.admin-variant-head,.staff-section-heading,.face-test-directory header) { border-color: #263a50 !important; }
+html[data-theme="dark"] .admin-console .admin-table tbody tr:hover { background: #14243a !important; }
+html[data-theme="dark"] .admin-console :is(h1,h2,h3,.admin-topline h1,.admin-card-head h2,.admin-metric strong,.admin-table td strong,.admin-branch-card h2,.staff-section-heading h2,.staff-profile-copy h2,.face-test-page h2,.face-test-selected strong) { color: #eef5fc !important; }
+html[data-theme="dark"] .admin-console :is(.admin-subtitle,.admin-table span,.admin-table small,.admin-branch-card p,.admin-card-head span,.staff-section-heading small,.staff-personnel-grid dt,.face-test-selected small,.face-test-directory p) { color: #98aabd !important; }
+html[data-theme="dark"] .admin-console :is(input,select,textarea,.admin-button,.admin-branch-edit-link,.face-test-field select,.face-test-directory-filters select,.inventory-adjust-form select,.inventory-adjust-form input) { border-color: #30465e !important; background: #0c1726 !important; color: #e4edf7 !important; }
+html[data-theme="dark"] .admin-console :is(input,textarea)::placeholder { color: #6f8298; }
+html[data-theme="dark"] .admin-console .admin-metric::after { background: #132b46; }
+html[data-theme="dark"] .admin-mobile-orbit { border-color: #2a4057; background: rgba(9,19,32,.95); box-shadow: 0 -14px 38px rgba(0,0,0,.35); }
+html[data-theme="dark"] .admin-mobile-orbit-head strong { color: #dce8f4; }
+html[data-theme="dark"] .admin-mobile-orbit-rail > a { border-color: #2a4057; background: #122135; color: #9eb0c3; box-shadow: none; }
+html[data-theme="dark"] .admin-mobile-orbit-icon { background: #18314d; }
+
+@media (max-width: 768px) {
+  .cps-header-actions { gap: 4px; }
+  .cps-header-actions > .theme-toggle { flex: 0 0 38px; width: 38px; min-width: 38px; }
+}
+
+@media print {
+  .theme-toggle { display: none !important; }
+  html[data-theme="dark"] { color-scheme: light; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle,
+  .theme-toggle-track > i { transition: none; }
+}

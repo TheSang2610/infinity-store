@@ -1,0 +1,45 @@
+# Dependencies and generated builds
+node_modules/
+dist/
+.next/
+.vinext/
+.wrangler/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.sqlite*
+*.db*
+backups/
+
+# Logs and editor files
+*.log
+*.tsbuildinfo
+.DS_Store
+.idea/
+.vscode/
+
+# Local duplicate/archive project
+Nheo_Apple_Da_Sua_Loi_Local_Da_Ghep_Quan_Ly/
+
+# Test and coverage output
+coverage/
+test-results/
+playwright-report/
+
+# Du lieu that khong bao gio dua len git: ban xuat CSDL, anh/khuon mat nhan vien
+exports/
+python-ai/images/
+python-ai/data/
+.claude/
+
+# Anh chup/nhat ky khi kiem thu bang trinh duyet
+.playwright-mcp/
+
+# Tai lieu nop bai / thuyet trinh - khong dua len kho
+*.docx
+*.pdf
+*.pptx

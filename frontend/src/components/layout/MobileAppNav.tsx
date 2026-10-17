@@ -1,0 +1,41 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useCart } from "@/src/hooks/cart";
+import { hidesStorefrontChrome } from "@/src/constants/shared/internal-routes";
+import { MOBILE_APP_NAV } from "@/src/constants/shared/common";
+
+const items = MOBILE_APP_NAV.items;
+
+export default function MobileAppNav() {
+  const pathname = usePathname();
+  const { count } = useCart();
+  if (hidesStorefrontChrome(pathname)) return null;
+
+  return (
+    <nav className="mobile-app-nav" aria-label={MOBILE_APP_NAV.label}>
+      {items.map((item) => {
+        const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+        return (
+          <Link key={item.href} href={item.href} className={active ? "is-active" : ""} aria-current={active ? "page" : undefined}>
+            <AppIcon name={item.icon} />
+            <span>{item.label}</span>
+            {item.icon === "cart" && count > 0 && <em>{count > 9 ? "9+" : count}</em>}
+          </Link>
+        );
+      })}
+    </nav>
+  );
+}
+
+function AppIcon({ name }: { name: (typeof items)[number]["icon"] }) {
+  const paths = {
+    home: <><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10M9 20v-6h6v6"/></>,
+    shop: <><path d="M4 9h16l-1-5H5L4 9Z"/><path d="M5 9v11h14V9M9 20v-6h6v6"/></>,
+    cart: <><path d="M3 4h2l2.2 10h10.9L21 7H6"/><circle cx="9" cy="19" r="1"/><circle cx="18" cy="19" r="1"/></>,
+    shield: <><path d="M12 3 5 6v5c0 4.6 2.8 8.1 7 10 4.2-1.9 7-5.4 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-5"/></>,
+    user: <><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></>,
+  };
+  return <svg viewBox="0 0 24 24" aria-hidden="true">{paths[name]}</svg>;
+}

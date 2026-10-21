@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import { and, desc, eq, gt, lt, ne, or, sql, type SQL } from "drizzle-orm";
 import { getDb } from "../db/client";
 import { customerPasswordResetSessions, customers, customerSessions, customerVerificationSessions } from "../db/schema";
-import { createPasswordHash, hashToken, randomToken, verifyPassword } from "../utils/crypto";
+import { createPasswordHash, hashToken, passwordNeedsRehash, randomToken, verifyPassword } from "../utils/crypto";
 import { badRequest } from "../utils/http";
 import type { Customer } from "../types";
 import { PUBLIC_IMAGE_PREFIX } from "../services/file-storage.service";
@@ -45,6 +45,11 @@ export async function authenticateCustomer(identifierInput: string, password: st
   const row = await findRow(or(sql`lower(${customers.username}) = ${identifier}`, eq(customers.email, normalizeEmail(identifier))));
   if (!row || !(await verifyPassword(password, row.passwordSalt, row.passwordHash))) {
     throw badRequest("Tên đăng nhập, email hoặc mật khẩu không đúng.");
+  }
+  // Hash dang cu (120.000 vong, chua ghi phien ban): bam lai ngay luc biet mat khau dung.
+  if (passwordNeedsRehash(row.passwordHash)) {
+    const { hash, salt } = await createPasswordHash(password);
+    await getDb().update(customers).set({ passwordHash: hash, passwordSalt: salt }).where(eq(customers.id, row.id));
   }
   return toCustomer(row);
 }

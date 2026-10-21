@@ -3,6 +3,24 @@ import type { ManagedOrder, ManagedProduct } from "@/src/types";
 export const orderStatuses = ["pending", "confirmed", "processing", "shipping", "delivered", "cancelled", "returned"];
 export const paymentStatuses = ["not_required", "unpaid", "paid", "refunded", "failed"];
 
+// Quy trinh trang thai don - CHEP tu backend/src/constants/order-status.ts (may chu moi la
+// noi chan that; o day chi de o chon trang thai khong hien buoc khong hop le).
+const ORDER_STATUS_FLOW: Record<string, string[]> = {
+  pending: ["confirmed", "cancelled"],
+  new: ["confirmed", "cancelled"],
+  confirmed: ["processing", "shipping", "delivered", "cancelled"],
+  processing: ["shipping", "delivered", "cancelled"],
+  shipping: ["delivered", "returned"],
+  delivered: ["returned"],
+  cancelled: [],
+  returned: [],
+};
+
+/** Cac trang thai duoc chuyen toi tu trang thai hien tai (khong gom chinh no). */
+export function nextOrderStatuses(status: string) {
+  return ORDER_STATUS_FLOW[status] ?? [];
+}
+
 export function formatDate(timestamp: number) {
   return new Date(timestamp).toLocaleDateString("vi-VN", {
     day: "2-digit",
@@ -39,6 +57,7 @@ export function formatMoney(value: number) {
 export function statusLabel(status: string) {
   const labels: Record<string, string> = {
     pending: "Chờ xác nhận",
+    new: "Chờ xác nhận",
     confirmed: "Đã tiếp nhận",
     processing: "Đang xử lý",
     shipping: "Đang giao",

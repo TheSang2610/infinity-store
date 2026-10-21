@@ -1,0 +1,60 @@
+# Kiem tra moi lan day len / mo pull request: typecheck, test, lint, build cho ca backend va frontend.
+# Tach tung buoc de log chi ra dung cho vo.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+      - run: npm ci
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Test (API that tren PGlite, khong can PostgreSQL)
+        run: npm test
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    env:
+      # Build khong goi backend; dat dia chi gia de next.config.ts co gia tri.
+      BACKEND_URL: http://127.0.0.1:4000
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Test
+        run: npm test
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build

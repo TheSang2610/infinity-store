@@ -29,7 +29,7 @@ export const apiSpec = {
       "",
       "| Cookie | Lấy bằng | Dùng cho |",
       "|---|---|---|",
-      "| `huy_customer` | `POST /api/account/login` | Khách hàng: hồ sơ, lịch sử mua |",
+      "| `infinity_customer` | `POST /api/account/login` | Khách hàng: hồ sơ, lịch sử mua |",
       "| `admin` | `POST /api/admin/session` | Nhân viên: mọi đường `/api/admin/*`, `/api/face/*` |",
       "",
       "Thử trên trang này thì gọi đăng nhập trước, cookie được giữ cho các lệnh sau.",
@@ -54,7 +54,7 @@ export const apiSpec = {
   components: {
     securitySchemes: {
       customerCookie: {
-        type: "apiKey", in: "cookie", name: "huy_customer",
+        type: "apiKey", in: "cookie", name: "infinity_customer",
         description: "Cookie httpOnly do POST /api/account/login đặt. Trình duyệt tự gửi kèm.",
       },
       adminCookie: {

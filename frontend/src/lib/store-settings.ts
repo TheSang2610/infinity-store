@@ -11,7 +11,7 @@ export const EMPTY_STORE_SETTINGS: PublicStoreSettings = {
   paymentMethods: { bankTransfer: "", momo: "", applePay: "", installment: "" },
 };
 
-/** "028.0000.0000" -> "tel:02800000000". */
+/** "0384.589.559" -> "tel:0384589559". */
 export function telHref(phone: string) {
   return `tel:${phone.replace(/[^\d+]/g, "")}`;
 }

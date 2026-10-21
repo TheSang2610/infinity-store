@@ -6,7 +6,7 @@ import request from "supertest";
 
 process.env.FRONTEND_URL = "http://localhost:3000";
 
-import { createApp } from "../app";
+import { createApp, SWAGGER_UI_CDN } from "../app";
 import { apiSpec } from "../docs/openapi";
 import { BANG } from "../docs/paths";
 
@@ -80,8 +80,13 @@ describe("Tai lieu API (Swagger)", () => {
       assert.match(res.headers["content-type"], /html/);
       assert.doesNotMatch(res.text, /(href|src)="\.\//, "con duong dan tuong doi ./");
     }
-    const css = await request(app).get("/api/docs/swagger-ui.css");
-    assert.equal(css.status, 200);
+    // CSS/JS lay tu CDN dung phien ban dang cai (tren Vercel tep tinh trong node_modules khong duoc dong goi).
+    const html = (await request(app).get("/api/docs")).text;
+    const installed = JSON.parse(readFileSync(require.resolve("swagger-ui-dist/package.json"), "utf8")).version;
+    assert.equal(SWAGGER_UI_CDN, `https://cdn.jsdelivr.net/npm/swagger-ui-dist@${installed}`, "doi SWAGGER_UI_CDN trong app.ts cho trung");
+    assert.ok(html.includes(`${SWAGGER_UI_CDN}/swagger-ui.css`));
+    assert.ok(html.includes(`${SWAGGER_UI_CDN}/swagger-ui-bundle.js`));
+    assert.ok(html.includes('src="/api/docs/swagger-ui-init.js"'));
     const init = await request(app).get("/api/docs/swagger-ui-init.js");
     assert.equal(init.status, 200);
     assert.match(init.text, /Infinity Store API/);

@@ -18,6 +18,9 @@ accountRoutes.get("/purchases", requireCustomer, controller.listPurchases);
 accountRoutes.get("/orders/:id", requireCustomer, controller.getOwnOrder);
 accountRoutes.post("/avatar", requireCustomer, upload(3 * 1024 * 1024).single("avatar"), controller.uploadAvatar);
 accountRoutes.delete("/avatar", requireCustomer, controller.removeAvatar);
+// Gio hang luu tren may chu theo tai khoan.
+accountRoutes.get("/cart", requireCustomer, controller.getOwnCart);
+accountRoutes.put("/cart", requireCustomer, controller.replaceOwnCart);
 // ---- Dang nhap Google: Google goi lai qua /api cua frontend (frontend chuyen tiep sang day) ----
 accountRoutes.get("/google/start", controller.startGoogleLogin);
 accountRoutes.get("/google/callback", controller.finishGoogleLogin);

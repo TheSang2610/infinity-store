@@ -2,7 +2,7 @@ import type { Request, Response } from "express";
 import { randomUUID } from "node:crypto";
 import { badRequest, forbidden, nonNegativeInt, notFound, text } from "../utils/http";
 import {
-  ADMIN_COOKIE, canOperateOrder, canSeeOrder, clearCookie, CUSTOMER_COOKIE, sessionCookie,
+  ADMIN_COOKIE, canOperateOrder, canSeeOrder, clearCookie, CUSTOMER_COOKIE, readCookie, sessionCookie,
 } from "../middlewares/auth";
 import type { AdminRole, AdminUser, OrderInvoiceInput, VoucherType } from "../types";
 import {
@@ -42,7 +42,7 @@ export async function login(req: Request, res: Response) {
   const user = await adminUsers.authenticateAdminUser(text(req.body?.username), password);
   if (!user) throw badRequest("Tên đăng nhập hoặc mật khẩu không đúng.");
   // Dang nhap nhan vien thi dang xuat tai khoan khach tren cung trinh duyet (giong ban cu).
-  await deleteCustomerSession(req.cookies?.[CUSTOMER_COOKIE]).catch(() => undefined);
+  await deleteCustomerSession(readCookie(req, CUSTOMER_COOKIE)).catch(() => undefined);
   clearCookie(res, CUSTOMER_COOKIE);
   res.cookie(ADMIN_COOKIE, await adminUsers.createAdminSession(user.id), sessionCookie());
   res.json({ ok: true, user });

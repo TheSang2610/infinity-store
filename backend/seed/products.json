@@ -506,7 +506,7 @@
     "color": "Cam Vũ Trụ",
     "colorHex": "#f77e2d",
     "price": "31.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro/cam-vu-tru.jpg"
    },
    {
@@ -516,7 +516,7 @@
     "color": "Xanh Đậm",
     "colorHex": "#33405a",
     "price": "31.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro/xanh-dam.jpg"
    },
    {
@@ -526,7 +526,7 @@
     "color": "Bạc",
     "colorHex": "#e3e4e1",
     "price": "31.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro/bac.jpg"
    }
   ],
@@ -556,7 +556,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 30,
   "description": "iPhone 17 Pro kết hợp màn hình Super Retina XDR 6,3 inch, ProMotion, hệ thống camera chuyên nghiệp và chip A19 Pro.",
   "mediaLinks": [
    {
@@ -609,7 +609,7 @@
     "color": "Cam Vũ Trụ",
     "colorHex": "#f77e2d",
     "price": "34.590.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro-max/cam-vu-tru.jpg"
    },
    {
@@ -619,7 +619,7 @@
     "color": "Xanh Đậm",
     "colorHex": "#33405a",
     "price": "34.590.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro-max/xanh-dam.jpg"
    },
    {
@@ -629,7 +629,7 @@
     "color": "Bạc",
     "colorHex": "#e3e4e1",
     "price": "34.590.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro-max/bac.jpg"
    }
   ],
@@ -661,7 +661,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 30,
   "description": "iPhone 17 Pro Max dành cho người cần màn hình lớn, camera linh hoạt và dung lượng lưu trữ lên đến 2TB.",
   "mediaLinks": [
    {
@@ -718,7 +718,7 @@
     "color": "Tím Oải Hương",
     "colorHex": "#dfcee9",
     "price": "24.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17/tim-oai-huong.jpg"
    },
    {
@@ -728,7 +728,7 @@
     "color": "Xanh Lá Xô Thơm",
     "colorHex": "#b9c5a9",
     "price": "24.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17/xanh-la-xo-thom.jpg"
    },
    {
@@ -738,7 +738,7 @@
     "color": "Xanh Lam Khói",
     "colorHex": "#a7bcd4",
     "price": "24.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17/xanh-lam-khoi.jpg"
    },
    {
@@ -748,7 +748,7 @@
     "color": "Trắng",
     "colorHex": "#f5f5f0",
     "price": "24.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17/trang.jpg"
    },
    {
@@ -758,7 +758,7 @@
     "color": "Đen",
     "colorHex": "#353536",
     "price": "24.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17/den.jpg"
    }
   ],
@@ -798,7 +798,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 50,
   "description": "iPhone 17 có màn hình Super Retina XDR 6,3 inch với ProMotion, chip A19 và hệ thống camera Dual Fusion 48MP.",
   "mediaLinks": [
    {
@@ -869,7 +869,7 @@
     "color": "Titan Sa Mạc",
     "colorHex": "#bfa48f",
     "price": "30.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16-pro-max/titan-sa-mac.jpg"
    },
    {
@@ -879,7 +879,7 @@
     "color": "Titan Tự Nhiên",
     "colorHex": "#c2bcb2",
     "price": "30.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16-pro-max/titan-tu-nhien.jpg"
    },
    {
@@ -889,7 +889,7 @@
     "color": "Titan Trắng",
     "colorHex": "#f2f1ed",
     "price": "30.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16-pro-max/titan-trang.jpg"
    },
    {
@@ -899,7 +899,7 @@
     "color": "Titan Đen",
     "colorHex": "#3c3c3d",
     "price": "30.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16-pro-max/titan-den.jpg"
    }
   ],
@@ -934,7 +934,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 40,
   "description": "",
   "sortOrder": 26
  },
@@ -986,7 +986,7 @@
     "color": "Cam Vũ Trụ",
     "colorHex": "#f77e2d",
     "price": "41.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro-max/cam-vu-tru.jpg"
    },
    {
@@ -996,7 +996,7 @@
     "color": "Xanh Đậm",
     "colorHex": "#33405a",
     "price": "41.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro-max/xanh-dam.jpg"
    },
    {
@@ -1006,7 +1006,7 @@
     "color": "Bạc",
     "colorHex": "#e3e4e1",
     "price": "41.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro-max/bac.jpg"
    }
   ],
@@ -1031,7 +1031,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 30,
   "sortOrder": 3
  },
  {
@@ -1097,7 +1097,7 @@
     "color": "Hồng",
     "colorHex": "#e3c8ca",
     "price": "18.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15/hong.jpg"
    },
    {
@@ -1107,7 +1107,7 @@
     "color": "Vàng",
     "colorHex": "#e6e0c1",
     "price": "18.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15/vang.jpg"
    },
    {
@@ -1117,7 +1117,7 @@
     "color": "Xanh Lá",
     "colorHex": "#cad4c5",
     "price": "18.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15/xanh-la.jpg"
    },
    {
@@ -1127,7 +1127,7 @@
     "color": "Xanh Dương",
     "colorHex": "#ced5d9",
     "price": "18.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15/xanh-duong.jpg"
    },
    {
@@ -1137,7 +1137,7 @@
     "color": "Đen",
     "colorHex": "#35393b",
     "price": "18.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15/den.jpg"
    }
   ],
@@ -1177,7 +1177,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 50,
   "description": "",
   "sortOrder": 19
  },
@@ -1226,7 +1226,7 @@
     "color": "Xanh Da Trời",
     "colorHex": "#c9dbe9",
     "price": "22.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-air/xanh-da-troi.jpg"
    },
    {
@@ -1236,7 +1236,7 @@
     "color": "Vàng Nhạt",
     "colorHex": "#f0e5cf",
     "price": "22.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-air/vang-nhat.jpg"
    },
    {
@@ -1246,7 +1246,7 @@
     "color": "Trắng Mây",
     "colorHex": "#f5f5f2",
     "price": "22.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-air/trang-may.jpg"
    },
    {
@@ -1256,7 +1256,7 @@
     "color": "Đen Không Gian",
     "colorHex": "#2b2b2c",
     "price": "22.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-air/den-khong-gian.jpg"
    }
   ],
@@ -1290,7 +1290,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 40,
   "description": "iPhone Air ưu tiên thiết kế mỏng nhẹ nhưng vẫn có màn hình ProMotion, chip A19 Pro và camera Fusion 48MP.",
   "mediaLinks": [
    {
@@ -1349,7 +1349,7 @@
     "color": "Cam Vũ Trụ",
     "colorHex": "#f77e2d",
     "price": "47.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro-max/cam-vu-tru.jpg"
    },
    {
@@ -1359,7 +1359,7 @@
     "color": "Xanh Đậm",
     "colorHex": "#33405a",
     "price": "47.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro-max/xanh-dam.jpg"
    },
    {
@@ -1369,7 +1369,7 @@
     "color": "Bạc",
     "colorHex": "#e3e4e1",
     "price": "47.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro-max/bac.jpg"
    }
   ],
@@ -1394,7 +1394,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 30,
   "sortOrder": 3
  },
  {
@@ -1438,7 +1438,7 @@
     "color": "Hồng Phớt",
     "colorHex": "#efd3d5",
     "price": "17.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17e/hong-phot.jpg"
    },
    {
@@ -1448,7 +1448,7 @@
     "color": "Trắng",
     "colorHex": "#f5f5f0",
     "price": "17.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17e/trang.jpg"
    },
    {
@@ -1458,7 +1458,7 @@
     "color": "Đen",
     "colorHex": "#2b2b2d",
     "price": "17.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17e/den.jpg"
    }
   ],
@@ -1487,7 +1487,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 30,
   "description": "iPhone 17e có màn hình Super Retina XDR 6,1 inch, chip A19, camera Fusion 48MP và bộ nhớ khởi điểm 256GB.",
   "mediaLinks": [
    {
@@ -1545,7 +1545,7 @@
     "color": "Cam Vũ Trụ",
     "colorHex": "#f77e2d",
     "price": "60.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro-max/cam-vu-tru.jpg"
    },
    {
@@ -1555,7 +1555,7 @@
     "color": "Xanh Đậm",
     "colorHex": "#33405a",
     "price": "60.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro-max/xanh-dam.jpg"
    },
    {
@@ -1565,7 +1565,7 @@
     "color": "Bạc",
     "colorHex": "#e3e4e1",
     "price": "60.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro-max/bac.jpg"
    }
   ],
@@ -1590,7 +1590,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 30,
   "sortOrder": 3
  },
  {
@@ -1655,7 +1655,7 @@
     "color": "Hồng",
     "colorHex": "#fae0d8",
     "price": "13.790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-13/hong.jpg"
    },
    {
@@ -1665,7 +1665,7 @@
     "color": "Xanh Dương",
     "colorHex": "#276787",
     "price": "13.790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-13/xanh-duong.jpg"
    },
    {
@@ -1675,7 +1675,7 @@
     "color": "Đen Nửa Đêm",
     "colorHex": "#232a31",
     "price": "13.790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-13/den-nua-dem.jpg"
    },
    {
@@ -1685,7 +1685,7 @@
     "color": "Trắng Ánh Sao",
     "colorHex": "#faf6f2",
     "price": "13.790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-13/trang-anh-sao.jpg"
    },
    {
@@ -1695,7 +1695,7 @@
     "color": "Đỏ (PRODUCT)RED",
     "colorHex": "#bf0013",
     "price": "13.790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-13/do-product-red.jpg"
    },
    {
@@ -1705,7 +1705,7 @@
     "color": "Xanh Lá",
     "colorHex": "#394c38",
     "price": "13.790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-13/xanh-la.jpg"
    }
   ],
@@ -1749,7 +1749,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 60,
   "description": "",
   "sortOrder": 12
  },
@@ -1803,7 +1803,7 @@
     "color": "Cam Vũ Trụ",
     "colorHex": "#f77e2d",
     "price": "38.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro/cam-vu-tru.jpg"
    },
    {
@@ -1813,7 +1813,7 @@
     "color": "Xanh Đậm",
     "colorHex": "#33405a",
     "price": "38.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro/xanh-dam.jpg"
    },
    {
@@ -1823,7 +1823,7 @@
     "color": "Bạc",
     "colorHex": "#e3e4e1",
     "price": "38.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17-pro/bac.jpg"
    }
   ],
@@ -1850,7 +1850,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 30,
   "sortOrder": 4
  },
  {
@@ -1905,7 +1905,7 @@
     "color": "Đen",
     "colorHex": "#2b2b2d",
     "price": "13.690.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16e/den.jpg"
    },
    {
@@ -1915,7 +1915,7 @@
     "color": "Trắng",
     "colorHex": "#f5f5f0",
     "price": "13.690.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16e/trang.jpg"
    }
   ],
@@ -1939,7 +1939,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 20,
   "description": "",
   "sortOrder": 27
  },
@@ -1996,7 +1996,7 @@
     "color": "Tím Oải Hương",
     "colorHex": "#dfcee9",
     "price": "29.790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17/tim-oai-huong.jpg"
    },
    {
@@ -2006,7 +2006,7 @@
     "color": "Xanh Lá Xô Thơm",
     "colorHex": "#b9c5a9",
     "price": "29.790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17/xanh-la-xo-thom.jpg"
    },
    {
@@ -2016,7 +2016,7 @@
     "color": "Xanh Lam Khói",
     "colorHex": "#a7bcd4",
     "price": "29.790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17/xanh-lam-khoi.jpg"
    },
    {
@@ -2026,7 +2026,7 @@
     "color": "Trắng",
     "colorHex": "#f5f5f0",
     "price": "29.790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17/trang.jpg"
    },
    {
@@ -2036,7 +2036,7 @@
     "color": "Đen",
     "colorHex": "#353536",
     "price": "29.790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-17/den.jpg"
    }
   ],
@@ -2067,7 +2067,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 50,
   "sortOrder": 5
  },
  {
@@ -2129,7 +2129,7 @@
     "color": "Xanh Dương",
     "colorHex": "#a0b4c7",
     "price": "15.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-14/xanh-duong.jpg"
    },
    {
@@ -2139,7 +2139,7 @@
     "color": "Tím",
     "colorHex": "#e5ddea",
     "price": "15.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-14/tim.jpg"
    },
    {
@@ -2149,7 +2149,7 @@
     "color": "Vàng",
     "colorHex": "#f9e479",
     "price": "15.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-14/vang.jpg"
    },
    {
@@ -2159,7 +2159,7 @@
     "color": "Đen Nửa Đêm",
     "colorHex": "#222930",
     "price": "15.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-14/den-nua-dem.jpg"
    },
    {
@@ -2169,7 +2169,7 @@
     "color": "Trắng Ánh Sao",
     "colorHex": "#faf6f2",
     "price": "15.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-14/trang-anh-sao.jpg"
    },
    {
@@ -2179,7 +2179,7 @@
     "color": "Đỏ (PRODUCT)RED",
     "colorHex": "#fc0324",
     "price": "15.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-14/do-product-red.jpg"
    }
   ],
@@ -2223,7 +2223,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 60,
   "description": "",
   "sortOrder": 16
  },
@@ -2284,7 +2284,7 @@
     "color": "Hồng",
     "colorHex": "#e3c8ca",
     "price": "20.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15/hong.jpg"
    },
    {
@@ -2294,7 +2294,7 @@
     "color": "Vàng",
     "colorHex": "#e6e0c1",
     "price": "20.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15/vang.jpg"
    },
    {
@@ -2304,7 +2304,7 @@
     "color": "Xanh Lá",
     "colorHex": "#cad4c5",
     "price": "20.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15/xanh-la.jpg"
    },
    {
@@ -2314,7 +2314,7 @@
     "color": "Xanh Dương",
     "colorHex": "#ced5d9",
     "price": "20.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15/xanh-duong.jpg"
    },
    {
@@ -2324,7 +2324,7 @@
     "color": "Đen",
     "colorHex": "#35393b",
     "price": "20.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15/den.jpg"
    }
   ],
@@ -2347,7 +2347,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 50,
   "sortOrder": 19
  },
  {
@@ -2409,7 +2409,7 @@
     "color": "Xanh Lưu Ly",
     "colorHex": "#9aadf6",
     "price": "20.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/xanh-luu-ly.jpg"
    },
    {
@@ -2419,7 +2419,7 @@
     "color": "Xanh Mòng Két",
     "colorHex": "#b0d4d2",
     "price": "20.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/xanh-mong-ket.jpg"
    },
    {
@@ -2429,7 +2429,7 @@
     "color": "Hồng",
     "colorHex": "#f2adda",
     "price": "20.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/hong.jpg"
    },
    {
@@ -2439,7 +2439,7 @@
     "color": "Trắng",
     "colorHex": "#fafafa",
     "price": "20.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/trang.jpg"
    },
    {
@@ -2449,7 +2449,7 @@
     "color": "Đen",
     "colorHex": "#3c4042",
     "price": "20.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/den.jpg"
    },
    {
@@ -2459,7 +2459,7 @@
     "color": "Xanh Lưu Ly",
     "colorHex": "#9aadf6",
     "price": "22.190.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/xanh-luu-ly.jpg"
    },
    {
@@ -2469,7 +2469,7 @@
     "color": "Xanh Mòng Két",
     "colorHex": "#b0d4d2",
     "price": "22.190.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/xanh-mong-ket.jpg"
    },
    {
@@ -2479,7 +2479,7 @@
     "color": "Hồng",
     "colorHex": "#f2adda",
     "price": "22.190.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/hong.jpg"
    },
    {
@@ -2489,7 +2489,7 @@
     "color": "Trắng",
     "colorHex": "#fafafa",
     "price": "22.190.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/trang.jpg"
    },
    {
@@ -2499,7 +2499,7 @@
     "color": "Đen",
     "colorHex": "#3c4042",
     "price": "22.190.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/den.jpg"
    },
    {
@@ -2509,7 +2509,7 @@
     "color": "Xanh Lưu Ly",
     "colorHex": "#9aadf6",
     "price": "26.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/xanh-luu-ly.jpg"
    },
    {
@@ -2519,7 +2519,7 @@
     "color": "Xanh Mòng Két",
     "colorHex": "#b0d4d2",
     "price": "26.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/xanh-mong-ket.jpg"
    },
    {
@@ -2529,7 +2529,7 @@
     "color": "Hồng",
     "colorHex": "#f2adda",
     "price": "26.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/hong.jpg"
    },
    {
@@ -2539,7 +2539,7 @@
     "color": "Trắng",
     "colorHex": "#fafafa",
     "price": "26.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/trang.jpg"
    },
    {
@@ -2549,7 +2549,7 @@
     "color": "Đen",
     "colorHex": "#3c4042",
     "price": "26.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16/den.jpg"
    }
   ],
@@ -2590,7 +2590,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 150,
   "description": "",
   "sortOrder": 23
  },
@@ -2647,7 +2647,7 @@
     "color": "Titan Sa Mạc",
     "colorHex": "#bfa48f",
     "price": "38.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16-pro-max/titan-sa-mac.jpg"
    },
    {
@@ -2657,7 +2657,7 @@
     "color": "Titan Tự Nhiên",
     "colorHex": "#c2bcb2",
     "price": "38.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16-pro-max/titan-tu-nhien.jpg"
    },
    {
@@ -2667,7 +2667,7 @@
     "color": "Titan Trắng",
     "colorHex": "#f2f1ed",
     "price": "38.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16-pro-max/titan-trang.jpg"
    },
    {
@@ -2677,7 +2677,7 @@
     "color": "Titan Đen",
     "colorHex": "#3c3c3d",
     "price": "38.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16-pro-max/titan-den.jpg"
    }
   ],
@@ -2691,7 +2691,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 40,
   "sortOrder": 26
  },
  {
@@ -2750,7 +2750,7 @@
     "color": "Hồng",
     "colorHex": "#e3c8ca",
     "price": "17.690.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15-plus/hong.jpg"
    },
    {
@@ -2760,7 +2760,7 @@
     "color": "Vàng",
     "colorHex": "#e6e0c1",
     "price": "17.690.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15-plus/vang.jpg"
    },
    {
@@ -2770,7 +2770,7 @@
     "color": "Xanh Lá",
     "colorHex": "#cad4c5",
     "price": "17.690.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15-plus/xanh-la.jpg"
    },
    {
@@ -2780,7 +2780,7 @@
     "color": "Xanh Dương",
     "colorHex": "#ced5d9",
     "price": "17.690.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15-plus/xanh-duong.jpg"
    },
    {
@@ -2790,7 +2790,7 @@
     "color": "Đen",
     "colorHex": "#35393b",
     "price": "17.690.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-15-plus/den.jpg"
    }
   ],
@@ -2829,7 +2829,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 50,
   "description": "",
   "sortOrder": 20
  },
@@ -2892,7 +2892,7 @@
     "color": "Xanh Lưu Ly",
     "colorHex": "#9aadf6",
     "price": "24.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16-plus/xanh-luu-ly.jpg"
    },
    {
@@ -2902,7 +2902,7 @@
     "color": "Xanh Mòng Két",
     "colorHex": "#b0d4d2",
     "price": "24.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16-plus/xanh-mong-ket.jpg"
    },
    {
@@ -2912,7 +2912,7 @@
     "color": "Hồng",
     "colorHex": "#f2adda",
     "price": "24.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16-plus/hong.jpg"
    },
    {
@@ -2922,7 +2922,7 @@
     "color": "Trắng",
     "colorHex": "#fafafa",
     "price": "24.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16-plus/trang.jpg"
    },
    {
@@ -2932,7 +2932,7 @@
     "color": "Đen",
     "colorHex": "#3c4042",
     "price": "24.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/apple/iphone-colors/iphone-16-plus/den.jpg"
    }
   ],
@@ -2971,7 +2971,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 50,
   "description": "",
   "sortOrder": 24
  },
@@ -2999,7 +2999,7 @@
     "name": "512GB",
     "storage": "512GB",
     "price": "23.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": ""
    }
   ],
@@ -3012,7 +3012,7 @@
   "condition": "new",
   "active": true,
   "status": "active",
-  "stock": 0,
+  "stock": 10,
   "description": ""
  },
  {
@@ -14816,7 +14816,7 @@
   "price": "45.999.000đ",
   "sellingPrice": "45.999.000đ",
   "salePrice": "45.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -14827,7 +14827,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "45.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-13-inch-5g-1tb.webp"
    }
   ],
@@ -14879,7 +14879,7 @@
   "price": "37.599.000đ",
   "sellingPrice": "37.599.000đ",
   "salePrice": "37.599.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -14890,7 +14890,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "37.599.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-13-inch-5g-512gb.webp"
    }
   ],
@@ -14939,7 +14939,7 @@
   "price": "32.499.000đ",
   "sellingPrice": "32.499.000đ",
   "salePrice": "32.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -14950,7 +14950,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "32.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-13-inch-5g-256gb.webp"
    }
   ],
@@ -14999,7 +14999,7 @@
   "price": "29.699.000đ",
   "sellingPrice": "29.699.000đ",
   "salePrice": "29.699.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15010,7 +15010,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "29.699.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-13-inch-5g-128gb.webp"
    }
   ],
@@ -15059,7 +15059,7 @@
   "price": "41.799.000đ",
   "sellingPrice": "41.799.000đ",
   "salePrice": "41.799.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15070,7 +15070,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "41.799.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-13-inch-wifi-1tb.webp"
    }
   ],
@@ -15122,7 +15122,7 @@
   "price": "33.899.000đ",
   "sellingPrice": "33.899.000đ",
   "salePrice": "33.899.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15133,7 +15133,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "33.899.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-13-inch-wifi-512gb.webp"
    }
   ],
@@ -15182,7 +15182,7 @@
   "price": "28.299.000đ",
   "sellingPrice": "28.299.000đ",
   "salePrice": "28.299.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15193,7 +15193,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "28.299.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-13-inch-wifi-256gb.webp"
    }
   ],
@@ -15242,7 +15242,7 @@
   "price": "25.499.000đ",
   "sellingPrice": "25.499.000đ",
   "salePrice": "25.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15253,7 +15253,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "25.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-13-inch-wifi-128gb.webp"
    }
   ],
@@ -15302,7 +15302,7 @@
   "price": "40.499.000đ",
   "sellingPrice": "40.499.000đ",
   "salePrice": "40.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15313,7 +15313,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "40.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-11-inch-5g-1tb.webp"
    }
   ],
@@ -15365,7 +15365,7 @@
   "price": "32.599.000đ",
   "sellingPrice": "32.599.000đ",
   "salePrice": "32.599.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15376,7 +15376,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "32.599.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-11-inch-5g-512gb.webp"
    }
   ],
@@ -15425,7 +15425,7 @@
   "price": "26.999.000đ",
   "sellingPrice": "26.999.000đ",
   "salePrice": "26.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15436,7 +15436,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "26.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-11-inch-5g-256gb.webp"
    }
   ],
@@ -15485,7 +15485,7 @@
   "price": "24.199.000đ",
   "sellingPrice": "24.199.000đ",
   "salePrice": "24.199.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15496,7 +15496,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "24.199.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-11-inch-5g-128gb.webp"
    }
   ],
@@ -15545,7 +15545,7 @@
   "price": "36.299.000đ",
   "sellingPrice": "36.299.000đ",
   "salePrice": "36.299.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15556,7 +15556,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "36.299.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-11-inch-wifi-1tb.webp"
    }
   ],
@@ -15608,7 +15608,7 @@
   "price": "28.399.000đ",
   "sellingPrice": "28.399.000đ",
   "salePrice": "28.399.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15619,7 +15619,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "28.399.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-11-inch-wifi-512gb.webp"
    }
   ],
@@ -15668,7 +15668,7 @@
   "price": "22.799.000đ",
   "sellingPrice": "22.799.000đ",
   "salePrice": "22.799.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15679,7 +15679,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "22.799.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-11-inch-wifi-256gb.webp"
    }
   ],
@@ -15728,7 +15728,7 @@
   "price": "19.999.000đ",
   "sellingPrice": "19.999.000đ",
   "salePrice": "19.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15739,7 +15739,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "19.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-8-m4-11-inch-wifi-128gb.webp"
    }
   ],
@@ -15788,7 +15788,7 @@
   "price": "40.499.000đ",
   "sellingPrice": "40.499.000đ",
   "salePrice": "40.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15799,7 +15799,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "40.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-13-inch-5g-1tb.webp"
    }
   ],
@@ -15851,7 +15851,7 @@
   "price": "34.499.000đ",
   "sellingPrice": "34.499.000đ",
   "salePrice": "34.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15862,7 +15862,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "34.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-13-inch-5g-512gb.webp"
    }
   ],
@@ -15911,7 +15911,7 @@
   "price": "28.999.000đ",
   "sellingPrice": "28.999.000đ",
   "salePrice": "28.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15922,7 +15922,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "28.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-13-inch-5g-256gb.webp"
    }
   ],
@@ -15971,7 +15971,7 @@
   "price": "25.999.000đ",
   "sellingPrice": "25.999.000đ",
   "salePrice": "25.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -15982,7 +15982,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "25.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-13-inch-5g-128gb.webp"
    }
   ],
@@ -16031,7 +16031,7 @@
   "price": "34.999.000đ",
   "sellingPrice": "34.999.000đ",
   "salePrice": "34.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16042,7 +16042,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "34.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-11-inch-5g-1tb.webp"
    }
   ],
@@ -16094,7 +16094,7 @@
   "price": "29.499.000đ",
   "sellingPrice": "29.499.000đ",
   "salePrice": "29.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16105,7 +16105,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "29.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-11-inch-5g-512gb.webp"
    }
   ],
@@ -16154,7 +16154,7 @@
   "price": "23.499.000đ",
   "sellingPrice": "23.499.000đ",
   "salePrice": "23.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16165,7 +16165,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "23.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-11-inch-5g-256gb.webp"
    }
   ],
@@ -16214,7 +16214,7 @@
   "price": "20.499.000đ",
   "sellingPrice": "20.499.000đ",
   "salePrice": "20.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16225,7 +16225,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "20.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-11-inch-5g-128gb.webp"
    }
   ],
@@ -16274,7 +16274,7 @@
   "price": "36.499.000đ",
   "sellingPrice": "36.499.000đ",
   "salePrice": "36.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16285,7 +16285,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "36.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-13-inch-wifi-1tb.webp"
    }
   ],
@@ -16337,7 +16337,7 @@
   "price": "30.999.000đ",
   "sellingPrice": "30.999.000đ",
   "salePrice": "30.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16348,7 +16348,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "30.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-13-inch-wifi-512gb.webp"
    }
   ],
@@ -16397,7 +16397,7 @@
   "price": "24.999.000đ",
   "sellingPrice": "24.999.000đ",
   "salePrice": "24.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16408,7 +16408,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "24.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-13-inch-wifi-256gb.webp"
    }
   ],
@@ -16457,7 +16457,7 @@
   "price": "21.999.000đ",
   "sellingPrice": "21.999.000đ",
   "salePrice": "21.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16468,7 +16468,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "21.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-13-inch-wifi-128gb.webp"
    }
   ],
@@ -16517,7 +16517,7 @@
   "price": "31.499.000đ",
   "sellingPrice": "31.499.000đ",
   "salePrice": "31.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16528,7 +16528,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "31.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-11-inch-wifi-1tb.webp"
    }
   ],
@@ -16580,7 +16580,7 @@
   "price": "25.499.000đ",
   "sellingPrice": "25.499.000đ",
   "salePrice": "25.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16591,7 +16591,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "25.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-11-inch-wifi-512gb.webp"
    }
   ],
@@ -16640,7 +16640,7 @@
   "price": "19.799.000đ",
   "sellingPrice": "19.799.000đ",
   "salePrice": "19.799.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16651,7 +16651,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "19.799.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-11-inch-wifi-256gb.webp"
    }
   ],
@@ -16700,7 +16700,7 @@
   "price": "16.799.000đ",
   "sellingPrice": "16.799.000đ",
   "salePrice": "16.799.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16711,7 +16711,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "16.799.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-7-m3-11-inch-wifi-128gb.webp"
    }
   ],
@@ -16759,7 +16759,7 @@
   "price": "22.490.000đ",
   "sellingPrice": "22.490.000đ",
   "salePrice": "22.490.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16770,7 +16770,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "22.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-mini-7-2024-5g-256gb.webp"
    }
   ],
@@ -16820,7 +16820,7 @@
   "price": "18.790.000đ",
   "sellingPrice": "18.790.000đ",
   "salePrice": "18.790.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16831,7 +16831,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "18.790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-mini-7-2024-5g-128gb.webp"
    }
   ],
@@ -16879,7 +16879,7 @@
   "price": "18.090.000đ",
   "sellingPrice": "18.090.000đ",
   "salePrice": "18.090.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16890,7 +16890,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "18.090.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-mini-7-2024-wifi-256gb.webp"
    }
   ],
@@ -16940,7 +16940,7 @@
   "price": "15.490.000đ",
   "sellingPrice": "15.490.000đ",
   "salePrice": "15.490.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -16951,7 +16951,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "15.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-mini-7-2024-wifi-128gb.webp"
    }
   ],
@@ -16999,7 +16999,7 @@
   "price": "39.390.000đ",
   "sellingPrice": "39.390.000đ",
   "salePrice": "39.390.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17010,7 +17010,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "39.390.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-13-inch-5g-1tb.webp"
    }
   ],
@@ -17060,7 +17060,7 @@
   "price": "27.090.000đ",
   "sellingPrice": "27.090.000đ",
   "salePrice": "27.090.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17071,7 +17071,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "27.090.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-13-inch-5g-256gb.webp"
    }
   ],
@@ -17119,7 +17119,7 @@
   "price": "22.890.000đ",
   "sellingPrice": "22.890.000đ",
   "salePrice": "22.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17130,7 +17130,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "22.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-13-inch-5g-128gb.webp"
    }
   ],
@@ -17179,7 +17179,7 @@
   "price": "35.390.000đ",
   "sellingPrice": "35.390.000đ",
   "salePrice": "35.390.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17190,7 +17190,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "35.390.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-13-inch-wifi-1tb.webp"
    }
   ],
@@ -17242,7 +17242,7 @@
   "price": "29.890.000đ",
   "sellingPrice": "29.890.000đ",
   "salePrice": "29.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17253,7 +17253,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "29.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-13-inch-wifi-512gb.webp"
    }
   ],
@@ -17302,7 +17302,7 @@
   "price": "16.890.000đ",
   "sellingPrice": "16.890.000đ",
   "salePrice": "16.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17313,7 +17313,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "16.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-13-inch-wifi-128gb.webp"
    }
   ],
@@ -17362,7 +17362,7 @@
   "price": "33.890.000đ",
   "sellingPrice": "33.890.000đ",
   "salePrice": "33.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17373,7 +17373,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "33.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-11-inch-5g-1tb.webp"
    }
   ],
@@ -17425,7 +17425,7 @@
   "price": "27.190.000đ",
   "sellingPrice": "27.190.000đ",
   "salePrice": "27.190.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17436,7 +17436,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "27.190.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-11-inch-5g-512gb.webp"
    }
   ],
@@ -17485,7 +17485,7 @@
   "price": "18.190.000đ",
   "sellingPrice": "18.190.000đ",
   "salePrice": "18.190.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17496,7 +17496,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "18.190.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-11-inch-5g-128gb.webp"
    }
   ],
@@ -17545,7 +17545,7 @@
   "price": "18.890.000đ",
   "sellingPrice": "18.890.000đ",
   "salePrice": "18.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17556,7 +17556,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "18.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-11-inch-wifi-256gb.webp"
    }
   ],
@@ -17605,7 +17605,7 @@
   "price": "15.490.000đ",
   "sellingPrice": "15.490.000đ",
   "salePrice": "15.490.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17616,7 +17616,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "15.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-11-inch-wifi-128gb.webp"
    }
   ],
@@ -17665,7 +17665,7 @@
   "price": "71.499.000đ",
   "sellingPrice": "71.499.000đ",
   "salePrice": "71.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17676,7 +17676,7 @@
     "colorHex": "#d8d8d8",
     "storage": "2TB",
     "price": "71.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-13-inch-5g-2tb.webp"
    }
   ],
@@ -17728,7 +17728,7 @@
   "price": "59.499.000đ",
   "sellingPrice": "59.499.000đ",
   "salePrice": "59.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17739,7 +17739,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "59.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-13-inch-5g-1tb.webp"
    }
   ],
@@ -17788,7 +17788,7 @@
   "price": "47.499.000đ",
   "sellingPrice": "47.499.000đ",
   "salePrice": "47.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17799,7 +17799,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "47.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-13-inch-5g-512gb.webp"
    }
   ],
@@ -17848,7 +17848,7 @@
   "price": "65.999.000đ",
   "sellingPrice": "65.999.000đ",
   "salePrice": "65.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17859,7 +17859,7 @@
     "colorHex": "#d8d8d8",
     "storage": "2TB",
     "price": "65.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-13-inch-wifi-2tb.webp"
    }
   ],
@@ -17911,7 +17911,7 @@
   "price": "53.999.000đ",
   "sellingPrice": "53.999.000đ",
   "salePrice": "53.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17922,7 +17922,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "53.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-13-inch-wifi-1tb.webp"
    }
   ],
@@ -17971,7 +17971,7 @@
   "price": "41.999.000đ",
   "sellingPrice": "41.999.000đ",
   "salePrice": "41.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -17982,7 +17982,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "41.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-13-inch-wifi-512gb.webp"
    }
   ],
@@ -18031,7 +18031,7 @@
   "price": "36.999.000đ",
   "sellingPrice": "36.999.000đ",
   "salePrice": "36.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18042,7 +18042,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "36.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-13-inch-wifi-256gb.webp"
    }
   ],
@@ -18091,7 +18091,7 @@
   "price": "62.499.000đ",
   "sellingPrice": "62.499.000đ",
   "salePrice": "62.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18102,7 +18102,7 @@
     "colorHex": "#d8d8d8",
     "storage": "2TB",
     "price": "62.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-11-inch-5g-2tb.webp"
    }
   ],
@@ -18154,7 +18154,7 @@
   "price": "50.499.000đ",
   "sellingPrice": "50.499.000đ",
   "salePrice": "50.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18165,7 +18165,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "50.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-11-inch-5g-1tb.webp"
    }
   ],
@@ -18213,7 +18213,7 @@
   "price": "44.999.000đ",
   "sellingPrice": "44.999.000đ",
   "salePrice": "44.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18224,7 +18224,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "44.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-11-inch-wifi-1tb.webp"
    }
   ],
@@ -18275,7 +18275,7 @@
   "price": "38.499.000đ",
   "sellingPrice": "38.499.000đ",
   "salePrice": "38.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18286,7 +18286,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "38.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-11-inch-5g-512gb.webp"
    }
   ],
@@ -18335,7 +18335,7 @@
   "price": "33.999.000đ",
   "sellingPrice": "33.999.000đ",
   "salePrice": "33.999.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18346,7 +18346,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "33.999.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-11-inch-5g-256gb.webp"
    }
   ],
@@ -18394,7 +18394,7 @@
   "price": "33.499.000đ",
   "sellingPrice": "33.499.000đ",
   "salePrice": "33.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18405,7 +18405,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "33.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-11-inch-wifi-512gb.webp"
    }
   ],
@@ -18453,7 +18453,7 @@
   "price": "25.690.000đ",
   "sellingPrice": "25.690.000đ",
   "salePrice": "25.690.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18464,7 +18464,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "25.690.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-11-inch-wifi-256gb.webp"
    }
   ],
@@ -18510,7 +18510,7 @@
   "price": "11.090.000đ",
   "sellingPrice": "11.090.000đ",
   "salePrice": "11.090.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18521,7 +18521,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "11.090.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-10-9-inch-2022-wifi-256gb.png"
    }
   ],
@@ -18567,7 +18567,7 @@
   "price": "8.190.000đ",
   "sellingPrice": "8.190.000đ",
   "salePrice": "8.190.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18578,7 +18578,7 @@
     "colorHex": "#d8d8d8",
     "storage": "64GB",
     "price": "8.190.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-10-9-inch-2022-wifi-64gb.png"
    }
   ],
@@ -18626,7 +18626,7 @@
   "price": "27.490.000đ",
   "sellingPrice": "27.490.000đ",
   "salePrice": "27.490.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18637,7 +18637,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "27.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-mini-7-2024-5g-512gb.webp"
    }
   ],
@@ -18685,7 +18685,7 @@
   "price": "23.490.000đ",
   "sellingPrice": "23.490.000đ",
   "salePrice": "23.490.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18696,7 +18696,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "23.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-mini-7-2024-wifi-512gb.webp"
    }
   ],
@@ -18745,7 +18745,7 @@
   "price": "23.190.000đ",
   "sellingPrice": "23.190.000đ",
   "salePrice": "23.190.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18756,7 +18756,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "23.190.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-13-inch-wifi-256gb.webp"
    }
   ],
@@ -18805,7 +18805,7 @@
   "price": "22.090.000đ",
   "sellingPrice": "22.090.000đ",
   "salePrice": "22.090.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18816,7 +18816,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "22.090.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-11-inch-5g-256gb.webp"
    }
   ],
@@ -18865,7 +18865,7 @@
   "price": "29.890.000đ",
   "sellingPrice": "29.890.000đ",
   "salePrice": "29.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18876,7 +18876,7 @@
     "colorHex": "#d8d8d8",
     "storage": "1TB",
     "price": "29.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-11-inch-wifi-1tb.webp"
    }
   ],
@@ -18928,7 +18928,7 @@
   "price": "24.490.000đ",
   "sellingPrice": "24.490.000đ",
   "salePrice": "24.490.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18939,7 +18939,7 @@
     "colorHex": "#d8d8d8",
     "storage": "512GB",
     "price": "24.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-6-m2-11-inch-wifi-512gb.webp"
    }
   ],
@@ -18988,7 +18988,7 @@
   "price": "42.499.000đ",
   "sellingPrice": "42.499.000đ",
   "salePrice": "42.499.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -18999,7 +18999,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "42.499.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-pro-m4-13-inch-5g-256gb.webp"
    }
   ],
@@ -19045,7 +19045,7 @@
   "price": "14.390.000đ",
   "sellingPrice": "14.390.000đ",
   "salePrice": "14.390.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19056,7 +19056,7 @@
     "colorHex": "#d8d8d8",
     "storage": "256GB",
     "price": "14.390.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-10-9-inch-2022-wifi-5g-256gb.png"
    }
   ],
@@ -19102,7 +19102,7 @@
   "price": "11.390.000đ",
   "sellingPrice": "11.390.000đ",
   "salePrice": "11.390.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19113,7 +19113,7 @@
     "colorHex": "#d8d8d8",
     "storage": "64GB",
     "price": "11.390.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-10-9-inch-2022-wifi-5g-64gb.png"
    }
   ],
@@ -19159,7 +19159,7 @@
   "price": "15.290.000đ",
   "sellingPrice": "15.290.000đ",
   "salePrice": "15.290.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19170,7 +19170,7 @@
     "colorHex": "#d8d8d8",
     "storage": "64GB",
     "price": "15.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-apple-ipad-mini-6-lite-64gb-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -19216,7 +19216,7 @@
   "price": "11.490.000đ",
   "sellingPrice": "11.490.000đ",
   "salePrice": "11.490.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19227,7 +19227,7 @@
     "colorHex": "#d8d8d8",
     "storage": "64GB",
     "price": "11.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-apple-ipad-mini-6-wifi-64gb-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -19273,7 +19273,7 @@
   "price": "15.390.000đ",
   "sellingPrice": "15.390.000đ",
   "salePrice": "15.390.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19284,7 +19284,7 @@
     "colorHex": "#d8d8d8",
     "storage": "64GB",
     "price": "15.390.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-10-9-2020-4g-64gb-i-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -19330,7 +19330,7 @@
   "price": "13.590.000đ",
   "sellingPrice": "13.590.000đ",
   "salePrice": "13.590.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19341,7 +19341,7 @@
     "colorHex": "#d8d8d8",
     "storage": "64GB",
     "price": "13.590.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-10-9-2020-wifi-64gb-i-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -19387,7 +19387,7 @@
   "price": "16.890.000đ",
   "sellingPrice": "16.890.000đ",
   "salePrice": "16.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19398,7 +19398,7 @@
     "colorHex": "#d8d8d8",
     "storage": "64GB",
     "price": "16.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-5-2022-5g-64gb-i-chinh-hang-apple-viet-nam.png"
    }
   ],
@@ -19442,7 +19442,7 @@
   "price": "13.390.000đ",
   "sellingPrice": "13.390.000đ",
   "salePrice": "13.390.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19453,7 +19453,7 @@
     "colorHex": "#d8d8d8",
     "storage": "64GB",
     "price": "13.390.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-ipad-air-5-2022-wifi-64gb-i-chinh-hang-apple-viet-nam.png"
    }
   ],
@@ -19497,7 +19497,7 @@
   "price": "25.890.000đ",
   "sellingPrice": "25.890.000đ",
   "salePrice": "25.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19508,7 +19508,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "25.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-apple-ipad-pro-12-9-2021-m1-5g-128gb-i-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -19554,7 +19554,7 @@
   "price": "21.690.000đ",
   "sellingPrice": "21.690.000đ",
   "salePrice": "21.690.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19565,7 +19565,7 @@
     "colorHex": "#d8d8d8",
     "storage": "128GB",
     "price": "21.690.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/ipad-apple-ipad-pro-12-9-2021-m1-wifi-128gb-i-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -19611,7 +19611,7 @@
   "price": "243.000đ",
   "sellingPrice": "243.000đ",
   "salePrice": "243.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19621,7 +19621,7 @@
     "color": "Đen",
     "colorHex": "#1b1d20",
     "price": "243.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-bo-sac-nhanh-20w-baseus-palm-usb-c-1m-den.webp"
    }
   ],
@@ -19663,7 +19663,7 @@
   "price": "149.000đ",
   "sellingPrice": "149.000đ",
   "salePrice": "149.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19673,7 +19673,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "149.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-tui-chong-soc-2-ngan-co-quai-13-16-inch-cho-laptop.webp"
    }
   ],
@@ -19715,7 +19715,7 @@
   "price": "199.000đ",
   "sellingPrice": "199.000đ",
   "salePrice": "199.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19725,7 +19725,7 @@
     "color": "Đen",
     "colorHex": "#1b1d20",
     "price": "199.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-chuot-khong-day-logitech-silent-m220-den.webp"
    }
   ],
@@ -19767,7 +19767,7 @@
   "price": "6.690.000đ",
   "sellingPrice": "6.690.000đ",
   "salePrice": "6.690.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19777,7 +19777,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "6.690.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-tai-nghe-apple-airpods-pro-3.jpg"
    }
   ],
@@ -19819,7 +19819,7 @@
   "price": "300.000đ",
   "sellingPrice": "300.000đ",
   "salePrice": "300.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19829,7 +19829,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "300.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-cap-sac-type-c-2m-99.jpg"
    }
   ],
@@ -19871,7 +19871,7 @@
   "price": "550.000đ",
   "sellingPrice": "550.000đ",
   "salePrice": "550.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19881,7 +19881,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "550.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-cap-sac-magsafe-3-99.jpg"
    }
   ],
@@ -19923,7 +19923,7 @@
   "price": "590.000đ",
   "sellingPrice": "590.000đ",
   "salePrice": "590.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19933,7 +19933,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "590.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-adapter-sac-macbook-30w-99.jpg"
    }
   ],
@@ -19975,7 +19975,7 @@
   "price": "650.000đ",
   "sellingPrice": "650.000đ",
   "salePrice": "650.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -19985,7 +19985,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "650.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-adapter-sac-macbook-61w-99.jpg"
    }
   ],
@@ -20027,7 +20027,7 @@
   "price": "850.000đ",
   "sellingPrice": "850.000đ",
   "salePrice": "850.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20037,7 +20037,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "850.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-adapter-sac-macbook-67w-99.jpg"
    }
   ],
@@ -20079,7 +20079,7 @@
   "price": "850.000đ",
   "sellingPrice": "850.000đ",
   "salePrice": "850.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20089,7 +20089,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "850.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-adapter-sac-macbook-87w-99.jpg"
    }
   ],
@@ -20131,7 +20131,7 @@
   "price": "900.000đ",
   "sellingPrice": "900.000đ",
   "salePrice": "900.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20141,7 +20141,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "900.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-adapter-sac-macbook-96w-99.jpg"
    }
   ],
@@ -20183,7 +20183,7 @@
   "price": "1.350.000đ",
   "sellingPrice": "1.350.000đ",
   "salePrice": "1.350.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20193,7 +20193,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "1.350.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-adapter-sac-macbook-140w-99.jpg"
    }
   ],
@@ -20235,7 +20235,7 @@
   "price": "300.000đ",
   "sellingPrice": "300.000đ",
   "salePrice": "300.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20245,7 +20245,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "300.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-mieng-dan-man-hinh-macbook-pro-16-inch-m1-m2-m3-m4.jpg"
    }
   ],
@@ -20287,7 +20287,7 @@
   "price": "270.000đ",
   "sellingPrice": "270.000đ",
   "salePrice": "270.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20297,7 +20297,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "270.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-mieng-dan-man-hinh-macbook-pro-14-inch-m1-m2-m3-m4.jpg"
    }
   ],
@@ -20339,7 +20339,7 @@
   "price": "270.000đ",
   "sellingPrice": "270.000đ",
   "salePrice": "270.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20349,7 +20349,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "270.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-mieng-dan-man-hinh-macbook-air-13-inch-m2-m3.jpg"
    }
   ],
@@ -20391,7 +20391,7 @@
   "price": "300.000đ",
   "sellingPrice": "300.000đ",
   "salePrice": "300.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20401,7 +20401,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "300.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-mieng-dan-man-hinh-macbook-air-15-inch-m2.jpg"
    }
   ],
@@ -20443,7 +20443,7 @@
   "price": "790.000đ",
   "sellingPrice": "790.000đ",
   "salePrice": "790.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20453,7 +20453,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-bo-dan-macbook-pro-16-inch-m1-m2-m3-m4.jpg"
    }
   ],
@@ -20495,7 +20495,7 @@
   "price": "790.000đ",
   "sellingPrice": "790.000đ",
   "salePrice": "790.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20505,7 +20505,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-bo-dan-macbook-pro-14-inch-m1-m2-m3-m4.jpg"
    }
   ],
@@ -20547,7 +20547,7 @@
   "price": "790.000đ",
   "sellingPrice": "790.000đ",
   "salePrice": "790.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20557,7 +20557,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-bo-dan-macbook-air-13-inch-m2-m3-m4.jpg"
    }
   ],
@@ -20599,7 +20599,7 @@
   "price": "2.890.000đ",
   "sellingPrice": "2.890.000đ",
   "salePrice": "2.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20609,7 +20609,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "2.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-but-apple-pencil-pro.webp"
    }
   ],
@@ -20651,7 +20651,7 @@
   "price": "9.590.000đ",
   "sellingPrice": "9.590.000đ",
   "salePrice": "9.590.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20661,7 +20661,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "9.590.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-ban-phim-magic-keyboard-trackpad-cho-ipad-pro-14-m4.webp"
    }
   ],
@@ -20703,7 +20703,7 @@
   "price": "8.090.000đ",
   "sellingPrice": "8.090.000đ",
   "salePrice": "8.090.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20713,7 +20713,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "8.090.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-ban-phim-magic-keyboard-trackpad-cho-ipad-pro-11-m4.webp"
    }
   ],
@@ -20755,7 +20755,7 @@
   "price": "7.890.000đ",
   "sellingPrice": "7.890.000đ",
   "salePrice": "7.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20765,7 +20765,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "7.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-ban-phim-magic-keyboard-cho-ipad-air-13-inch.webp"
    }
   ],
@@ -20807,7 +20807,7 @@
   "price": "7.490.000đ",
   "sellingPrice": "7.490.000đ",
   "salePrice": "7.490.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20817,7 +20817,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "7.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-ban-phim-magic-keyboard-cho-ipad-air-11-inch.webp"
    }
   ],
@@ -20859,7 +20859,7 @@
   "price": "12.090.000đ",
   "sellingPrice": "12.090.000đ",
   "salePrice": "12.090.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20869,7 +20869,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "12.090.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-tai-nghe-airpods-max-2024.webp"
    }
   ],
@@ -20911,7 +20911,7 @@
   "price": "1.890.000đ",
   "sellingPrice": "1.890.000đ",
   "salePrice": "1.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20921,7 +20921,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "1.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-chuot-apple-magic-mouse-3.webp"
    }
   ],
@@ -20963,7 +20963,7 @@
   "price": "4.290.000đ",
   "sellingPrice": "4.290.000đ",
   "salePrice": "4.290.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -20973,7 +20973,7 @@
     "color": "Xanh",
     "colorHex": "#41617b",
     "price": "4.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-tai-nghe-bluetooth-apple-airpods-4-chong-on-chu-dong.webp"
    }
   ],
@@ -21015,7 +21015,7 @@
   "price": "2.790.000đ",
   "sellingPrice": "2.790.000đ",
   "salePrice": "2.790.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21025,7 +21025,7 @@
     "color": "Xanh",
     "colorHex": "#41617b",
     "price": "2.790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-tai-nghe-bluetooth-apple-airpods-4.webp"
    }
   ],
@@ -21067,7 +21067,7 @@
   "price": "4.890.000đ",
   "sellingPrice": "4.890.000đ",
   "salePrice": "4.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21077,7 +21077,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "4.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-apple-airpods-pro-2022-chinh-hang-apple-viet-nam.png"
    }
   ],
@@ -21119,7 +21119,7 @@
   "price": "690.000đ",
   "sellingPrice": "690.000đ",
   "salePrice": "690.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21129,7 +21129,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "690.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-apple-airtag-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -21171,7 +21171,7 @@
   "price": "2.390.000đ",
   "sellingPrice": "2.390.000đ",
   "salePrice": "2.390.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21181,7 +21181,7 @@
     "color": "Cam / Vàng",
     "colorHex": "#c7794e",
     "price": "2.390.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-but-cam-ung-apple-pencil-2-mu8f2-chinh-hang-apple-viet-nam.webp"
    }
   ],
@@ -21223,7 +21223,7 @@
   "price": "Liên hệ",
   "sellingPrice": "Liên hệ",
   "salePrice": "Liên hệ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21233,7 +21233,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "Liên hệ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-chuot-apple-magic-mouse-2-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -21275,7 +21275,7 @@
   "price": "1.490.000đ",
   "sellingPrice": "1.490.000đ",
   "salePrice": "1.490.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21285,7 +21285,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "1.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-chuot-apple-magic-mouse-2021-mk2e3-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -21327,7 +21327,7 @@
   "price": "4.000.000đ",
   "sellingPrice": "4.000.000đ",
   "salePrice": "4.000.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21337,7 +21337,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "4.000.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-ban-phim-smart-keyboard-cho-ipad-pro-10-5-air-10-5-10-2-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -21379,7 +21379,7 @@
   "price": "3.000.000đ",
   "sellingPrice": "3.000.000đ",
   "salePrice": "3.000.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21389,7 +21389,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "3.000.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-ban-phim-apple-magic-keyboard-touch-id-2021-mk293-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -21431,7 +21431,7 @@
   "price": "8.490.000đ",
   "sellingPrice": "8.490.000đ",
   "salePrice": "8.490.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21441,7 +21441,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "8.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-ban-phim-apple-magic-keyboard-trackpad-cho-ipad-pro-12-9-2021.jpg"
    }
   ],
@@ -21483,7 +21483,7 @@
   "price": "2.300.000đ",
   "sellingPrice": "2.300.000đ",
   "salePrice": "2.300.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21493,7 +21493,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "2.300.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-ban-phim-apple-magic-keyboard-2021-mk2a3-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -21535,7 +21535,7 @@
   "price": "7.290.000đ",
   "sellingPrice": "7.290.000đ",
   "salePrice": "7.290.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21545,7 +21545,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "7.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-ban-phim-magic-keyboard-cho-apple-ipad-pro-11-2021-chinh-hang-apple-viet-nam.png"
    }
   ],
@@ -21587,7 +21587,7 @@
   "price": "2.290.000đ",
   "sellingPrice": "2.290.000đ",
   "salePrice": "2.290.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21597,7 +21597,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "2.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-cap-chuyen-usb-c-to-vga-multiport-apple-mj1l2zp-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -21639,7 +21639,7 @@
   "price": "1.990.000đ",
   "sellingPrice": "1.990.000đ",
   "salePrice": "1.990.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21649,7 +21649,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "1.990.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-cap-chuyen-doi-apple-usb-c-digital-av-multiport-muf82za-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -21691,7 +21691,7 @@
   "price": "2.890.000đ",
   "sellingPrice": "2.890.000đ",
   "salePrice": "2.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21701,7 +21701,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "2.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-sac-doi-apple-magsafe-duo-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -21743,7 +21743,7 @@
   "price": "450.000đ",
   "sellingPrice": "450.000đ",
   "salePrice": "450.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21753,7 +21753,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "450.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-sac-nhanh-20w-apple-mhje3za-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -21795,7 +21795,7 @@
   "price": "450.000đ",
   "sellingPrice": "450.000đ",
   "salePrice": "450.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21805,7 +21805,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "450.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-cap-type-c-to-type-c-apple-muf72za-1m-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -21847,7 +21847,7 @@
   "price": "440.000đ",
   "sellingPrice": "440.000đ",
   "salePrice": "440.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21857,7 +21857,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "440.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-cap-type-c-to-lightning-apple-mm0a3fe-a-1m-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -21899,7 +21899,7 @@
   "price": "1.090.000đ",
   "sellingPrice": "1.090.000đ",
   "salePrice": "1.090.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21909,7 +21909,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "1.090.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-cap-apple-magsafe-mhxh3-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -21951,7 +21951,7 @@
   "price": "2.399.000đ",
   "sellingPrice": "2.399.000đ",
   "salePrice": "2.399.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -21961,7 +21961,7 @@
     "color": "Xanh",
     "colorHex": "#41617b",
     "price": "2.399.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-tai-nghe-bluetooth-apple-airpods-2-vn-a.jpg"
    }
   ],
@@ -22003,7 +22003,7 @@
   "price": "3.290.000đ",
   "sellingPrice": "3.290.000đ",
   "salePrice": "3.290.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -22013,7 +22013,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "3.290.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-ban-phim-khong-day-apple-smart-keyboard-ipad-pro-12-9-2021-mxnl2-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -22055,7 +22055,7 @@
   "price": "749.000đ",
   "sellingPrice": "749.000đ",
   "salePrice": "749.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -22065,7 +22065,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "749.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-op-lung-magsafe-iphone-13-apple-silicone-clear-case-chinh-hang.png"
    }
   ],
@@ -22107,7 +22107,7 @@
   "price": "725.000đ",
   "sellingPrice": "725.000đ",
   "salePrice": "725.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -22117,7 +22117,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "725.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-op-lung-magsafe-iphone-13-mini-apple-silicone-case-chinh-hang.jpg"
    }
   ],
@@ -22159,7 +22159,7 @@
   "price": "795.000đ",
   "sellingPrice": "795.000đ",
   "salePrice": "795.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -22169,7 +22169,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "795.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-op-lung-apple-silicone-ho-tro-magsafe-cho-iphone-12-12-pro-chinh-hang.jpg"
    }
   ],
@@ -22211,7 +22211,7 @@
   "price": "1.113.000đ",
   "sellingPrice": "1.113.000đ",
   "salePrice": "1.113.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -22221,7 +22221,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "1.113.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-op-lung-magsafe-iphone-13-pro-apple-silicone-clear-case-chinh-hang.png"
    }
   ],
@@ -22263,7 +22263,7 @@
   "price": "1.323.000đ",
   "sellingPrice": "1.323.000đ",
   "salePrice": "1.323.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -22273,7 +22273,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "1.323.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-op-lung-magsafe-iphone-13-pro-max-apple-leather-case-chinh-hang.jpg"
    }
   ],
@@ -22315,7 +22315,7 @@
   "price": "1.113.000đ",
   "sellingPrice": "1.113.000đ",
   "salePrice": "1.113.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -22325,7 +22325,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "1.113.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-op-lung-magsafe-iphone-13-pro-max-apple-silicone-clear-case-chinh-hang.png"
    }
   ],
@@ -22367,7 +22367,7 @@
   "price": "1.890.000đ",
   "sellingPrice": "1.890.000đ",
   "salePrice": "1.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -22377,7 +22377,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "1.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-but-apple-pencil-1-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -22419,7 +22419,7 @@
   "price": "2.790.000đ",
   "sellingPrice": "2.790.000đ",
   "salePrice": "2.790.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -22429,7 +22429,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "2.790.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-ban-phim-apple-magic-keyboard-touch-id-phim-so-2021-mk2c3-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -22471,7 +22471,7 @@
   "price": "4.890.000đ",
   "sellingPrice": "4.890.000đ",
   "salePrice": "4.890.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -22481,7 +22481,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "4.890.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-ban-phim-smart-keyboard-ipad-pro-11-2020-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -22523,7 +22523,7 @@
   "price": "1.390.000đ",
   "sellingPrice": "1.390.000đ",
   "salePrice": "1.390.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -22533,7 +22533,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "1.390.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-sac-macbook-67w-apple-mku63za-a.jpg"
    }
   ],
@@ -22575,7 +22575,7 @@
   "price": "590.000đ",
   "sellingPrice": "590.000đ",
   "salePrice": "590.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -22585,7 +22585,7 @@
     "color": "Màu theo ảnh",
     "colorHex": "#d8d8d8",
     "price": "590.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-cap-type-c-to-type-c-apple-ml82zp-2m-chinh-hang-apple-viet-nam.jpg"
    }
   ],
@@ -22627,7 +22627,7 @@
   "price": "4.590.000đ",
   "sellingPrice": "4.590.000đ",
   "salePrice": "4.590.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -22637,7 +22637,7 @@
     "color": "Xanh",
     "colorHex": "#41617b",
     "price": "4.590.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-tai-nghe-bluetooth-apple-airpods-pro-vn-a.jpg"
    }
   ],
@@ -22679,7 +22679,7 @@
   "price": "3.490.000đ",
   "sellingPrice": "3.490.000đ",
   "salePrice": "3.490.000đ",
-  "stock": 1,
+  "stock": 10,
   "status": "active",
   "active": true,
   "variants": [
@@ -22689,7 +22689,7 @@
     "color": "Xanh",
     "colorHex": "#41617b",
     "price": "3.490.000đ",
-    "stock": 1,
+    "stock": 10,
     "image": "/products/tuandigi/phu-kien-tai-nghe-bluetooth-apple-airpods-3-vn-a.jpg"
    }
   ],

@@ -8,7 +8,7 @@
  *
  * Cot quyen (khop voi requireCustomer / requireAdmin(...) trong routes/):
  *   ""     cong khai
- *   "kh"   khach hang da dang nhap (cookie huy_customer)
+ *   "kh"   khach hang da dang nhap (cookie infinity_customer)
  *   "nv"   moi nhan vien (cookie admin)
  *   "bh"   nhan vien sua san pham: moi vai tro tru Kho (CATALOG_EDITORS)
  *   "ql"   Giam doc hoac Quan ly (MANAGERS)
@@ -99,7 +99,7 @@ export const BANG: Row[] = [
   // ------------------------------ Dat hang ------------------------------
   ["post", "/api/orders", "", "Đặt hàng", {
     tag: T.dh, than: "OrderInput", tra: "OrderResult",
-    ghiChu: "Khách chưa đăng nhập vẫn đặt được. Giá tính lại ở máy chủ từ CSDL, không tin giá trình duyệt gửi lên.",
+    ghiChu: "Khách chưa đăng nhập vẫn đặt được. Giá tính lại ở máy chủ từ CSDL, không tin giá trình duyệt gửi lên. Trừ tồn kho của biến thể ngay khi đặt; không đủ hàng thì trả 400 kèm số còn lại.",
   }],
   ["get", "/api/orders/status", "", "Trạng thái thanh toán của đơn", {
     tag: T.dh, q: ["orderCode"], ghiChu: "Trang thanh toán gọi định kỳ để biết tiền đã về chưa. `orderCode` dạng HA + 10 ký tự.",
@@ -134,7 +134,7 @@ export const BANG: Row[] = [
   }],
   ["post", "/api/account/login", "", "Đăng nhập", {
     tag: T.tk, than: { identifier: "string", password: "string" }, tra: "Customer",
-    ghiChu: "`identifier` là tên đăng nhập, email hoặc số điện thoại. Đặt cookie httpOnly `huy_customer`. Giới hạn 5 lần/15 phút.",
+    ghiChu: "`identifier` là tên đăng nhập, email hoặc số điện thoại. Đặt cookie httpOnly `infinity_customer`. Giới hạn 5 lần/15 phút.",
   }],
   ["post", "/api/account/logout", "", "Đăng xuất", { tag: T.tk }],
   ["patch", "/api/account/profile", "kh", "Cập nhật hồ sơ", { tag: T.tk, than: { name: "string", phone: "string" }, tra: "Customer" }],
@@ -142,6 +142,8 @@ export const BANG: Row[] = [
   ["get", "/api/account/orders/:id", "kh", "Hóa đơn của một đơn", { tag: T.tk, ghiChu: "Chỉ xem được đơn của chính mình." }],
   ["post", "/api/account/avatar", "kh", "Đổi ảnh đại diện", { tag: T.tk, file: true, than: { avatar: "file" }, ghiChu: "Tối đa 3 MB." }],
   ["delete", "/api/account/avatar", "kh", "Xóa ảnh đại diện", { tag: T.tk }],
+  ["get", "/api/account/cart", "kh", "Giỏ hàng của tài khoản", { tag: T.tk, ghiChu: "Lưu trên máy chủ: đăng nhập máy nào cũng thấy cùng một giỏ." }],
+  ["put", "/api/account/cart", "kh", "Lưu giỏ hàng", { tag: T.tk, than: { items: "array" }, ghiChu: "Ghi đè cả giỏ. Tối đa 20 dòng, mỗi dòng 1–10 sản phẩm. Giá trong giỏ chỉ để hiển thị, đặt hàng luôn tính lại giá." }],
   ["get", "/api/account/google/start", "", "Bắt đầu đăng nhập Google", { tag: T.tk, q: ["returnTo"], ghiChu: "Chuyển hướng sang Google." }],
   ["get", "/api/account/google/callback", "", "Google gọi lại sau khi đăng nhập", { tag: T.tk, q: ["code", "state"] }],
   ["post", "/api/account/verification/check", "", "Nhập mã xác minh sau đăng ký", { tag: T.tk, than: { code: "string" } }],
@@ -163,7 +165,10 @@ export const BANG: Row[] = [
     tag: T.chat, than: { action: "string?", name: "string?", phone: "string?", branchId: "string?", conversationId: "string?", token: "string?", text: "string?" },
     ghiChu: "`action: \"start\"` kèm name, phone, branchId để mở cuộc chat (trả conversationId + token). Gửi tin thì kèm conversationId, token, text.",
   }],
-  ["get", "/api/live-chat", "", "Chat trực tiếp: lấy tin mới", { tag: T.chat, q: ["conversationId", "token", "after", "branches"] }],
+  ["get", "/api/live-chat", "", "Chat trực tiếp: lấy tin mới", {
+    tag: T.chat, q: ["conversationId", "after", "branches"],
+    ghiChu: "Mã `token` của cuộc chat gửi trong header `X-Chat-Token`, không đặt trên URL.",
+  }],
   ["get", "/api/admin/live-chat", "tv", "Cửa hàng: danh sách / tin của cuộc chat", { tag: T.chat, q: ["conversationId"] }],
   ["post", "/api/admin/live-chat", "tv", "Cửa hàng: trả lời hoặc đổi trạng thái chat", {
     tag: T.chat, than: { conversationId: "string", text: "string?", action: "string?", status: "string?" },
@@ -192,7 +197,10 @@ export const BANG: Row[] = [
   // ------------------------------ Quan tri: don hang ------------------------------
   ["get", "/api/admin/orders", "nv", "Danh sách đơn hàng", { tag: T.qdh }],
   ["get", "/api/admin/orders/:id", "nv", "Chi tiết đơn hàng", { tag: T.qdh }],
-  ["patch", "/api/admin/orders/:id/status", "nv", "Đổi trạng thái đơn", { tag: T.qdh, than: { status: "string" } }],
+  ["patch", "/api/admin/orders/:id/status", "nv", "Đổi trạng thái đơn", {
+    tag: T.qdh, than: { status: "string" },
+    ghiChu: "Theo quy trình: pending → confirmed → processing → shipping → delivered (→ returned); hủy được trước khi giao. Sai bước trả 400. Chuyển sang cancelled / returned thì cộng lại tồn kho và trả lượt voucher; hai trạng thái này là điểm cuối.",
+  }],
   ["patch", "/api/admin/orders/:id/payment-status", "nv", "Đổi trạng thái thanh toán", { tag: T.qdh, than: { paymentStatus: "string" } }],
   ["patch", "/api/admin/orders/:id/assignment", "ql", "Giao đơn cho chi nhánh / nhân viên", {
     tag: T.qdh, than: { branchId: "string?", adminUserId: "string?" }, ghiChu: "Quản lý chỉ giao trong chi nhánh của mình.",

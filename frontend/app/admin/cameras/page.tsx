@@ -16,7 +16,7 @@ export default async function CamerasPage({
   const user = await requireAdminPage("/admin/cameras");
   const isOwner = user.role === "owner";
   const [cameras, branches, users, permissions, query] = await Promise.all([
-    getAccessibleCameras(user).catch(() => []),
+    getAccessibleCameras().catch(() => []),
     isOwner ? getBranches(false).catch(() => []) : Promise.resolve([]),
     isOwner ? getAdminUsers().catch(() => []) : Promise.resolve([]),
     isOwner ? getCameraPermissions().catch(() => []) : Promise.resolve([]),

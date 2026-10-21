@@ -46,7 +46,8 @@ export async function getCustomerConversation(req: Request, res: Response) {
     return;
   }
   const id = clean(req.query.conversationId, 50);
-  const chat = await customerConversation(id, clean(req.query.token, 50)).catch(() => undefined);
+  // Ma chat gui trong header de khong nam tren URL (log may chu, lich su trinh duyet). Van nhan ?token= cho trang cu.
+  const chat = await customerConversation(id, clean(req.get("x-chat-token") ?? req.query.token, 50)).catch(() => undefined);
   if (!chat) throw forbidden("Phiên chat không hợp lệ.");
   res.set("Cache-Control", "no-store").json({
     conversation: { status: chat.status, customerName: chat.customerName, branchName: chat.branchName },

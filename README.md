@@ -5,6 +5,13 @@ kho, đơn hàng và chăm sóc khách hàng.
 
 **Tác giả:** Nguyễn Thế Sang · [github.com/TheSang2610](https://github.com/TheSang2610)
 
+**Bản chạy thật:** https://infinityy-store.vercel.app · Tài liệu API: https://infinityy-store.vercel.app/api/docs
+
+> Bản demo chưa bật các dịch vụ cần khóa riêng: **đăng ký tài khoản khách / quên mật khẩu** (cần Twilio để gửi mã OTP),
+> **đăng nhập Google**, **tự xác nhận thanh toán qua Casso** (đơn vẫn được Giám đốc xác nhận tay) và
+> **chấm công khuôn mặt** (máy chủ Python + TensorFlow không chạy được trên Vercel). Xem, tìm, giỏ hàng, đặt hàng,
+> mã QR thanh toán và trang quản trị đều chạy.
+
 > Tài liệu này mô tả **hiện trạng thật** của repo, không phải kế hoạch. Phần chưa làm nằm ở mục 14.
 > Đổi cấu trúc thư mục thì sửa README trong cùng commit.
 
@@ -45,7 +52,7 @@ kho, đơn hàng và chăm sóc khách hàng.
 - **Tài liệu API bằng Swagger UI** (`/api/docs`, 106 endpoint), có test bảo đảm tài liệu luôn khớp với route thật.
 - **Bảo mật:** giới hạn tần suất, chống CSRF, kiểm tra JSON, nhận dạng ảnh theo chữ ký nhị phân, mã hóa hồ sơ nhân sự.
   Chi tiết trong [SECURITY_AUDIT.md](SECURITY_AUDIT.md).
-- **Kiểm thử:** backend 38 test gọi API thật trên PostgreSQL chạy trong bộ nhớ (PGlite), frontend 49 test.
+- **Kiểm thử:** backend 45 test gọi API thật trên PostgreSQL chạy trong bộ nhớ (PGlite), frontend 49 test.
 
 ### 1.2. Chức năng
 
@@ -319,7 +326,7 @@ Mỗi endpoint khai bằng **một dòng** trong `backend/src/docs/paths.ts` (ph
 Nhóm vai trò dùng lại khai trong `backend/src/middlewares/auth.ts`: `OWNER_ONLY`, `MANAGERS`, `INVENTORY_STAFF`,
 `CATALOG_EDITORS`. Thiếu phiên trả **401**, sai vai trò trả **403**, gọi quá nhiều lần trả **429**.
 
-Hai loại phiên đều là cookie `httpOnly`: `huy_customer` cho khách, `admin` cho nhân viên.
+Hai loại phiên đều là cookie `httpOnly`: `infinity_customer` cho khách, `admin` cho nhân viên.
 
 Lớp bảo mật đang có, rủi ro còn lại và việc bắt buộc trước khi lên production: [SECURITY_AUDIT.md](SECURITY_AUDIT.md).
 
@@ -328,7 +335,7 @@ Lớp bảo mật đang có, rủi ro còn lại và việc bắt buộc trướ
 ## 10. Kiểm thử
 
 ```bash
-cd backend  && npm run typecheck && npm test      # 38 test
+cd backend  && npm run typecheck && npm test      # 45 test
 cd frontend && npm run typecheck && npm test && npm run lint && npm run build
 ```
 
@@ -371,9 +378,27 @@ Sửa một bản trong bảng mục 7.2, chép sang bản còn lại, chạy `c
 
 ### 12.1. Vercel
 
-Hai project Vercel: một trỏ Root Directory vào `backend/`, một vào `frontend/`.
-Backend cần PostgreSQL (Neon) và Vercel Blob (`STORAGE_DRIVER=blob`); frontend cần `BACKEND_URL` trỏ về backend.
-Đặt `INTERNAL_API_SECRET` giống nhau ở cả hai.
+Bản đang chạy dùng hai project Vercel:
+
+| Project | Thư mục | Tên miền | Tài nguyên |
+| --- | --- | --- | --- |
+| `infinity-store-api` | `backend/` | infinityy-store-api.vercel.app | Neon PostgreSQL (Singapore), Vercel Blob riêng tư (Singapore) |
+| `infinity-store` | `frontend/` | infinityy-store.vercel.app | — |
+
+```bash
+cd backend  && npx vercel --prod --yes                 # deploy backend TRƯỚC (frontend gọi API mới)
+cd frontend && npx vercel --prod --yes --archive=tgz   # ảnh trong public/ nhiều, gói một tệp cho ổn định
+```
+
+- `backend/vercel.json` khai `"framework": "express"`, `frontend/vercel.json` khai `"framework": "nextjs"`. Thiếu dòng này
+  Vercel coi thư mục là web tĩnh: backend trả 404 mọi đường `/api` và **phơi tệp trong thư mục ra ngoài**.
+- `backend/.vercelignore`, `frontend/.vercelignore` chặn tải lên `.env*`, CSDL thử `.pglite/`, `uploads/`, `.next/`. Đừng xóa.
+- Biến môi trường đặt bằng `vercel env add <TEN> production`. Backend: `DATABASE_URL` (Neon tự thêm), `BLOB_READ_WRITE_TOKEN`
+  (Blob tự thêm), `FRONTEND_URL`, `OWNER_USERNAME`, `OWNER_PASSWORD`, `HR_DATA_KEY`, `INTERNAL_API_SECRET`,
+  `STORAGE_DRIVER=blob`, `FACE_AUTOSTART=false`. Frontend: `BACKEND_URL`, `INTERNAL_API_SECRET` (giống backend), `SITE_URL`.
+- CSDL mới: chạy `db:migrate` rồi `db:seed` từ máy với `DATABASE_URL` của Neon (dùng `DATABASE_URL_UNPOOLED` cho migrate).
+- Trang `/api/docs` lấy CSS/JS của Swagger UI từ jsDelivr (`SWAGGER_UI_CDN` trong `backend/src/app.ts`), vì hàm trên Vercel
+  không đóng gói tệp tĩnh trong `node_modules`.
 
 ### 12.2. Tự host (không qua Vercel)
 
@@ -437,23 +462,27 @@ Ví dụ: `feat(face): gioi han tan suat cham cong khuon mat`
 
 ### P1 — Lưới an toàn
 
-- [ ] **Chưa có CI.** Repo chưa có `.github/workflows/`. Typecheck, test, lint, build mới chạy tay.
-  - _Xong khi:_ mỗi lần đẩy lên chạy đủ các lệnh ở mục 10 cho cả backend và frontend.
-- [ ] **31 test frontend đang `test.skip`** trong `frontend/tests/rendered-html.test.mjs`. Chúng đọc chữ trong code
-  Cloudflare/D1 cũ, phần đó đã chuyển sang backend và được kiểm bằng `api.test.ts`.
-  - _Cách làm:_ test nào còn ý nghĩa thì viết lại theo cấu trúc mới, còn lại xóa.
-- [ ] **6 cảnh báo lint** (biến không dùng) trong `frontend/src/services/data.ts`.
+- [x] **CI**: `.github/workflows/ci.yml` chạy typecheck + test (backend), typecheck + test + lint + build (frontend)
+  mỗi lần đẩy lên `main` và mỗi pull request.
+- [x] **31 test frontend `test.skip`** đọc chữ trong code Cloudflare/D1 cũ: đã xóa (phần đó `api.test.ts` kiểm).
+  Test ảnh sản phẩm viết lại theo `backend/seed/products.json`. Frontend còn 49 test, 0 bỏ qua.
+- [x] **6 cảnh báo lint** trong `frontend/src/services/data.ts`: đã bỏ tham số không dùng, lint 0 cảnh báo.
 
 ### P2 — Bảo mật (chi tiết trong SECURITY_AUDIT.md)
 
-- [ ] Bộ đếm giới hạn tần suất nằm trong bộ nhớ từng máy chủ → chuyển sang PostgreSQL hoặc Redis.
-- [ ] Hash mật khẩu PBKDF2 chưa ghi phiên bản → thêm tiền tố phiên bản, băm lại với số vòng cao hơn khi đăng nhập.
-- [ ] Chấm công khuôn mặt chưa kiểm tra người thật (liveness).
-- [ ] Chưa có Content-Security-Policy cho toàn giao diện.
+- [x] Giới hạn đăng nhập / OTP đếm trong PostgreSQL (bảng `rate_limit_buckets`, migration `0003`): mọi máy chủ Vercel
+  thấy cùng một con số. API thường vẫn đếm trong bộ nhớ từng máy chủ, đủ chặn spam.
+- [x] Hash mật khẩu ghi phiên bản (`v2$600000$...`, mức OWASP). Hash cũ 120.000 vòng vẫn đăng nhập được và được băm lại
+  ngay khi đăng nhập đúng.
+- [x] CSP cơ bản cho mọi trang (`frontend/next.config.ts`): script/kết nối chỉ từ chính trang, chặn `object`, chặn nhúng iframe.
+  Còn `'unsafe-inline'` cho script; muốn chặt hơn thì làm CSP theo nonce (mỗi trang phải render động).
+- [ ] Chấm công khuôn mặt chưa kiểm tra người thật (liveness). Cần mô hình chống giả mạo hoặc camera có cảm biến chiều sâu,
+  chưa sửa trong code được; hiện kết hợp đăng nhập nhân viên + passkey.
 
 ### P3 — Dọn dẹp
 
-- [ ] Cookie khách còn tiền tố `huy_` từ dự án gốc. Đổi tên thì mọi khách đang đăng nhập bị đăng xuất một lần.
+- [x] Cookie khách đổi tiền tố `huy_` → `infinity_`. Vẫn đọc tên cũ nên không ai bị đăng xuất; đăng nhập / đăng xuất
+  thì xóa cookie tên cũ.
 - [ ] `frontend/src/styles/storefront/` có 21 file CSS chồng lớp qua nhiều đợt đổi giao diện → gộp lại.
 - [ ] Xóa `backend/scripts/legacy-catalog/` sau khi đã chuyển dữ liệu trên CSDL thật.
 - [ ] Công cụ phát triển còn lỗ hổng (`drizzle-kit` kéo esbuild cũ, `braces`); không vào bản chạy thật.

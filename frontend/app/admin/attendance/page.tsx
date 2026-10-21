@@ -15,7 +15,7 @@ export default async function AttendancePage({ searchParams }: { searchParams: P
   const [allStaff, dateRecords, ownRecords] = await Promise.all([
     isSupervisor ? getAdminUsers().catch(() => []) : Promise.resolve([]),
     isSupervisor ? getAttendanceForDate(selectedDate).catch(() => []) : Promise.resolve([]),
-    user.role !== "owner" ? getEmployeeAttendance(user.id, 31).catch(() => []) : Promise.resolve([]),
+    user.role !== "owner" ? getEmployeeAttendance(user.id).catch(() => []) : Promise.resolve([]),
   ]);
   const staff = user.role === "owner" ? allStaff : allStaff.filter((item) => item.branchId === user.branchId);
   const records = user.role === "owner" ? dateRecords : dateRecords.filter((item) => staff.some((employee) => employee.id === item.adminUserId));

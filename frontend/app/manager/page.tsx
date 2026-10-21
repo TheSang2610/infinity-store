@@ -19,9 +19,9 @@ export default async function ManagerPortal() {
     getBranchById(user.branchId).catch(() => undefined),
     getAdminUsers().then((items) => items.filter((item) => item.branchId === user.branchId)).catch(() => []),
     getReportingOrders().then((items) => items.filter((item) => item.branchId === user.branchId)).catch(() => []),
-    getWorkTasks(user).catch(() => []),
+    getWorkTasks().catch(() => []),
     getEmployeeProfile(user.id).catch(() => undefined),
-    getEmployeeAttendance(user.id, 31).catch(() => []),
+    getEmployeeAttendance(user.id).catch(() => []),
   ]);
   const delivered = orders.filter((item) => item.status === "delivered");
   const open = orders.filter((item) => ["new", "pending", "confirmed", "processing", "shipping"].includes(item.status));

@@ -4,7 +4,7 @@ import { env } from "../config/env";
 import { badRequest, notFound, text } from "../utils/http";
 import {
   ADMIN_COOKIE, clearCookie, CUSTOMER_COOKIE, CUSTOMER_PASSWORD_RESET_COOKIE, CUSTOMER_VERIFICATION_COOKIE,
-  GOOGLE_RETURN_TO_COOKIE, GOOGLE_STATE_COOKIE, sessionCookie, shortCookie,
+  clearLegacyCookie, GOOGLE_RETURN_TO_COOKIE, GOOGLE_STATE_COOKIE, readCookie, sessionCookie, shortCookie,
 } from "../middlewares/auth";
 import { deleteAdminSession } from "../repositories/admin-user.repository";
 import { getCustomerOrderById, getCustomerOrders } from "../repositories/order.repository";
@@ -13,6 +13,7 @@ import {
 } from "../repositories/student-verification.repository";
 import { deleteFile, deleteImage, detectImageType, isPdf, putFile, saveImage } from "../services/file-storage.service";
 import * as customers from "../repositories/customer.repository";
+import { getCart, saveCart } from "../repositories/cart.repository";
 import {
   checkOtpVerification, fetchGoogleProfile, googleOAuthConfig, startOtpVerification,
 } from "../services/identity-provider.service";
@@ -24,6 +25,7 @@ async function signInCustomer(res: Response, customerId: string, adminToken?: st
   if (adminToken) await deleteAdminSession(adminToken).catch(() => undefined);
   clearCookie(res, ADMIN_COOKIE);
   res.cookie(CUSTOMER_COOKIE, await customers.createCustomerSession(customerId), sessionCookie());
+  clearLegacyCookie(res, CUSTOMER_COOKIE);
 }
 
 // ---- Quen mat khau: forgot -> verify -> reset ----
@@ -72,7 +74,7 @@ export async function login(req: Request, res: Response) {
 }
 
 export async function logout(req: Request, res: Response) {
-  await customers.deleteCustomerSession(req.cookies?.[CUSTOMER_COOKIE]);
+  await customers.deleteCustomerSession(readCookie(req, CUSTOMER_COOKIE));
   for (const name of [CUSTOMER_COOKIE, CUSTOMER_VERIFICATION_COOKIE, CUSTOMER_PASSWORD_RESET_COOKIE, GOOGLE_RETURN_TO_COOKIE]) clearCookie(res, name);
   res.json({ ok: true });
 }
@@ -152,8 +154,8 @@ export function startGoogleLogin(req: Request, res: Response) {
 }
 
 export async function finishGoogleLogin(req: Request, res: Response) {
-  const expectedState = req.cookies?.[GOOGLE_STATE_COOKIE] ?? "";
-  const returnTo = safeReturnTo(req.cookies?.[GOOGLE_RETURN_TO_COOKIE] ?? "");
+  const expectedState = readCookie(req, GOOGLE_STATE_COOKIE) ?? "";
+  const returnTo = safeReturnTo(readCookie(req, GOOGLE_RETURN_TO_COOKIE) ?? "");
   clearCookie(res, GOOGLE_STATE_COOKIE);
   clearCookie(res, GOOGLE_RETURN_TO_COOKIE);
   try {
@@ -175,7 +177,7 @@ export async function finishGoogleLogin(req: Request, res: Response) {
 export async function checkVerificationCode(req: Request, res: Response) {
   const code = text(req.body?.code).replace(/\D/g, "");
   if (!/^\d{4,10}$/.test(code)) throw badRequest("Mã xác minh chưa hợp lệ.");
-  const pending = await customers.verificationFromToken(req.cookies?.[CUSTOMER_VERIFICATION_COOKIE]);
+  const pending = await customers.verificationFromToken(readCookie(req, CUSTOMER_VERIFICATION_COOKIE));
   if (!pending) throw badRequest("Phiên xác minh đã hết hạn. Vui lòng đăng nhập lại.");
   if (!(await checkOtpVerification(pending.destination, code))) throw badRequest("Mã xác minh không đúng hoặc đã hết hạn.");
   const customer = await customers.markCustomerVerified(pending.customer.id, pending.channel);
@@ -187,7 +189,7 @@ export async function checkVerificationCode(req: Request, res: Response) {
 }
 
 export async function resendVerificationCode(req: Request, res: Response) {
-  const pending = await customers.verificationFromToken(req.cookies?.[CUSTOMER_VERIFICATION_COOKIE]);
+  const pending = await customers.verificationFromToken(readCookie(req, CUSTOMER_VERIFICATION_COOKIE));
   if (!pending) throw badRequest("Phiên xác minh đã hết hạn. Vui lòng đăng nhập lại.");
   await startOtpVerification(pending.destination, pending.channel);
   res.json({ ok: true });
@@ -213,7 +215,7 @@ export async function requestPasswordReset(req: Request, res: Response) {
 export async function verifyPasswordResetCode(req: Request, res: Response) {
   const code = text(req.body?.code).replace(/\D/g, "");
   if (!/^\d{4,10}$/.test(code)) throw badRequest("Mã xác minh chưa hợp lệ.");
-  const pending = await customers.passwordResetFromToken(req.cookies?.[CUSTOMER_PASSWORD_RESET_COOKIE]);
+  const pending = await customers.passwordResetFromToken(readCookie(req, CUSTOMER_PASSWORD_RESET_COOKIE));
   if (!pending) throw badRequest("Phiên khôi phục đã hết hạn. Vui lòng yêu cầu mã mới.");
   if (!(await checkOtpVerification(pending.destination, code))) {
     await customers.recordPasswordResetAttempt(pending.id);
@@ -228,7 +230,7 @@ export async function resetPassword(req: Request, res: Response) {
   if (password !== (typeof req.body?.confirmPassword === "string" ? req.body.confirmPassword : "")) {
     throw badRequest("Hai lần nhập mật khẩu mới chưa trùng nhau.");
   }
-  const pending = await customers.passwordResetFromToken(req.cookies?.[CUSTOMER_PASSWORD_RESET_COOKIE]);
+  const pending = await customers.passwordResetFromToken(readCookie(req, CUSTOMER_PASSWORD_RESET_COOKIE));
   if (!pending?.verifiedAt) throw badRequest("Bạn cần xác minh mã trước khi đổi mật khẩu.");
   const customer = await customers.resetCustomerPassword(pending.id, pending.customer.id, password);
   if (!customer) throw badRequest("Không tìm thấy tài khoản cần khôi phục.");
@@ -273,4 +275,13 @@ export async function requestStudentDiscount(req: Request, res: Response) {
     await deleteFile(key);
     throw error;
   }
+}
+
+/** Gio hang cua khach dang dang nhap (dang nhap may nao cung thay). */
+export async function getOwnCart(req: Request, res: Response) {
+  res.set(NO_STORE).json({ items: await getCart(req.customer!.id) });
+}
+
+export async function replaceOwnCart(req: Request, res: Response) {
+  res.set(NO_STORE).json({ items: await saveCart(req.customer!.id, req.body?.items) });
 }

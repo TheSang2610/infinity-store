@@ -2,6 +2,9 @@ import cookieParser from "cookie-parser";
 import express from "express";
 import swaggerUi from "swagger-ui-express";
 import { apiSpec } from "./docs/openapi";
+
+/** Phai trung phien ban swagger-ui-dist dang cai (test docs.test.ts kiem). */
+export const SWAGGER_UI_CDN = "https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.33.3";
 import { env } from "./config/env";
 import { loadCustomer } from "./middlewares/auth";
 import { errorHandler, notFoundHandler } from "./middlewares/errors";
@@ -38,15 +41,17 @@ export function createApp() {
     res.json(apiSpec);
   });
   // Khac LMS: trang nay thuong mo qua frontend, ma Next.js tu bo dau "/" cuoi ("/api/docs/" -> "/api/docs")
-  // con swaggerUi.serve lai tu them vao -> chuyen huong vong tron. Nen tu tra HTML cho ca hai dang,
-  // doi duong dan tep "./swagger-ui.css" thanh tuyet doi "/api/docs/swagger-ui.css" (khong phu thuoc dau "/").
+  // con swaggerUi.serve lai tu them vao -> chuyen huong vong tron. Nen tu tra HTML cho ca hai dang.
+  // CSS/JS cua Swagger UI lay tu CDN: ham tren Vercel chi dong goi ma, khong dong goi tep tinh trong
+  // node_modules/swagger-ui-dist. Rieng swagger-ui-init.js (chua ban dac ta) van do backend tra.
   const docsHtml = swaggerUi
     .generateHTML(apiSpec, {
       customSiteTitle: "Infinity Store API",
       // Gui kem cookie phien khi bam Try it out, neu khong moi lan thu deu 401.
       swaggerOptions: { withCredentials: true, persistAuthorization: true },
     })
-    .replace(/(href|src)="\.\//g, '$1="/api/docs/');
+    .replace(/(href|src)="\.\/swagger-ui-init\.js"/g, '$1="/api/docs/swagger-ui-init.js"')
+    .replace(/(href|src)="\.\//g, `$1="${SWAGGER_UI_CDN}/`);
   app.get(["/api/docs", "/api/docs/", "/api/docs/index.html"], (_req, res) => {
     res.type("html").send(docsHtml);
   });

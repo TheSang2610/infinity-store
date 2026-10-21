@@ -162,12 +162,13 @@ export default function CartCheckout({
         }),
       });
 
-      const result = (await response.json()) as { ok?: boolean; orderCode?: string; message?: string };
+      const result = (await response.json()) as { ok?: boolean; orderCode?: string; message?: string; total?: number };
       if (!response.ok || !result.ok) throw new Error(result.message || CHECKOUT.orderFailed);
 
       setOrderCode(result.orderCode || "");
       setExpiresAt(Date.now() + 10 * 60 * 1000);
-      setSubmittedTotal(total);
+      // Tong do may chu tinh lai (gia trong gio co the da cu) - cung so tien voi ma QR.
+      setSubmittedTotal(typeof result.total === "number" && result.total > 0 ? result.total : total);
       setSubmittedItems(items);
       setStatus("success");
       clearCart();

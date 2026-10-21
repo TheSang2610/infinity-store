@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 export default async function TasksPage({ searchParams }: { searchParams: Promise<{ status?: string; error?: string }> }) {
   const [user, query] = await Promise.all([requireAdminPage("/admin/tasks"), searchParams]);
   const canAssign = user.role === "owner" || user.role === "manager";
-  const [tasks, allUsers] = await Promise.all([getWorkTasks(user).catch(() => []), canAssign ? getAdminUsers().catch(() => []) : Promise.resolve([])]);
+  const [tasks, allUsers] = await Promise.all([getWorkTasks().catch(() => []), canAssign ? getAdminUsers().catch(() => []) : Promise.resolve([])]);
   const reports = await getWorkReports(tasks.map((task) => task.id)).catch(() => []);
   const assignees = allUsers.filter((item) => item.active && item.role !== "owner" && (user.role === "owner" || (item.branchId === user.branchId && item.role !== "manager")));
   const reportMap = new Map<string, typeof reports>();

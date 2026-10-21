@@ -1096,6 +1096,7 @@ export const ORDER_DETAIL_PAGE = {
   update: "Cập nhật",
   updatePayment: "Cập nhật thanh toán",
   updateStatus: "Cập nhật trạng thái",
+  updateStatusFinal: "Đơn đã kết thúc (đã hủy / hoàn trả) nên không đổi trạng thái được nữa. Tồn kho và lượt voucher đã được trả lại.",
   vatIncluded: "Giá đơn hàng đã gồm VAT",
   vatRate: "Thuế suất VAT",
   visitRequestNote: "· Không thu tiền ở bước tiếp nhận · Nhân viên cần liên hệ tư vấn và xác nhận tồn kho.",

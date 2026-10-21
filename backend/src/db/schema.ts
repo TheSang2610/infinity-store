@@ -12,7 +12,7 @@
  */
 import { relations, sql } from "drizzle-orm";
 import { bigint, boolean, check, index, integer, jsonb, pgTable, primaryKey, text, uniqueIndex } from "drizzle-orm/pg-core";
-import type { OrderItem, ProductColor, ProductMediaLink, ProductVariant, StoreSettings } from "../types";
+import type { CartItem, OrderItem, ProductColor, ProductMediaLink, ProductVariant, StoreSettings } from "../types";
 
 const epochMs = (name: string) => bigint(name, { mode: "number" });
 const vnd = (name: string) => bigint(name, { mode: "number" });
@@ -296,6 +296,16 @@ export const storeSettings = pgTable("store_settings", {
   updatedAt: epochMs("updated_at").notNull(),
 });
 
+/**
+ * Bo dem gioi han dang nhap / OTP (5 lan / 15 phut). Nam trong CSDL vi Vercel chay nhieu may chu cung luc:
+ * dem trong bo nho thi moi may dem rieng, gioi han that long hon con so cau hinh.
+ */
+export const rateLimitBuckets = pgTable("rate_limit_buckets", {
+  key: text("key").primaryKey(),
+  count: integer("count").notNull(),
+  resetAt: epochMs("reset_at").notNull(),
+}, (table) => [index("rate_limit_buckets_reset_idx").on(table.resetAt)]);
+
 export const productViews = pgTable("product_views", {
   id: text("id").primaryKey(),
   productSlug: text("product_slug").notNull(),
@@ -329,6 +339,17 @@ export const customers = pgTable("customers", {
   uniqueIndex("customers_google_sub_idx").on(table.googleSub).where(sql`${table.googleSub} <> ''`),
   uniqueIndex("customers_username_idx").on(sql`lower(${table.username})`).where(sql`${table.username} <> ''`),
 ]);
+
+/**
+ * Gio hang cua khach thanh vien: mot dong moi khach, cac mon nam trong jsonb (toi da 20 dong).
+ * Luu tren may chu de dang nhap may khac van thay gio. Gia trong gio chi de hien thi -
+ * dat hang luon tinh lai gia tu CSDL.
+ */
+export const customerCarts = pgTable("customer_carts", {
+  customerId: text("customer_id").primaryKey().references(() => customers.id, { onDelete: "cascade" }),
+  items: jsonb("items").$type<CartItem[]>().notNull().default([]),
+  updatedAt: epochMs("updated_at").notNull(),
+});
 
 export const customerSessions = pgTable("customer_sessions", {
   id: text("id").primaryKey(),

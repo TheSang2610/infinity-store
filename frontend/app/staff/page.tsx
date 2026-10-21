@@ -16,9 +16,9 @@ export default async function StaffPortal() {
 
   const [profile, attendance, orders, workTasks] = await Promise.all([
     getEmployeeProfile(user.id).catch(() => undefined),
-    getEmployeeAttendance(user.id, 31).catch(() => []),
+    getEmployeeAttendance(user.id).catch(() => []),
     getReportingOrders().then((items) => items.filter((item) => item.assignedAdminId === user.id)).catch(() => []),
-    getWorkTasks(user).catch(() => []),
+    getWorkTasks().catch(() => []),
   ]);
   const today = attendance.find((item) => item.workDate === vietnamDate());
   const open = orders.filter((item) => ["new", "pending", "confirmed", "processing", "shipping"].includes(item.status));

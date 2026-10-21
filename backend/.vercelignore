@@ -1,0 +1,8 @@
+# Khong tai len Vercel: bi mat, CSDL thu tren may, tep tai len cuc bo, script dung mot lan.
+.env
+.env.*
+!.env.example
+.pglite/
+uploads/
+scripts/
+node_modules/

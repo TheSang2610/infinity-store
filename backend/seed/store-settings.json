@@ -4,11 +4,11 @@
   "businessLicense": "GPĐKKD: 0000000000 (dữ liệu demo, không phải doanh nghiệp thật).",
   "officeAddress": "123 Đường Số 1, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh",
   "email": "",
-  "hotline": "028.0000.0000",
+  "hotline": "0384.589.559",
   "hotlineHours": "7h30 - 22h00",
-  "supportHotline": "1800.0000",
+  "supportHotline": "0384.589.559",
   "supportHours": "8h00 - 21h00",
-  "complaintHotline": "1800.0001",
+  "complaintHotline": "0384.589.559",
   "complaintHours": "8h00 - 21h30",
   "consultPhone": "0384 589 559",
   "zaloPhone": "0384589559",
@@ -23,5 +23,5 @@
   ],
   "bank": {"code": "bidv", "name": "BIDV", "accountNumber": "1810408755", "accountName": "NGUYEN THE SANG"},
   "momo": {"phone": "0384589559", "accountName": "NGUYEN THE SANG"},
-  "invoiceSeller": {"name": "INFINITY STORE", "taxCode": "", "address": "123 Đường Số 1, Q. 1, TP.HCM", "phone": "02800000000"}
+  "invoiceSeller": {"name": "INFINITY STORE", "taxCode": "", "address": "123 Đường Số 1, Q. 1, TP.HCM", "phone": "0384589559"}
 }

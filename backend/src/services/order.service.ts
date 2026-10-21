@@ -8,6 +8,7 @@ import { getPublicProducts } from "./product.service";
 import { redeemVoucher, releaseVoucher, validateVoucher } from "../repositories/voucher.repository";
 import { INSTALLMENT_PAYMENT, NO_PAYMENT } from "../constants/payment";
 import { createOrder, generateOrderCode, getWarrantyOrder } from "../repositories/order.repository";
+import { reserveStock, restoreStock } from "../repositories/stock.repository";
 import { getStoreSettings, paymentMethodLabels } from "./store-settings.service";
 
 const HOME_DELIVERY = "Giao hàng tận nơi";
@@ -24,15 +25,26 @@ type Payload = Record<string, unknown>;
  * - Den cua hang xem may: chon chi nhanh, khong thanh toan, khong dung voucher.
  * - Thanh toan truoc (chi chuyen khoan): bo sung thong tin giao nhan sau.
  * Gia luon tinh lai o may chu; ma don do may chu sinh.
+ * Ton kho tru ngay luc dat (thieu hang thi bao loi); don bi huy / tra hang thi cong lai
+ * (repositories/order.repository.ts > updateOrderStatus).
  */
 export async function placeOrder(payload: Payload, customer: Customer | undefined) {
   const order = await normalizeOrder(payload, customer);
+  await reserveStock(order.items);
+  order.items = order.items.map((item) => ({ ...item, stockReserved: true }));
+
   const voucherReserved = Boolean(order.voucherCode);
-  if (voucherReserved) await redeemVoucher(order.voucherCode);
+  try {
+    if (voucherReserved) await redeemVoucher(order.voucherCode);
+  } catch (error) {
+    await restoreStock(order.items);
+    throw error;
+  }
   try {
     const saved = await createOrder(order);
     return { ...saved, total: Number(order.total) || 0, discount: Number(order.discount) || 0 };
   } catch (error) {
+    await restoreStock(order.items);
     if (voucherReserved) await releaseVoucher(order.voucherCode);
     throw error;
   }

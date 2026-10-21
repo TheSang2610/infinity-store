@@ -2,7 +2,7 @@ import { randomUUID } from "node:crypto";
 import { and, asc, desc, eq, gt, sql } from "drizzle-orm";
 import { getDb } from "../db/client";
 import { adminUsers, adminUserSessions } from "../db/schema";
-import { createPasswordHash, hashToken, randomToken, verifyPassword } from "../utils/crypto";
+import { createPasswordHash, hashToken, passwordNeedsRehash, randomToken, verifyPassword } from "../utils/crypto";
 import { badRequest } from "../utils/http";
 import { ADMIN_ROLES, type AdminRole, type AdminUser } from "../types";
 
@@ -53,6 +53,11 @@ export async function upsertOwner(username: string, password: string) {
 export async function authenticateAdminUser(usernameInput: string, password: string) {
   const row = await findByUsername(usernameInput.trim().toLowerCase());
   if (!row || !row.active || !(await verifyPassword(password, row.passwordSalt, row.passwordHash))) return undefined;
+  // Hash dang cu (120.000 vong, chua ghi phien ban): bam lai ngay luc biet mat khau dung.
+  if (passwordNeedsRehash(row.passwordHash)) {
+    const { hash, salt } = await createPasswordHash(password);
+    await getDb().update(adminUsers).set({ passwordHash: hash, passwordSalt: salt }).where(eq(adminUsers.id, row.id));
+  }
   return toAdminUser(row);
 }
 

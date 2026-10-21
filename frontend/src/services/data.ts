@@ -94,7 +94,7 @@ export async function getManagedOrderById(id: string) {
 }
 
 /** Hoa don cua chinh khach dang dang nhap. */
-export async function getCustomerOrderById(id: string, _customerId?: string) {
+export async function getCustomerOrderById(id: string) {
   return orUndefined(async () => (await get<{ order: ManagedOrder }>(`/account/orders/${encodeURIComponent(id)}`)).order);
 }
 
@@ -112,7 +112,7 @@ export async function getProductViewStats() {
   );
 }
 
-export async function getAdminConversations(_branchId?: string) {
+export async function getAdminConversations() {
   return (await get<{ conversations: LiveConversation[] }>("/admin/live-chat")).conversations;
 }
 
@@ -129,7 +129,7 @@ export async function getEmployeeProfile(adminUserId: string) {
   return (await employeeDetail(adminUserId))?.employee;
 }
 
-export async function getEmployeeAttendance(adminUserId: string, _limit?: number) {
+export async function getEmployeeAttendance(adminUserId: string) {
   return (await employeeDetail(adminUserId))?.attendance ?? [];
 }
 
@@ -164,7 +164,7 @@ export function vietnamDate(date = new Date()) {
 
 const taskBoard = cache(() => api<{ tasks: WorkTask[]; reports: WorkReport[] }>("/admin/tasks"));
 
-export async function getWorkTasks(_user?: AdminUser) {
+export async function getWorkTasks() {
   return (await taskBoard()).tasks;
 }
 
@@ -183,13 +183,13 @@ export async function getBranchInventory(branchId: string) {
   return (await inventoryView(branchId)).items;
 }
 
-export async function getInventoryMovements(branchId: string, _limit?: number) {
+export async function getInventoryMovements(branchId: string) {
   return (await inventoryView(branchId)).movements;
 }
 
 const cameraView = cache(() => api<{ cameras: Camera[]; permissions: CameraPermission[] }>("/admin/cameras"));
 
-export async function getAccessibleCameras(_user?: AdminUser) {
+export async function getAccessibleCameras() {
   return (await cameraView()).cameras;
 }
 

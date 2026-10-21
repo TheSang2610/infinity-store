@@ -22,6 +22,20 @@
       "when": 1791981031787,
       "tag": "0002_store_settings",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1792255035869,
+      "tag": "0003_rate_limit_buckets",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1792546017271,
+      "tag": "0004_customer_carts",
+      "breakpoints": true
     }
   ]
 }

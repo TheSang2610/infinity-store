@@ -15,7 +15,7 @@ export default async function MemberInvoicePage({ params }: { params: Promise<{ 
   const customer = await currentCustomer();
   if (!customer) redirect("/member");
   const { id } = await params;
-  const [order, { invoiceSeller: seller }] = await Promise.all([getCustomerOrderById(id, customer.id), getStoreSettings()]);
+  const [order, { invoiceSeller: seller }] = await Promise.all([getCustomerOrderById(id), getStoreSettings()]);
   if (!order) notFound();
 
   const items = order.items.length ? order.items : [{ productSlug: order.productSlug, productName: order.productName, ram: "", storage: order.storage, color: order.color, quantity: order.quantity, unitPrice: Number(order.total) / Math.max(1, order.quantity), image: "" }];

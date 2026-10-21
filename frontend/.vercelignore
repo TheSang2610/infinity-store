@@ -1,0 +1,8 @@
+# Khong tai len Vercel: bi mat, ban build cu tren may, cau hinh cong cu cuc bo.
+.env
+.env.*
+!.env.example
+.next/
+.impeccable/
+node_modules/
+tsconfig.tsbuildinfo

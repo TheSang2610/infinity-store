@@ -71,6 +71,19 @@ export type ManagedProduct = Product & {
   updatedAt: number;
 };
 
+/** Mot dong trong gio hang (frontend/src/hooks/cart.tsx, bang customer_carts). */
+export type CartItem = {
+  key: string;
+  productSlug: string;
+  productName: string;
+  image: string;
+  ram: string;
+  storage: string;
+  color: string;
+  unitPrice: number;
+  quantity: number;
+};
+
 export type OrderItem = {
   productSlug: string;
   productName: string;
@@ -80,6 +93,11 @@ export type OrderItem = {
   quantity: number;
   unitPrice: number;
   image: string;
+  /**
+   * Da tru ton kho luc dat hang (repositories/stock.repository.ts). Don dat truoc ngay
+   * them co nay khong co - huy cac don do thi khong cong ton, tranh ton bi doi len.
+   */
+  stockReserved?: boolean;
 };
 
 /** Tien tra ve dang chuoi chu so ("23890000", rong = chua co) giong ban cu de giao dien khong phai doi. */

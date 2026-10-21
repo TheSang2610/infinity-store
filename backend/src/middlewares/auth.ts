@@ -5,13 +5,27 @@ import { adminUserFromSession } from "../repositories/admin-user.repository";
 import { customerFromSession } from "../repositories/customer.repository";
 import type { AdminRole, AdminUser, Customer } from "../types";
 
-// Ten cookie giu nhu ban cu de khach/nhan vien dang dang nhap khong bi dang xuat khi chuyen.
-export const CUSTOMER_COOKIE = "huy_customer";
-export const CUSTOMER_VERIFICATION_COOKIE = "huy_customer_verification";
-export const CUSTOMER_PASSWORD_RESET_COOKIE = "huy_customer_password_reset";
-export const GOOGLE_STATE_COOKIE = "huy_google_state";
-export const GOOGLE_RETURN_TO_COOKIE = "huy_google_return_to";
+// Cookie khach dung tien to "infinity_". Truoc 18/10/2026 la "huy_" (con lai tu du an goc): van doc
+// ten cu khi chua co ten moi de khach dang dang nhap khong bi dang xuat; dang nhap / dang xuat thi xoa ten cu.
+const PREFIX = "infinity_";
+const LEGACY_PREFIX = "huy_";
+export const CUSTOMER_COOKIE = "infinity_customer";
+export const CUSTOMER_VERIFICATION_COOKIE = "infinity_customer_verification";
+export const CUSTOMER_PASSWORD_RESET_COOKIE = "infinity_customer_password_reset";
+export const GOOGLE_STATE_COOKIE = "infinity_google_state";
+export const GOOGLE_RETURN_TO_COOKIE = "infinity_google_return_to";
 export const ADMIN_COOKIE = "admin";
+
+function legacyName(name: string) {
+  return name.startsWith(PREFIX) ? LEGACY_PREFIX + name.slice(PREFIX.length) : undefined;
+}
+
+/** Doc cookie theo ten moi, chua co thi thu ten cu "huy_*". */
+export function readCookie(req: Request, name: string): string | undefined {
+  const cookies = req.cookies as Record<string, string> | undefined;
+  const legacy = legacyName(name);
+  return cookies?.[name] ?? (legacy ? cookies?.[legacy] : undefined);
+}
 
 const THIRTY_DAYS_MS = 30 * 24 * 60 * 60 * 1000;
 
@@ -25,6 +39,13 @@ export function shortCookie(maxAgeMs = 10 * 60 * 1000): CookieOptions {
 
 export function clearCookie(res: Response, name: string) {
   res.clearCookie(name, { httpOnly: true, sameSite: "lax", secure: env.isProduction, path: "/" });
+  clearLegacyCookie(res, name);
+}
+
+/** Chi xoa ten cu "huy_*" - dung khi vua dat cookie ten moi cung ten nay. */
+export function clearLegacyCookie(res: Response, name: string) {
+  const legacy = legacyName(name);
+  if (legacy) res.clearCookie(legacy, { httpOnly: true, sameSite: "lax", secure: env.isProduction, path: "/" });
 }
 
 declare module "express-serve-static-core" {
@@ -36,7 +57,7 @@ declare module "express-serve-static-core" {
 
 /** Gan khach dang dang nhap (neu co) vao req.customer, khong chan request. */
 export async function loadCustomer(req: Request, _res: Response, next: NextFunction) {
-  req.customer = await customerFromSession(req.cookies?.[CUSTOMER_COOKIE]);
+  req.customer = await customerFromSession(readCookie(req, CUSTOMER_COOKIE));
   next();
 }
 

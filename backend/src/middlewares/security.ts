@@ -1,12 +1,15 @@
+import { lt, sql } from "drizzle-orm";
 import type { NextFunction, Request, Response } from "express";
 import { env } from "../config/env";
+import { getDb } from "../db/client";
+import { rateLimitBuckets } from "../db/schema";
 import { HttpError } from "../utils/http";
 
 // Chuyen tu worker/api-security.ts cua ban Cloudflare:
 // - chan request ghi (POST/PUT/PATCH/DELETE) den tu trang web khac (chong CSRF),
 // - gioi han tan suat theo IP (dang nhap/OTP 5 lan/15 phut, API thuong 60-180 lan/phut).
-// Bo dem nam trong bo nho tung may chu: tren Vercel moi instance dem rieng, du chan spam
-// co ban; can chat hon thi chuyen bo dem sang Postgres hoac Redis.
+// Dang nhap / OTP dem trong CSDL (bang rate_limit_buckets) de moi may chu Vercel thay cung mot con so;
+// API thuong dem trong bo nho tung may chu, du chan spam co ban.
 
 const MUTATING = new Set(["POST", "PUT", "PATCH", "DELETE"]);
 const AUTH_PATHS = new Set([
@@ -23,7 +26,8 @@ export function securityHeaders(req: Request, res: Response, next: NextFunction)
     "X-Frame-Options": "DENY",
     "Referrer-Policy": "strict-origin-when-cross-origin",
   });
-  if (req.path.startsWith("/api/account/")) res.set("Cache-Control", "no-store");
+  // Du lieu theo phien dang nhap: khong cho proxy / trinh duyet luu lai. Route nao can cache tu dat lai sau.
+  if (req.path.startsWith("/api/account/") || req.path.startsWith("/api/admin/")) res.set("Cache-Control", "no-store");
   next();
 }
 
@@ -43,29 +47,66 @@ function allowedOrigins() {
 
 const buckets = new Map<string, { count: number; resetAt: number }>();
 
-export function rateLimit(req: Request, res: Response, next: NextFunction) {
+type Hit = { count: number; resetAt: number };
+
+/** Dem trong bo nho may chu nay. */
+function hitMemory(key: string, windowMs: number, now: number): Hit {
+  const bucket = buckets.get(key);
+  if (!bucket || bucket.resetAt <= now) {
+    const fresh = { count: 1, resetAt: now + windowMs };
+    buckets.set(key, fresh);
+    if (buckets.size > 50_000) pruneBuckets(now);
+    return fresh;
+  }
+  bucket.count += 1;
+  return bucket;
+}
+
+/**
+ * Dem trong CSDL: moi may chu Vercel thay cung mot con so. Mot cau lenh upsert nen hai request
+ * cung luc khong dem trung. CSDL loi thi lui ve dem trong bo nho, khong chan nham ca trang dang nhap.
+ */
+async function hitShared(key: string, windowMs: number, now: number): Promise<Hit> {
+  try {
+    const resetAt = now + windowMs;
+    const [row] = await getDb()
+      .insert(rateLimitBuckets)
+      .values({ key, count: 1, resetAt })
+      .onConflictDoUpdate({
+        target: rateLimitBuckets.key,
+        set: {
+          count: sql`case when ${rateLimitBuckets.resetAt} <= ${now} then 1 else ${rateLimitBuckets.count} + 1 end`,
+          resetAt: sql`case when ${rateLimitBuckets.resetAt} <= ${now} then ${resetAt} else ${rateLimitBuckets.resetAt} end`,
+        },
+      })
+      .returning({ count: rateLimitBuckets.count, resetAt: rateLimitBuckets.resetAt });
+    // Don dong het han thinh thoang, khong can job rieng.
+    if (Math.random() < 0.02) await getDb().delete(rateLimitBuckets).where(lt(rateLimitBuckets.resetAt, now)).catch(() => undefined);
+    return row;
+  } catch {
+    return hitMemory(key, windowMs, now);
+  }
+}
+
+export async function rateLimit(req: Request, res: Response, next: NextFunction) {
   const pathname = fullPath(req);
   // Camera goi /api/face/detect lien tuc de ve khung mat (chi quan ly dung) nen khong gioi han.
   // Cham cong / dang ky / xac minh van theo gioi han thuong: may chu khuon mat da bo gioi han cho backend.
   if (pathname === "/api/face/detect") return next();
   // DELETE /api/admin/session la dang xuat: khong tinh vao luot dang nhap 5 lan/15 phut.
-  const policy = AUTH_PATHS.has(pathname) && req.method !== "DELETE"
+  const isAuth = AUTH_PATHS.has(pathname) && req.method !== "DELETE";
+  const policy = isAuth
     ? { limit: 5, windowMs: 15 * 60 * 1000, scope: `auth:${pathname}` }
     : pathname === "/api/payments/casso"
       ? { limit: 120, windowMs: 60 * 1000, scope: "webhook" }
       : { limit: MUTATING.has(req.method) ? 60 : 180, windowMs: 60 * 1000, scope: `api:${req.method}` };
-  const client = clientIp(req);
-  const key = `${policy.scope}:${client}`;
+  const key = `${policy.scope}:${clientIp(req)}`;
   const now = Date.now();
-  const bucket = buckets.get(key);
-  if (!bucket || bucket.resetAt <= now) {
-    buckets.set(key, { count: 1, resetAt: now + policy.windowMs });
-    if (buckets.size > 50_000) pruneBuckets(now);
-    return next();
-  }
-  bucket.count += 1;
+  // Chi dang nhap / OTP dem trong CSDL (de do mat khau la thu can chan that chat); API thuong dem
+  // trong bo nho de khong them mot truy van CSDL vao moi request.
+  const bucket = isAuth ? await hitShared(key, policy.windowMs, now) : hitMemory(key, policy.windowMs, now);
   if (bucket.count > policy.limit) {
-    res.set("Retry-After", String(Math.ceil((bucket.resetAt - now) / 1000)));
+    res.set("Retry-After", String(Math.max(1, Math.ceil((bucket.resetAt - now) / 1000))));
     throw new HttpError(429, "Bạn gửi yêu cầu quá nhanh. Vui lòng thử lại sau.");
   }
   next();
@@ -116,6 +157,8 @@ function fullPath(req: Request) {
 }
 
 /** Chi dung trong test. */
-export function resetRateLimits() {
+/** Cho test: xoa ca bo dem trong bo nho lan trong CSDL. */
+export async function resetRateLimits() {
   buckets.clear();
+  await Promise.resolve().then(() => getDb().delete(rateLimitBuckets)).catch(() => undefined);
 }

@@ -6,7 +6,7 @@ import { getManagedOrderById, getManagedProducts, getBranches, getAdminUsers, ge
 import { changeOrderPaymentStatusAction, changeOrderStatusAction, saveOrderInvoiceAction } from "@/src/actions/admin/orders-products";
 import { requireAdminPage } from "@/src/services/admin-auth";
 
-import { formatDateTime, formatMoney, orderStatuses, orderTotalNumber, paymentStatuses, statusLabel } from "@/src/lib/admin/format";
+import { formatDateTime, formatMoney, nextOrderStatuses, orderStatuses, orderTotalNumber, paymentStatuses, statusLabel } from "@/src/lib/admin/format";
 import PrintButtons from "@/src/components/features/admin/common/PrintButtons";
 import OrderAssignmentForm from "@/src/components/features/admin/orders/OrderAssignmentForm";
 import DocumentStamp from "@/src/components/common/DocumentStamp";
@@ -80,11 +80,16 @@ export default async function AdminOrderDetailPage({ params, searchParams }: { p
         </div>
         <div className="admin-card">
           <div className="admin-card-head"><div><span>{ORDER_DETAIL_PAGE.status}</span><h2>{ORDER_DETAIL_PAGE.update}</h2></div></div>
-          <form action={changeOrderStatusAction} className="admin-status-form">
-            <input type="hidden" name="id" value={order.id} />
-            <select name="status" defaultValue={order.status}>{orderStatuses.map((status) => <option key={status} value={status}>{statusLabel(status)}</option>)}</select>
-            <button className="admin-button admin-button-primary" type="submit">{ORDER_DETAIL_PAGE.updateStatus}</button>
-          </form>
+          {/* Chi hien trang thai hien tai + cac buoc duoc di tiep (quy trinh o lib/admin/format.ts). */}
+          {nextOrderStatuses(order.status).length ? (
+            <form action={changeOrderStatusAction} className="admin-status-form">
+              <input type="hidden" name="id" value={order.id} />
+              <select name="status" defaultValue={order.status}>{[order.status, ...nextOrderStatuses(order.status)].map((status) => <option key={status} value={status}>{statusLabel(status)}</option>)}</select>
+              <button className="admin-button admin-button-primary" type="submit">{ORDER_DETAIL_PAGE.updateStatus}</button>
+            </form>
+          ) : (
+            <p className="admin-status-form">{statusLabel(order.status)} · {ORDER_DETAIL_PAGE.updateStatusFinal}</p>
+          )}
           <form action={changeOrderPaymentStatusAction} className="admin-status-form">
             <input type="hidden" name="id" value={order.id} />
             <select name="paymentStatus" defaultValue={order.paymentStatus}>{paymentStatuses.map((status) => <option key={status} value={status}>{statusLabel(status)}</option>)}</select>

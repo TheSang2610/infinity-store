@@ -2,9 +2,12 @@ import { randomUUID } from "node:crypto";
 import { and, desc, eq, gte, inArray, like, sql } from "drizzle-orm";
 import { getDb } from "../db/client";
 import { bankPaymentEvents, ORDER_STATUSES, orders, PAYMENT_STATUSES } from "../db/schema";
-import { badRequest } from "../utils/http";
+import { badRequest, notFound } from "../utils/http";
 import type { ManagedOrder, OrderInput, OrderInvoiceInput } from "../types";
 import { BANK_TRANSFER_PREFIX, NO_PAYMENT } from "../constants/payment";
+import { canChangeOrderStatus, ORDER_STATUS_LABELS, STOCK_RELEASE_STATUSES } from "../constants/order-status";
+import { restoreStock } from "./stock.repository";
+import { releaseVoucher } from "./voucher.repository";
 
 type OrderRow = typeof orders.$inferSelect;
 
@@ -94,9 +97,30 @@ export async function getWarrantyOrder(orderCodeInput: string, phoneInput: strin
   return toOrder(row);
 }
 
+/**
+ * Doi trang thai don theo quy trinh (constants/order-status.ts). Chuyen sang Da huy / Hoan tra
+ * thi cong lai ton kho trong cung giao dich, roi tra lai luot voucher.
+ */
 export async function updateOrderStatus(id: string, status: string) {
   if (!(ORDER_STATUSES as readonly string[]).includes(status)) throw badRequest("Trạng thái đơn hàng không hợp lệ.");
-  await getDb().update(orders).set({ status }).where(eq(orders.id, id));
+
+  const released = await getDb().transaction(async (tx) => {
+    // Khoa dong don: hai nguoi bam cung luc thi nguoi sau thay trang thai da doi.
+    const [row] = await tx.select({ status: orders.status, items: orders.items, voucherCode: orders.voucherCode })
+      .from(orders).where(eq(orders.id, id)).limit(1).for("update");
+    if (!row) throw notFound("Không tìm thấy đơn hàng.");
+    if (row.status === status) return undefined;
+    if (!canChangeOrderStatus(row.status, status)) {
+      throw badRequest(`Không thể chuyển đơn từ "${ORDER_STATUS_LABELS[row.status] ?? row.status}" sang "${ORDER_STATUS_LABELS[status] ?? status}".`);
+    }
+
+    const releasing = STOCK_RELEASE_STATUSES.includes(status) && !STOCK_RELEASE_STATUSES.includes(row.status);
+    if (releasing) await restoreStock(row.items.filter((item) => item.stockReserved), tx);
+    await tx.update(orders).set({ status }).where(eq(orders.id, id));
+    return releasing ? row.voucherCode : undefined;
+  });
+
+  if (released) await releaseVoucher(released);
 }
 
 export async function updateOrderPaymentStatus(id: string, paymentStatus: string) {

@@ -3,8 +3,6 @@
 Website bán điện thoại, laptop, máy ảnh kèm **hệ thống quản lý nội bộ**: chi nhánh, nhân sự, chấm công bằng khuôn mặt,
 kho, đơn hàng và chăm sóc khách hàng.
 
-**Tác giả:** Nguyễn Thế Sang · [github.com/TheSang2610](https://github.com/TheSang2610)
-
 **Bản chạy thật:** https://infinityy-store.vercel.app · Tài liệu API: https://infinityy-store.vercel.app/api/docs
 
 > Bản demo chưa bật các dịch vụ cần khóa riêng: **đăng ký tài khoản khách / quên mật khẩu** (cần Twilio để gửi mã OTP),
@@ -48,18 +46,21 @@ kho, đơn hàng và chăm sóc khách hàng.
   và chuyển đơn sang "Đã thanh toán", không cần nhân viên đối soát tay.
 - **Chấm công bằng khuôn mặt:** máy chủ Python (FastAPI + DeepFace) đăng ký và đối chiếu khuôn mặt nhân viên,
   kèm chấm công bằng passkey (WebAuthn). Một khuôn mặt chỉ gắn với một tài khoản, chống chấm công hộ.
+- **Quản lý đơn hàng chặt:** trạng thái đơn đi theo quy trình (không nhảy cóc / quay ngược), đặt hàng trừ tồn kho
+  của đúng biến thể, hủy / hoàn trả thì cộng lại kho và trả lượt voucher.
+- **Giỏ hàng lưu theo tài khoản** trên máy chủ: đăng nhập máy nào cũng thấy cùng một giỏ, đăng xuất thì ẩn đi.
 - **Phân quyền theo 7 vai trò**, quản lý chỉ thao tác nhân viên trong chi nhánh của mình (mục 9).
-- **Tài liệu API bằng Swagger UI** (`/api/docs`, 106 endpoint), có test bảo đảm tài liệu luôn khớp với route thật.
+- **Tài liệu API bằng Swagger UI** (`/api/docs`, 108 endpoint), có test bảo đảm tài liệu luôn khớp với route thật.
 - **Bảo mật:** giới hạn tần suất, chống CSRF, kiểm tra JSON, nhận dạng ảnh theo chữ ký nhị phân, mã hóa hồ sơ nhân sự.
   Chi tiết trong [SECURITY_AUDIT.md](SECURITY_AUDIT.md).
-- **Kiểm thử:** backend 45 test gọi API thật trên PostgreSQL chạy trong bộ nhớ (PGlite), frontend 49 test.
+- **Kiểm thử:** backend 51 test gọi API thật trên PostgreSQL chạy trong bộ nhớ (PGlite), frontend 49 test.
 
 ### 1.2. Chức năng
 
 | Khách hàng | Nội bộ cửa hàng |
 | --- | --- |
 | Danh mục, tìm kiếm, chi tiết sản phẩm theo dung lượng / màu | Sản phẩm, biến thể, ảnh, ẩn/hiện |
-| Giỏ hàng, đặt hàng, mã giảm giá | Đơn hàng: trạng thái, thanh toán, giao chi nhánh, hóa đơn |
+| Giỏ hàng lưu theo tài khoản, đặt hàng (kiểm tra tồn kho), mã giảm giá | Đơn hàng: trạng thái theo quy trình, thanh toán, giao chi nhánh, hóa đơn |
 | Thanh toán VietQR, MoMo; trả góp; đặt trước | Mã giảm giá, danh sách khách hàng (chỉ Giám đốc) |
 | Tài khoản: đăng nhập Google, xác minh email/SMS, quên mật khẩu | Nhân viên, chi nhánh, hồ sơ nhân sự (mã hóa), bảng lương |
 | Lịch sử mua, hóa đơn, tra cứu bảo hành | Chấm công khuôn mặt / passkey, giao việc, camera |
@@ -335,13 +336,13 @@ Lớp bảo mật đang có, rủi ro còn lại và việc bắt buộc trướ
 ## 10. Kiểm thử
 
 ```bash
-cd backend  && npm run typecheck && npm test      # 45 test
+cd backend  && npm run typecheck && npm test      # 51 test
 cd frontend && npm run typecheck && npm test && npm run lint && npm run build
 ```
 
 | Bộ test | Kiểm gì |
 | --- | --- |
-| `backend/src/test/api.test.ts` | Gọi API thật qua `supertest` trên PGlite: danh mục, đặt hàng và giá tính ở máy chủ, webhook Casso, voucher, tài khoản khách, giới hạn đăng nhập, chống CSRF, phân quyền theo vai trò / chi nhánh, kho, hồ sơ nhân sự mã hóa, bảng lương, chat, cài đặt cửa hàng |
+| `backend/src/test/api.test.ts` | Gọi API thật qua `supertest` trên PGlite: danh mục, đặt hàng và giá tính ở máy chủ, quy trình trạng thái đơn, trừ / cộng lại tồn kho, giỏ hàng theo tài khoản, webhook Casso, voucher, tài khoản khách, giới hạn đăng nhập, chống CSRF, phân quyền theo vai trò / chi nhánh, kho, hồ sơ nhân sự mã hóa, bảng lương, chat, cài đặt cửa hàng |
 | `backend/src/test/docs.test.ts` | Swagger khớp route thật; trang `/api/docs` mở được qua Next.js |
 | `frontend/tests/shared-copies.test.mjs` | Các file dùng chung hai phía giống hệt nhau (mục 7.2) |
 | `frontend/tests/*.test.mjs` khác | Trả góp, danh mục iPhone 18, đặt trước MacBook, danh sách sản phẩm quản trị |
@@ -470,6 +471,10 @@ Ví dụ: `feat(face): gioi han tan suat cham cong khuon mat`
 
 ### P2 — Bảo mật (chi tiết trong SECURITY_AUDIT.md)
 
+- [x] Giỏ hàng lưu trên máy chủ (bảng `customer_carts`, migration `0004`, `GET/PUT /api/account/cart`). Máy chủ lỗi
+  hoặc chưa chạy migration thì giỏ tự dùng bản trong trình duyệt, trang không hỏng.
+- [x] Trạng thái đơn theo quy trình (`backend/src/constants/order-status.ts`), tồn kho trừ khi đặt / cộng lại khi hủy
+  (`backend/src/repositories/stock.repository.ts`). Đơn đặt trước khi có trừ kho không được cộng thêm khi hủy.
 - [x] Giới hạn đăng nhập / OTP đếm trong PostgreSQL (bảng `rate_limit_buckets`, migration `0003`): mọi máy chủ Vercel
   thấy cùng một con số. API thường vẫn đếm trong bộ nhớ từng máy chủ, đủ chặn spam.
 - [x] Hash mật khẩu ghi phiên bản (`v2$600000$...`, mức OWASP). Hash cũ 120.000 vòng vẫn đăng nhập được và được băm lại
